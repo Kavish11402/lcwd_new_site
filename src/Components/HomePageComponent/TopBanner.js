@@ -1,9 +1,15 @@
 import Image from "next/image";
 import manWithComputer from "@/Assets/Images/manComp.svg"
+import ReactTyped from "react-typed";
 export default function TopBanner()
 {
+
+    const typedText = ["Programming", "Coding", "Technology", "Development" , "Skills" , "Logic Building"];
+
+
+
   return(
-      <div className={"flex flex-row border-2 border-black"}>
+      <div className={"flex flex-row"}>
 
           <div className={"w-1/2 py-32"}>
               <Image src={manWithComputer} alt={"Man With Computer"} className={"mx-auto"} />
@@ -15,7 +21,15 @@ export default function TopBanner()
 
 
               <h1 className={"text-center text-6xl font-bold py-7 bg-gradient-to-r from-secondary-dark to-primary-dark bg-clip-text text-transparent"}> Learn Code With Durgesh </h1>
-              <h1 className={"text-center text-4xl font-semibold mt-1 text-zinc-600"}> Master Programming </h1>
+
+              <div className={"mt-1 flex flex-row justify-center"}>
+                  <h1 className={"text-center text-4xl font-semibold text-zinc-600 mr-2"}> Master </h1>
+                  <h1 className={"text-center text-4xl font-semibold text-zinc-600"}>
+                      <ReactTyped strings={typedText} typeSpeed={30} backSpeed={15} loop/>
+                  </h1>
+              </div>
+
+
 
 
               <p className={"mt-10 text-center w-4/5 text-lg mx-auto text-zinc-600 font-semibold"}>

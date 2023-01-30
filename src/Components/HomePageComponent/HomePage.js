@@ -1,10 +1,9 @@
 import TopBanner from "@/Components/HomePageComponent/TopBanner";
 import Top4LatestVideo from "@/Components/HomePageComponent/Top4LatestVideo";
 import WhyLCWD from "@/Components/HomePageComponent/WhyLCWD";
-import SubscribeShow from "@/Components/HomePageComponent/SubscribeShow";
 import FreeCourses from "@/Components/HomePageComponent/FreeCourses";
 import YoutubeCount from "@/Components/HomePageComponent/YoutubeCount";
-import BottomWhyLCWD from "@/Components/HomePageComponent/BottomWhyLCWD";
+import LCWDStrategy from "@/Components/HomePageComponent/LCWDStrategy";
 
 export default function HomePage()
 {
@@ -15,8 +14,8 @@ export default function HomePage()
           <Top4LatestVideo/>
           <YoutubeCount/>
           <FreeCourses/>
-          <SubscribeShow/>
-          <BottomWhyLCWD/>
+          {/*<SubscribeShow/>*/}
+          <LCWDStrategy/>
       </div>
   );
 }

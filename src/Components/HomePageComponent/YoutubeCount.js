@@ -6,13 +6,14 @@ import instagramPhoto from"@/Assets/Icons/instagram.png";
 import facebookPhoto from"@/Assets/Icons/facebook.png";
 import linkedinPhoto from"@/Assets/Icons/linkedin.png";
 import youtubePhoto from"@/Assets/Icons/youtube.png";
-import SocialMediaFollowers from "@/Components/HomePageComponent/SocialMediaFollowers";
+import SocialMediaFollowers from "@/Components/HomePageComponent/SingleReuseableComponents/SocialMediaFollowers";
 
 export default function YoutubeCount()
 {
   return(
-      <div className={"flex flex-col border-2 border-black"}>
+      <div className={"flex flex-col"}>
 
+          <h1 className={"text-center text-5xl font-bold underline underline-offset-8 text-primary-dark mt-14 mb-8"}> Our Community </h1>
 
           <div className={"flex flex-row justify-center text-gray-700 py-14"}>
 
@@ -59,6 +60,7 @@ export default function YoutubeCount()
 
           <div className={"flex flex-row justify-center py-10 bg-primary-light"}>
 
+              {/* Link To that social media handle lagao */}
               <SocialMediaFollowers handleImage={youtubePhoto} handleFollowers={"175K+"} handleOtherInfo={"Subscribers"}/>
 
               <div className={"rounded-full border-[1px] border-zinc-500 mx-7"}></div>

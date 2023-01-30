@@ -27,12 +27,12 @@ export default function NavBar()
               {/*hover:text-primary-dark*/}
               <h1 className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>Home</h1>
               <h1 className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>Blogs</h1>
-              <h1 className={"mr-5 h-fit my-auto text-red-500 transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>Premium Courses</h1>
+              <h1 className={"mr-5 h-fit my-auto text-red-600 transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>Premium Courses</h1>
               <h1 className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>Free Courses</h1>
               <h1 className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>About</h1>
               <h1 className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>Contact</h1>
 
-              <h1 className={"h-fit my-auto text-red-400 flex flex-row transition-all ease-linear hover:-translate-y-1"}>
+              <h1 className={"h-fit my-auto text-red-600 flex flex-row transition-all ease-linear hover:-translate-y-1"}>
                   <Image className={"h-6 w-6 mr-2 my-auto"} src={youtubeLogo} alt={"LCWD Logo"}/>
                   <p>Youtube</p>
               </h1>

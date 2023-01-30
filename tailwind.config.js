@@ -12,14 +12,14 @@ module.exports = {
     extend: {
       colors:{
         /* Primary Color Shades Used */
-        "primary-light" : "#FDE68A" /*for amber-200 */ ,
-        "primary-medium" : "#FBBF24" /*for amber-400 */ ,
-        "primary-dark" : "#F59E0B" /*for amber-500 */ ,
+        "primary-light" : "#FDE68A" /*for amber-200 in tailwind css */ ,
+        "primary-medium" : "#FBBF24" /*for amber-400 in tailwind css */ ,
+        "primary-dark" : "#F59E0B" /*for amber-500 in tailwind css */ ,
 
         /* Secondary Color Shades Used */
-        "secondary-light" : "#FBCFE8" /*for pink-200 */ ,
-        "secondary-medium" : "#F472B6" /*for pink-400 */ ,
-        "secondary-dark" : "#EC4899" /*for pink-500 */ ,
+        "secondary-light" : "#FBCFE8" /*for pink-200 in tailwind css */ ,
+        "secondary-medium" : "#F472B6" /*for pink-400 in tailwind css */ ,
+        "secondary-dark" : "#EC4899" /*for pink-500 in tailwind css */ ,
       }
     }
   },
