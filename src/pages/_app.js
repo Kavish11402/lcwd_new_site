@@ -8,7 +8,9 @@ export default function App({ Component, pageProps })
       <div className={"select-none"}>
           <NavBar/>
           <Component {...pageProps} />
-          <Footer/>
+
+          {/* TODO -> FOOTER COMMENTED */}
+          {/*<Footer/>*/}
       </div>
   );
 }

@@ -10,6 +10,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}", ],
   theme: {
     extend: {
+      transitionDuration:{
+        "400" : "400ms",
+      },
       colors:{
         /* Primary Color Shades Used */
         "primary-light" : "#FDE68A" /*for amber-200 in tailwind css */ ,

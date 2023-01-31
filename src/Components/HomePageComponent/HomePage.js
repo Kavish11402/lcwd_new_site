@@ -8,14 +8,13 @@ import LCWDStrategy from "@/Components/HomePageComponent/LCWDStrategy";
 export default function HomePage()
 {
   return(
-      <div>
+      <>
           <TopBanner/>
-          <WhyLCWD/>
+          {/*<WhyLCWD/>
           <Top4LatestVideo/>
           <YoutubeCount/>
           <FreeCourses/>
-          {/*<SubscribeShow/>*/}
-          <LCWDStrategy/>
-      </div>
+          <LCWDStrategy/>*/}
+      </>
   );
 }

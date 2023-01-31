@@ -31,6 +31,7 @@ export default function index()
           </Head>
 
           <main className={"mt-20"}>
+              {/* TODO -> HOME PAGE COMMENTED */}
               <HomePage/>
           </main>
       </>
