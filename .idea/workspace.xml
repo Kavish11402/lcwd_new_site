@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="things changed again">
+    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="TopBanner, WhyLCWD, YoutubeCount, LCWDStrategy responsive UI Completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/LCWDStrategy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/LCWDStrategy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/ExplanationCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/ExplanationCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/SocialMediaFollowers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/SocialMediaFollowers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/TopBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/TopBanner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/WhyLCWD.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/WhyLCWD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/YoutubeCount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/YoutubeCount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/FooterComponents/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/FooterComponents/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +119,7 @@
       <workItem from="1675158527483" duration="9452000" />
       <workItem from="1675190101791" duration="1746000" />
       <workItem from="1675194513291" duration="1280000" />
-      <workItem from="1675326868587" duration="17969000" />
+      <workItem from="1675326868587" duration="20202000" />
     </task>
     <task id="LOCAL-00001" summary="Home page Desktop ready">
       <created>1675078250937</created>
@@ -147,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675366654033</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="TopBanner, WhyLCWD, YoutubeCount, LCWDStrategy responsive UI Completed">
+      <created>1675373484929</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675373484929</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +183,7 @@
     <MESSAGE value="Home page Desktop ready" />
     <MESSAGE value="things changed" />
     <MESSAGE value="things changed again" />
-    <option name="LAST_COMMIT_MESSAGE" value="things changed again" />
+    <MESSAGE value="TopBanner, WhyLCWD, YoutubeCount, LCWDStrategy responsive UI Completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="TopBanner, WhyLCWD, YoutubeCount, LCWDStrategy responsive UI Completed" />
   </component>
 </project>
