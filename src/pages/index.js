@@ -30,7 +30,7 @@ export default function index()
               <link rel="manifest" href="/Assets/Favicon/site.webmanifest"/>
           </Head>
 
-          <main className={"mt-20"}>
+          <main className={"mt-12"}>
               {/* TODO -> HOME PAGE COMMENTED */}
               <HomePage/>
           </main>

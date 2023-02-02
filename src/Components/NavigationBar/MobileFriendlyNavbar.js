@@ -8,14 +8,14 @@ export default function MobileFriendlyNavbar( { toggle , navbarState } )
   return(
       <div className={"absolute lg:invisible"}>
 
-        <div className={"z-50 fixed top-0 left-0 right-0"}>
+        <div className={"z-50 fixed top-0 left-0 right-0 backdrop-blur-lg bg-neutral-300/20"}>
 
-            <div className={"flex flex-row justify-between px-2 py-1 backdrop-blur-lg bg-neutral-300/20 drop-shadow-lg"}>
+            <div className={`flex flex-row justify-between px-2 py-1 h-16 `}>
                 <div className={"flex flex-col justify-center"}>
 
                     <Link href={'/'} className={"flex flex-row"}>
-                        <Image className={"w-10"} src={lcwdLogo} alt={"LCWD Logo"}/>
-                        <h1 className={"ml-5 my-auto font-semibold text-3xl bg-gradient-to-r from-secondary-dark to-primary-dark bg-clip-text text-transparent"}> LCWD </h1>
+                        <Image className={"w-12"} src={lcwdLogo} alt={"LCWD Logo"}/>
+                        <h1 className={"ml-5 my-auto font-semibold text-[2rem] bg-gradient-to-r from-secondary-dark to-primary-dark bg-clip-text text-transparent"}> LCWD </h1>
                     </Link>
 
                 </div>
@@ -37,7 +37,7 @@ export default function MobileFriendlyNavbar( { toggle , navbarState } )
                 </div>
             </div>
 
-            <div className={`backdrop-blur-lg bg-neutral-300/20 drop-shadow-lg border-b-8 border-primary-dark ${ navbarState? "opacity-100" : "opacity-0" } py-16 rounded-b-xl transition-all duration-200 ease-in-out`}>
+            <div className={`border-b-8 border-primary-dark ${ navbarState? "block" : "hidden" } py-10 rounded-b-xl `}>
 
                 <h1 className={"mx-auto w-fit border-2 border-black"}>Home</h1>
                 <h1 className={"mx-auto w-fit border-2 border-black"}>Blogs</h1>
@@ -46,7 +46,9 @@ export default function MobileFriendlyNavbar( { toggle , navbarState } )
                 <h1 className={"mx-auto w-fit border-2 border-black"}>About</h1>
                 <h1 className={"mx-auto w-fit border-2 border-black"}>Contact</h1>
 
-                <h1 className={"mx-auto w-fit border-2 border-black text-red-600 flex flex-row"}> <Image className={"h-6 w-6 mr-2 my-auto"} src={youtubeLogo} alt={"LCWD Logo"}/> <p>Youtube</p> </h1>
+                <h1 className={"mx-auto w-fit border-2 border-black text-red-600 flex flex-row"}> <Image className={"h-6 w-6 mr-2 my-auto"} src={youtubeLogo} alt={"LCWD Logo"}/>
+                    <p>Youtube</p>
+                </h1>
 
             </div>
 

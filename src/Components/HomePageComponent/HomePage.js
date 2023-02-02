@@ -11,10 +11,10 @@ export default function HomePage()
       <>
           <TopBanner/>
           {/*<WhyLCWD/>
-          <Top4LatestVideo/>
-          <YoutubeCount/>
-          <FreeCourses/>
-          <LCWDStrategy/>*/}
+          {/*<Top4LatestVideo/>
+          {/*<YoutubeCount/>
+          {/*<FreeCourses/>
+          {/*<LCWDStrategy/>*/}
       </>
   );
 }
