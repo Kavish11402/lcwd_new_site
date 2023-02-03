@@ -2,6 +2,7 @@ import TopBanner from "@/Components/HomePageComponent/TopBanner";
 import WhyLCWD from "@/Components/HomePageComponent/WhyLCWD";
 import LCWDStrategy from "@/Components/HomePageComponent/LCWDStrategy";
 import YoutubeCount from "@/Components/HomePageComponent/YoutubeCount";
+import Top4LatestVideo from "@/Components/HomePageComponent/Top4LatestVideo";
 
 export default function HomePage()
 {
@@ -9,7 +10,7 @@ export default function HomePage()
       <>
           <TopBanner/>
           <WhyLCWD/>
-          {/*<Top4LatestVideo/>*/}
+          <Top4LatestVideo/>
           <YoutubeCount/>
           {/*<FreeCourses/>*/}
           <LCWDStrategy/>

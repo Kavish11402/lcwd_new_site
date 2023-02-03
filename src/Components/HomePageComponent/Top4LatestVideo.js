@@ -8,12 +8,10 @@ export default function Top4LatestVideo()
         <div>
 
             <div>
-                <h1 className={"text-center text-5xl font-bold pt-7 text-primary-dark"}>
-                    Latest Videos
-                </h1>
+                <h1 className={"text-center text-3xl lg:text-5xl font-bold underline underline-offset-8 pt-7 text-primary-dark"}> Latest Videos </h1>
             </div>
 
-            <div className={"flex flex-row justify-center space-x-12 py-12"}>
+            <div className={"flex flex-col lg:flex-row justify-center space-y-5 py-12 lg:space-x-12 lg:space-y-0"}>
 
                 <CourseCard
                     bannerImage={bannerBg}
