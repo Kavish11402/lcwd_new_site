@@ -11,7 +11,6 @@ export default function CourseCard({bannerImage , bannerTitle , bannerDescriptio
 
             <div className={"mt-8 mb-3 rounded-full border-[1px] border-gray-400 mx-3"}></div>
 
-
             <div className={"text-justify w-72 font-bold text-lg lg:text-xl mx-auto"}>
                 {bannerTitle}
             </div>
@@ -22,7 +21,6 @@ export default function CourseCard({bannerImage , bannerTitle , bannerDescriptio
 
             <div className={"mb-6 mt-3 rounded-full border-[1px] border-gray-400 mx-3"}></div>
 
-
             <div>
                 <Link target={`_blank`} href={`https://www.youtube.com/watch?v=${bannerVideoID}`}>
                     <h1 className={"bg-primary-medium hover:bg-amber-300 transition-all ease-in-out rounded-md py-2 text-center text-md font-semibold text-zinc-600 lg:px-16 lg:text-xl"} >
@@ -30,7 +28,6 @@ export default function CourseCard({bannerImage , bannerTitle , bannerDescriptio
                     </h1>
                 </Link>
             </div>
-
 
         </div>
     );

@@ -40,7 +40,33 @@ export default function FreeCourses()
                 bannerVideoID={"ekDGDYLEw7Y"}
             />
 
+            <CourseCard
+                bannerImage={bannerBg}
+                bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
+                bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
+                bannerVideoID={"ekDGDYLEw7Y"}
+            />
 
+            <CourseCard
+                bannerImage={bannerBg}
+                bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
+                bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
+                bannerVideoID={"ekDGDYLEw7Y"}
+            />
+
+            <CourseCard
+                bannerImage={bannerBg}
+                bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
+                bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
+                bannerVideoID={"ekDGDYLEw7Y"}
+            />
+
+            <CourseCard
+                bannerImage={bannerBg}
+                bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
+                bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
+                bannerVideoID={"ekDGDYLEw7Y"}
+            />
 
             <CourseCard
                 bannerImage={bannerBg}
@@ -70,36 +96,12 @@ export default function FreeCourses()
                 bannerVideoID={"ekDGDYLEw7Y"}
             />
 
-
             <CourseCard
                 bannerImage={bannerBg}
                 bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
                 bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
                 bannerVideoID={"ekDGDYLEw7Y"}
             />
-
-            <CourseCard
-                bannerImage={bannerBg}
-                bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
-                bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
-                bannerVideoID={"ekDGDYLEw7Y"}
-            />
-
-            <CourseCard
-                bannerImage={bannerBg}
-                bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
-                bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
-                bannerVideoID={"ekDGDYLEw7Y"}
-            />
-
-            <CourseCard
-                bannerImage={bannerBg}
-                bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
-                bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
-                bannerVideoID={"ekDGDYLEw7Y"}
-            />
-
-
 
             <CourseCard
                 bannerImage={bannerBg}
@@ -129,22 +131,12 @@ export default function FreeCourses()
                 bannerVideoID={"ekDGDYLEw7Y"}
             />
 
-
-
             <CourseCard
                 bannerImage={bannerBg}
                 bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
                 bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
                 bannerVideoID={"ekDGDYLEw7Y"}
             />
-
-            <CourseCard
-                bannerImage={bannerBg}
-                bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
-                bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
-                bannerVideoID={"ekDGDYLEw7Y"}
-            />
-
           </div>
 
         </div>

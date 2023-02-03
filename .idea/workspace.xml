@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="Nav Bar Altered">
+    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="Home Page Complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/FreeCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/FreeCourses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/LCWDStrategy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/LCWDStrategy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/CourseCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/CourseCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/ExplanationCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/ExplanationCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/SocialMediaFollowers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/SocialMediaFollowers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/Top4LatestVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/Top4LatestVideo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/TopBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/TopBanner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/WhyLCWD.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/WhyLCWD.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/YoutubeCount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/YoutubeCount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NavigationBar/DesktopNavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavigationBar/DesktopNavBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/NavigationBar/MobileFriendlyNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavigationBar/MobileFriendlyNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NavigationBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavigationBar/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +131,7 @@
       <workItem from="1675190101791" duration="1746000" />
       <workItem from="1675194513291" duration="1280000" />
       <workItem from="1675326868587" duration="20330000" />
-      <workItem from="1675397545693" duration="10629000" />
+      <workItem from="1675397545693" duration="12572000" />
     </task>
     <task id="LOCAL-00001" summary="Home page Desktop ready">
       <created>1675078250937</created>
@@ -184,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675415070905</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Home Page Complete">
+      <created>1675415417956</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675415417956</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +243,7 @@
     <MESSAGE value="Top 4 Latest Video UI Responsive" />
     <MESSAGE value="FreeCourses Responsive UI" />
     <MESSAGE value="Nav Bar Altered" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nav Bar Altered" />
+    <MESSAGE value="Home Page Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Home Page Complete" />
   </component>
 </project>

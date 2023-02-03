@@ -39,13 +39,20 @@ export default function MobileFriendlyNavbar( { toggle , navbarState } )
 
             <div className={`border-b-8 border-primary-dark ${ navbarState? "block" : "hidden" } py-10 rounded-b-xl space-y-3 `}>
 
+                <Link href={'/'}>
+                    <h1 className={"mx-auto w-fit text-lg font-semibold"} onClick={()=>{toggle()}}>Home</h1>
+                </Link>
 
-
-                <h1 className={"mx-auto w-fit text-lg font-semibold"}>Home</h1>
                 <h1 className={"mx-auto w-fit text-lg font-semibold"}>Blogs</h1>
-                <h1 className={"mx-auto w-fit text-lg font-semibold"}>Premium Courses</h1>
+
+                <Link target={'_blank'} href={"https://courses.learncodewithdurgesh.com/learn"}>
+                    <h1 className={"mx-auto w-fit text-lg font-semibold"}>Premium Courses</h1>
+                </Link>
+
                 <h1 className={"mx-auto w-fit text-lg font-semibold"}>Free Courses</h1>
+
                 <h1 className={"mx-auto w-fit text-lg font-semibold"}>About</h1>
+
                 <h1 className={"mx-auto w-fit text-lg font-semibold"}>Contact</h1>
 
                 <Link className={"mx-auto w-fit text-lg font-semibold text-red-600 flex flex-row"} target={`_blank`} href={`https://www.youtube.com/learncodewithdurgesh`}>

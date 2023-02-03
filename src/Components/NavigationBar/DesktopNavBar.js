@@ -13,38 +13,38 @@ export default function DesktopNavBar()
               <div>
 
                   <Link href={'/'} className={"flex flex-row"}>
-
                       <Image className={"w-16"} src={lcwdLogo} alt={"LCWD Logo"}/>
                       <h1 className={"ml-5 h-fit my-auto font-semibold text-4xl bg-gradient-to-r from-secondary-dark to-primary-dark bg-clip-text text-transparent"}>LCWD</h1>
-
                   </Link>
 
               </div>
 
-              {/*text-black*/}
               <div className={"flex flex-row cursor-default text-lg  font-semibold"}>
 
+                  <Link href={'/'} className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>
+                      Home
+                  </Link>
 
-                  {/*hover:text-primary-dark*/}
-                  <h1 className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>Home</h1>
                   <h1 className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>Blogs</h1>
-                  <h1 className={"mr-5 h-fit my-auto text-red-600 transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>Premium Courses</h1>
+
+                  <Link className={"mr-5 h-fit my-auto text-red-600 transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"} target={'_blank'} href={"https://courses.learncodewithdurgesh.com/learn"}>
+                      Premium Courses
+                  </Link>
+
                   <h1 className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>Free Courses</h1>
+
                   <h1 className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>About</h1>
+
                   <h1 className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>Contact</h1>
 
-                  <h1 className={"h-fit my-auto text-red-600 flex flex-row transition-all ease-linear hover:-translate-y-1"}>
+                  <Link className={"h-fit my-auto text-red-600 flex flex-row transition-all ease-linear hover:-translate-y-1"} target={`_blank`} href={`https://www.youtube.com/learncodewithdurgesh`}>
                       <Image className={"h-6 w-6 mr-2 my-auto"} src={youtubeLogo} alt={"LCWD Logo"}/>
                       <p>Youtube</p>
-                  </h1>
-
+                  </Link>
 
               </div>
 
           </div>
-
-
-
 
       </div>
   );

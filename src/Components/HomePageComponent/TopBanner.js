@@ -5,7 +5,6 @@ import {useEffect, useRef} from "react";
 import Typed from "typed.js";
 export default function TopBanner()
 {
-
     const typedText = useRef(null);
 
     useEffect(() => {
@@ -19,21 +18,14 @@ export default function TopBanner()
     }, []);
 
 
-
   return(
-      /* Writing for Small Devices */
       <div className={"flex flex-col lg:flex-row lg:h-[89vh]"}>
 
           <div className={"px-3 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:px-0"}> <Image src={manWithComputer} alt={"Man With Computer"} className={"mx-auto w-[400px] md:w-[500px] lg:w-[400px] xl:w-auto"} /> </div>
 
-          {/* Don't display it on small devices */}
           <div className={"hidden lg:inline-flex rounded-full lg:my-16 xl:my-24 border-[1px] border-zinc-500"}></div>
 
-
-
           <div className={"flex flex-col justify-center lg:w-1/2"}>
-
-
 
               <h1 className={"text-center text-[2.5rem] xl:text-6xl font-bold py-6 lg:py-7 bg-gradient-to-r from-secondary-dark to-primary-dark bg-clip-text text-transparent"}>
                   Learn Code With Durgesh
@@ -44,9 +36,6 @@ export default function TopBanner()
                   <h1 className={"text-center"} ref={typedText} >  </h1>
               </div>
 
-
-
-
               <p className={"mt-4 text-center mx-auto text-zinc-600 lg:mt-7 xl:mt-10 sm:w-[700px] lg:w-[90%] lg:text-base xl:text-lg lg:mx-auto xl:font-semibold xl-w-4/5"}>
                   Best Video Courses in <b>HINDI</b>, These courses are totally free of cost.
                   Thousands of people learn from these courses daily.
@@ -55,14 +44,11 @@ export default function TopBanner()
 
               <div className={"mt-10 flex flex-row justify-center font-semibold text-zinc-600 xl:mt-16"}>
 
-                  {/*<h1 className={"bg-primary-medium hover:bg-primary-dark transition-all ease-in-out text-white px-5 py-3 rounded-xl text-2xl mx-16"}>Premium Courses</h1>*/}
-
                   <Link target={'_blank'} href={"https://courses.learncodewithdurgesh.com/learn"}>
                       <h1 className={"mx-2 border-2 px-3 py-2 rounded-xl border-primary-medium lg:mx-8 xl:mx-16 lg:hover:border-primary-dark lg:hover:bg-primary-dark lg:hover:text-white lg:transition-all lg:ease-in-out lg:px-2 xl:px-5 lg:py-3 lg:text-lg xl:text-2xl lg:text-zinc-600"}>
                           Premium Courses
                       </h1>
                   </Link>
-
 
                   {/* TODO -> Add "/courses" link to the below Link's href */}
                   <Link href={"/"}>
@@ -73,13 +59,10 @@ export default function TopBanner()
 
               </div>
 
-
               <div className={"mt-10 flex flex-col justify-center"}>
 
                   <div className={"flex flex-row justify-center mb-2 xl:mb-4"}>
 
-
-
                       <div className={"border-2 border-secondary-dark rounded-full mx-1"} >
 
                           <svg className={"w-8 h-8 xl:w-10 xl:h-10 text-secondary-dark"} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" >
@@ -133,8 +116,6 @@ export default function TopBanner()
                           </svg>
 
                       </div>
-
-
 
                   </div>
 
@@ -143,10 +124,7 @@ export default function TopBanner()
 
               </div>
 
-
-
           </div>
-
 
       </div>
   );

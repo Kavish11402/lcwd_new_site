@@ -15,8 +15,8 @@ export default function WhyLCWD()
               <div><ExplanationCard icon={cardIcon} title={"Best Explanation"} description={"Each and every concepts are well explained so that you can learn effectively."}/></div>
               <div className={"lg:col-span-2 2xl:col-auto"}><ExplanationCard icon={cardIcon} title={"Best Explanation"} description={"Each and every concepts are well explained so that you can learn effectively."}/></div>
 
-
           </div>
+
       </div>
   );
 }

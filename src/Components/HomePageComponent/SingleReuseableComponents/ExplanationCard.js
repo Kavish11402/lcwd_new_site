@@ -9,17 +9,12 @@ export default function ExplanationCard({ icon , title , description })
           <Image className={"w-20 lg:w-28 rounded-xl"} src={icon} alt={"Video Image"} />
         </div>
 
-
-
         <div className={"text-center w-full mt-3 font-bold text-xl lg:w-72 lg:mt-5 lg:text-3xl mx-auto"}>
           {title}
         </div>
 
-
-
-
         <div className={"px-3 text-center h-[5.6rem] line-clamp-3 text-zinc-600 text-sm mt-3 mx-auto lg:text-lg lg:mt-4"}>
-          {description}
+            {description}
         </div>
       </div>
   );

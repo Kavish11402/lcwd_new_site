@@ -8,18 +8,16 @@ export default function index()
       <>
           <Head>
 
-
-
               <title>Master Programming in Hindi | Learn Code With Durgesh</title>
+
               <meta
                   name="keywords"
-                  content="lcwd, learn code with durgesh, learn code with durgesh, best hindi courses, free hindi programing courses, java programming in hindi,
-                            python programming hindi, c programming hindi, django in hindi, spring boot in hindi, learn spring boot in hindi"
+                  content = "lcwd, learn code with durgesh, learn code with durgesh, best hindi courses, free hindi programing courses, java programming in hindi,  python programming hindi, c programming hindi, django in hindi, spring boot in hindi, learn spring boot in hindi"
               />
+
               <meta
                   name="description"
-                  content="learn code with Durgesh is online platform which provide free video courses on different type of technologies like ,
-                            c programming language , java programming language , python programming language , android development"
+                  content = "learn code with Durgesh is online platform which provide free video courses on different type of technologies like , c programming language , java programming language , python programming language , android development"
               />
 
               <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -28,10 +26,10 @@ export default function index()
               <link rel="icon" type="image/png" sizes="32x32" href="/Assets/Favicon/favicon-32x32.png"/>
               <link rel="icon" type="image/png" sizes="16x16" href="/Assets/Favicon/favicon-16x16.png"/>
               <link rel="manifest" href="/Assets/Favicon/site.webmanifest"/>
+
           </Head>
 
           <main className={"mt-20"}>
-              {/* TODO -> HOME PAGE COMMENTED */}
               <HomePage/>
           </main>
       </>

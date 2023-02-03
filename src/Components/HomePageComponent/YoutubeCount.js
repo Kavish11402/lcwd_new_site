@@ -15,8 +15,6 @@ export default function YoutubeCount()
 
           <h1 className={"text-center text-2xl font-bold underline underline-offset-8 text-primary-dark lg:text-5xl mt-4 lg:mt-14 mb-8"}> Our Community </h1>
 
-
-
           <div className={"flex flex-col-reverse justify-center text-gray-700 py-8 lg:flex-row lg:py-14"}>
 
               <div className={"flex flex-col justify-center mt-8 lg:mt-0"} >
@@ -28,6 +26,7 @@ export default function YoutubeCount()
                   </div>
 
                   <div className={"mt-5"}>
+
                       <h1 className={"text-center !text-black font font-semibold text-5xl lg:text-6xl"}>YouTube Views</h1>
                       <h2 className={"mt-2 text-zinc-800 text-center text-md lg:text-lg"}>Strong community we are building for coders.</h2>
 
@@ -39,7 +38,6 @@ export default function YoutubeCount()
                               </h1>
                           </Link>
 
-
                           <Link target={`_blank`} href={`https://t.me/learncodewithdurgesh`} >
                               <h1 className={"bg-secondary-medium hover:bg-secondary-dark text-white transition-all ease-in-out px-4 py-2 rounded-xl text-lg lg:text-xl"}>
                                   Join Community
@@ -47,11 +45,11 @@ export default function YoutubeCount()
                           </Link>
 
                       </div>
+
                   </div>
 
               </div>
 
-              {/* TODO -> don't appear on small devices */}
               <div className={"hidden lg:block rounded-full lg:mx-24 xl:mx-36 border-[1px] my-10 border-zinc-400"}></div>
 
               <div>
@@ -59,11 +57,6 @@ export default function YoutubeCount()
               </div>
 
           </div>
-
-
-
-
-
 
           {/*TODO -> Link To that social media handle lagao consult to durgesh sir*/}
           <div className={"grid grid-cols-2 gap-3 py-10 px-4 bg-primary-light lg:flex lg:flex-row lg:justify-center"}>
@@ -82,9 +75,7 @@ export default function YoutubeCount()
 
               <SocialMediaFollowers handleImage={linkedinPhoto} handleFollowers={"4,096+"} handleOtherInfo={"Followers"} />
 
-
           </div>
-
 
       </div>
   );
