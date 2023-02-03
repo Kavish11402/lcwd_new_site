@@ -37,16 +37,19 @@ export default function MobileFriendlyNavbar( { toggle , navbarState } )
                 </div>
             </div>
 
-            <div className={`border-b-8 border-primary-dark ${ navbarState? "block" : "hidden" } py-10 rounded-b-xl `}>
+            <div className={`border-b-8 border-primary-dark ${ navbarState? "block" : "hidden" } py-10 rounded-b-xl space-y-3 `}>
 
-                <h1 className={"mx-auto w-fit border-2 border-black"}>Home</h1>
-                <h1 className={"mx-auto w-fit border-2 border-black"}>Blogs</h1>
-                <h1 className={"mx-auto w-fit border-2 border-black"}>Premium Courses</h1>
-                <h1 className={"mx-auto w-fit border-2 border-black"}>Free Courses</h1>
-                <h1 className={"mx-auto w-fit border-2 border-black"}>About</h1>
-                <h1 className={"mx-auto w-fit border-2 border-black"}>Contact</h1>
 
-                <h1 className={"mx-auto w-fit border-2 border-black text-red-600 flex flex-row"}> <Image className={"h-6 w-6 mr-2 my-auto"} src={youtubeLogo} alt={"LCWD Logo"}/>
+
+                <h1 className={"mx-auto w-fit text-lg font-semibold"}>Home</h1>
+                <h1 className={"mx-auto w-fit text-lg font-semibold"}>Blogs</h1>
+                <h1 className={"mx-auto w-fit text-lg font-semibold"}>Premium Courses</h1>
+                <h1 className={"mx-auto w-fit text-lg font-semibold"}>Free Courses</h1>
+                <h1 className={"mx-auto w-fit text-lg font-semibold"}>About</h1>
+                <h1 className={"mx-auto w-fit text-lg font-semibold"}>Contact</h1>
+
+                <h1 className={"mx-auto w-fit text-lg font-semibold text-red-600 flex flex-row"}>
+                    <Image className={"h-6 w-6 mr-2 my-auto"} src={youtubeLogo} alt={"LCWD Logo"}/>
                     <p>Youtube</p>
                 </h1>
 

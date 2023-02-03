@@ -99,7 +99,6 @@ export default function Footer()
 
                   <div className={"mt-3 flex flex-row lg:flex-col justify-around h-full"}>
 
-
                       <div className={"flex flex-row text-sm mr-3 lg:text-base lg:mr-24"}>
                           <Image className={"w-5 lg:w-6 mr-1 lg:mr-4"} src={youtubeLogo} alt={"youtubeLogo"} />
                           <a href={`https://www.youtube.com/learncodewithdurgesh`} rel={"noreferrer"} target={'_blank'}> YouTube </a>
@@ -120,35 +119,11 @@ export default function Footer()
                           <a href={`https://www.linkedin.com/in/durgeshkumartiwari/`} rel={'noreferrer'} target={'_blank'}>Linkedin</a>
                       </div>
 
-
                   </div>
 
               </div>
 
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
           {/* Horizontal Line Divider */}
           <div className={"border-[1px] border-black my-2 lg:mx-20 lg:my-6"}></div>
