@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="footer 100% responsive">
+    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="Top 4 Latest Video UI Responsive">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/FreeCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/FreeCourses.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/HomePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/CourseCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/CourseCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/Top4LatestVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/Top4LatestVideo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/ExplanationCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/ExplanationCard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +122,7 @@
       <workItem from="1675190101791" duration="1746000" />
       <workItem from="1675194513291" duration="1280000" />
       <workItem from="1675326868587" duration="20330000" />
-      <workItem from="1675397545693" duration="7887000" />
+      <workItem from="1675397545693" duration="9812000" />
     </task>
     <task id="LOCAL-00001" summary="Home page Desktop ready">
       <created>1675078250937</created>
@@ -165,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675402078594</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Top 4 Latest Video UI Responsive">
+      <created>1675405647944</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675405647944</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +210,7 @@
     <MESSAGE value="TopBanner, WhyLCWD, YoutubeCount, LCWDStrategy responsive UI Completed" />
     <MESSAGE value="footer 50% responsive" />
     <MESSAGE value="footer 100% responsive" />
-    <option name="LAST_COMMIT_MESSAGE" value="footer 100% responsive" />
+    <MESSAGE value="Top 4 Latest Video UI Responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="Top 4 Latest Video UI Responsive" />
   </component>
 </project>

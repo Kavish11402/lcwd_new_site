@@ -18,7 +18,7 @@ export default function ExplanationCard({ icon , title , description })
 
 
 
-        <div className={"px-3 text-center min-h-fit max-h-[5.6rem] line-clamp-3 text-zinc-600 text-sm mt-3 mx-auto lg:text-lg lg:mt-4"}>
+        <div className={"px-3 text-center h-[5.6rem] line-clamp-3 text-zinc-600 text-sm mt-3 mx-auto lg:text-lg lg:mt-4"}>
           {description}
         </div>
       </div>

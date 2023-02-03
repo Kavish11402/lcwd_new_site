@@ -7,10 +7,10 @@ export default function FreeCourses()
       <div>
         <div>
 
-          <div> <h1 className={"text-center text-5xl font-bold pt-16 pb-10 underline underline-offset-8 text-primary-dark"}> Top Free Courses </h1> </div>
+          <div> <h1 className={"text-center font-bold pb-10 underline underline-offset-8 text-primary-dark text-3xl lg:text-5xl pt-7"}> Top Free Courses </h1> </div>
 
           {/* TODO -> Add Mapping function of each video here */}
-          <div className={"grid grid-cols-4 gap-y-12 px-36"}>
+          <div className={"grid grid-cols-1 gap-y-6 lg:grid-cols-4 lg:gap-y-12 lg:px-36"}>
 
             <CourseCard
                 bannerImage={bannerBg}

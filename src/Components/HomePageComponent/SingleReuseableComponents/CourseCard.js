@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function CourseCard({bannerImage , bannerTitle , bannerDescription , bannerVideoID })
 {
     return(
-        <div className={"border-2 border-black mx-auto w-[20rem] flex flex-col justify-center py-5 px-3 rounded-xl drop-shadow-xl bg-stone-100 lg:w-[22rem] lg:px-6 lg:mx-0"} >
+        <div className={"mx-auto w-[20rem] flex flex-col justify-center py-5 px-3 rounded-xl drop-shadow-xl bg-stone-100 lg:w-[22rem] lg:px-6 lg:mx-0"} >
 
             <div className={"w-fit mx-auto"}>
                 <Image className={"w-72 rounded-xl"} src={bannerImage} alt={"Video Image"} />
@@ -25,7 +25,7 @@ export default function CourseCard({bannerImage , bannerTitle , bannerDescriptio
 
             <div>
                 <Link target={`_blank`} href={`https://www.youtube.com/watch?v=${bannerVideoID}`}>
-                    <h1 className={"bg-primary-medium hover:bg-amber-300 transition-all ease-in-out rounded-md py-2 text-center text-lg font-semibold text-zinc-600 lg:px-16 lg:text-xl"} >
+                    <h1 className={"bg-primary-medium hover:bg-amber-300 transition-all ease-in-out rounded-md py-2 text-center text-md font-semibold text-zinc-600 lg:px-16 lg:text-xl"} >
                         Go To Video
                     </h1>
                 </Link>
