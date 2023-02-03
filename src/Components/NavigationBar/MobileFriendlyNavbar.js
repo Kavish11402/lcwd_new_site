@@ -48,10 +48,10 @@ export default function MobileFriendlyNavbar( { toggle , navbarState } )
                 <h1 className={"mx-auto w-fit text-lg font-semibold"}>About</h1>
                 <h1 className={"mx-auto w-fit text-lg font-semibold"}>Contact</h1>
 
-                <h1 className={"mx-auto w-fit text-lg font-semibold text-red-600 flex flex-row"}>
+                <Link className={"mx-auto w-fit text-lg font-semibold text-red-600 flex flex-row"} target={`_blank`} href={`https://www.youtube.com/learncodewithdurgesh`}>
                     <Image className={"h-6 w-6 mr-2 my-auto"} src={youtubeLogo} alt={"LCWD Logo"}/>
                     <p>Youtube</p>
-                </h1>
+                </Link>
 
             </div>
 
