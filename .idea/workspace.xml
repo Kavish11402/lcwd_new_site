@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="Home Page Complete">
+    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="Code Decorated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/FreeCourses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/FreeCourses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/LCWDStrategy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/LCWDStrategy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/CourseCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/CourseCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/ExplanationCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/ExplanationCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/SocialMediaFollowers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/SocialMediaFollowers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/Top4LatestVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/Top4LatestVideo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/TopBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/TopBanner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/WhyLCWD.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/WhyLCWD.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/YoutubeCount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/YoutubeCount.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/NavigationBar/DesktopNavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavigationBar/DesktopNavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/NavigationBar/MobileFriendlyNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavigationBar/MobileFriendlyNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/NavigationBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavigationBar/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +26,13 @@
         <option name="title" value="All" />
       </GitPushTagMode>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -212,6 +205,16 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="4a819979-af51-4c1a-ae95-c305be0b0bb8">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="7418f6b3-5c06-4b83-807b-ba04f5299c10">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State>
