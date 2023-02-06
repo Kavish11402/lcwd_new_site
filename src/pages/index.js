@@ -27,6 +27,12 @@ export default function index()
               <link rel="icon" type="image/png" sizes="16x16" href="/Assets/Favicon/favicon-16x16.png"/>
               <link rel="manifest" href="/Assets/Favicon/site.webmanifest"/>
 
+
+
+
+
+
+
           </Head>
 
           <main className={"mt-20"}>
