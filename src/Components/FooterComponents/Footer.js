@@ -136,7 +136,7 @@ export default function Footer()
                   <p className={"font-bold underline mr-2"}>Substring Technologies Pvt Ltd.</p>
               </div>
 
-              <p className={"mt-2 text-center"}>All Rights Reserved.</p>
+              <p className={"text-center"}>All Rights Reserved.</p>
           </div>
 
       </div>

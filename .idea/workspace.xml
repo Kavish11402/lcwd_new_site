@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="Code Decorated">
+    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/public/Assets/Images/contactBanner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/ContactUsComponent/ContactUsHub.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/ContactUsComponent/temp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/SingleSubCategoryComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/ContactUs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/FooterComponents/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/FooterComponents/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NavigationBar/DesktopNavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavigationBar/DesktopNavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/NavigationBar/MobileFriendlyNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavigationBar/MobileFriendlyNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +63,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2KyIhMLTUV0nKAJYrfG7j7PFJxE" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -70,26 +85,29 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.16.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/lcwd_new_site/src/Assets/Icons&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/lcwd_new_site/src/Assets/Images&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2021.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\lcwd_new_site\src\Assets\Images" />
+      <recent name="G:\lcwd_new_site\src\Components\HomePageComponent\SingleReuseableComponents" />
       <recent name="G:\lcwd_new_site\src\Assets\Icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\lcwd_new_site\public\Assets\Images" />
+      <recent name="G:\lcwd_new_site\src\Assets\Images" />
+      <recent name="G:\lcwd_new_site\src\pages" />
       <recent name="G:\lcwd_new_site\public\Assets" />
       <recent name="G:\lcwd_new_site\public" />
-      <recent name="G:\lcwd_new_site\src\Components\HomePageComponent\SingleReuseableComponents" />
-      <recent name="G:\lcwd_new_site\src\Components\HomePageComponent" />
     </key>
   </component>
   <component name="RunManager">
@@ -101,9 +119,7 @@
       </scripts>
       <node-interpreter value="project" />
       <envs />
-      <method v="2">
-        <option name="LaunchBrowser.Before.Run" url="http://localhost:3000/" />
-      </method>
+      <method v="2" />
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -126,6 +142,15 @@
       <workItem from="1675194513291" duration="1280000" />
       <workItem from="1675326868587" duration="20330000" />
       <workItem from="1675397545693" duration="12572000" />
+      <workItem from="1675693917560" duration="14000" />
+      <workItem from="1675761444673" duration="7923000" />
+      <workItem from="1675769530394" duration="53000" />
+      <workItem from="1675769613620" duration="211000" />
+      <workItem from="1675769859904" duration="1438000" />
+      <workItem from="1675841523830" duration="2024000" />
+      <workItem from="1675845413367" duration="369000" />
+      <workItem from="1675845946617" duration="13702000" />
+      <workItem from="1675879448179" duration="10605000" />
     </task>
     <task id="LOCAL-00001" summary="Home page Desktop ready">
       <created>1675078250937</created>
@@ -231,7 +256,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="kavish" />
                       </list>
                     </value>
                   </entry>

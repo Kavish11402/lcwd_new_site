@@ -35,7 +35,13 @@ export default function DesktopNavBar()
 
                   <h1 className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>About</h1>
 
-                  <h1 className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>Contact</h1>
+
+                  <Link className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"} href={"/ContactUs"}>
+                      Contact
+                  </Link>
+
+
+
 
                   <Link className={"h-fit my-auto text-red-600 flex flex-row transition-all ease-linear hover:-translate-y-1"} target={`_blank`} href={`https://www.youtube.com/learncodewithdurgesh`}>
                       <Image className={"h-6 w-6 mr-2 my-auto"} src={youtubeLogo} alt={"LCWD Logo"}/>

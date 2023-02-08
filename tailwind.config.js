@@ -10,6 +10,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}", ],
   theme: {
     extend: {
+      backgroundImage:{
+        "contactBannerImg" : "url('/Assets/Images/contactBanner.jpg')"
+      },
       transitionDuration:{
         "400" : "400ms",
       },
@@ -26,5 +29,10 @@ module.exports = {
       }
     }
   },
-  plugins: [ require('@tailwindcss/line-clamp') ],
+  plugins:
+      [
+        require('@tailwindcss/line-clamp'),
+        require('@headlessui/tailwindcss'),
+        require('@tailwindcss/forms')
+      ],
 }
