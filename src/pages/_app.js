@@ -30,7 +30,7 @@ export default function App({ Component, pageProps })
 
           </Head>
 
-          <main className={"mt-20 select-none"}>
+          <main className={"mt-[4rem] lg:mt-[4.5rem] select-none"}>
               <NavBar/>
               <Component {...pageProps} />
               <Footer/>

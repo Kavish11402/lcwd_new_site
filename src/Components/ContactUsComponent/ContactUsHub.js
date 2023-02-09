@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import {Tab} from "@headlessui/react";
-import { RadioGroup } from '@headlessui/react'
+import {Tab , RadioGroup} from "@headlessui/react";
 
 
 
@@ -35,24 +34,20 @@ export default function ContactUsHub()
 
             <div className={"absolute -z-30 top-0 right-0 left-0 bg-contactBannerImg bg-bottom bg-cover brightness-90 h-[36rem]"}></div>
 
-
-            <div className={"z-40 pt-12"}>
+            <div className={"z-40 pt-16 lg:pt-12"}>
 
                 {/* border-l-8 border-r-8 border-primary-dark */}
-                <div className={"rounded-3xl drop-shadow-2xl w-fit mx-auto bg-zinc-300/40 backdrop-blur-2xl py-4 mb-16"}>
+                <div className={"rounded-3xl drop-shadow-2xl w-80 lg:w-fit mx-auto bg-zinc-400/30 lg:bg-zinc-300/40 backdrop-blur-2xl py-4 mb-16"}>
 
+                  <Image className={"w-36 lg:w-48 mx-auto"} src={lcwdLogo} alt={"LCWD Logo"}/>
 
-                  <Image className={"w-48 mx-auto"} src={lcwdLogo} alt={"LCWD Logo"}/>
+                  <h1 className={"text-center text-primary-dark text-4xl lg:text-7xl font-semibold px-5 lg:px-24 mt-3"}>Feel Free to Contact Us</h1>
 
-                  <h1 className={"text-center text-primary-dark text-7xl font-semibold px-24 mt-3"}>Feel Free to Contact Us</h1>
-
-                  <h1 className={"text-center text-white font-semibold text-2xl my-4"}>Kindly Follow Us on Different Social Medias</h1>
-
-
+                  <h1 className={"text-center text-white px-5 lg:px-0 font-semibold lg:text-2xl my-4"}>Kindly Follow Us on Different Social Medias</h1>
 
                   <div className={"rounded-full border-[1px] border-white"}></div>
 
-                  <div className={"flex flex-row justify-center space-x-16 my-6"}>
+                  <div className={"flex flex-row justify-center space-x-7 lg:space-x-16 px-5 lg:px-0 my-6"}>
 
                       <Link href={`https://instagram.com/durgesh_k_t`} rel={'noreferrer'} target={'_blank'}>
                           <Image className={"w-16 transition-all ease-linear hover:-translate-y-2"} src={instagramLogo} alt={"Instagram Logo"}/>
@@ -74,14 +69,13 @@ export default function ContactUsHub()
 
                   <div className={"rounded-full border-[1px] border-white"}></div>
 
-
-              </div>
+                </div>
 
                 <Tab.Group defaultIndex={1}>
 
                     <Tab.List className={"flex flex-row justify-center"}>
 
-                        <div className={"w-fit bg-primary-medium/30 p-2 rounded-xl space-x-2"}>
+                        <div className={"flex flex-col lg:flex-row justify-center w-fit bg-primary-medium/30 p-2 rounded-xl space-y-2 lg:space-x-2"}>
 
                             {/* Student Enquiry Button */}
                             <Tab className={"transition-all ease-linear w-80 rounded-xl py-2.5 text-xl font-medium text-secondary-dark outline-0 border-2 border-transparent" +
@@ -104,7 +98,7 @@ export default function ContactUsHub()
 
                         {/* Student Enquiry Form */}
                         <Tab.Panel>
-                            <div className={"flex flex-col justify-center items-center h-[46rem]"}>
+                            <div className={"flex flex-col justify-center items-center h-[38rem] lg:h-[46rem]"}>
                                 <div className={"drop-shadow-2xl bg-white w-[90%] rounded-3xl lg:px-20 lg:w-1/2 lg:py-5"}>
                                     <header className={" mt-5 text-center "}>
                                       <h1 className={"font-bold  text-2xl lg:text-3xl xl:text-5xl"}>Student Enquiry</h1>
@@ -155,7 +149,7 @@ export default function ContactUsHub()
 
                         {/* Corporate Query Form */}
                         <Tab.Panel>
-                            <div className={"flex flex-col justify-center items-center h-[65rem]"}>
+                            <div className={"flex flex-col justify-center items-center h-[58rem] lg:h-[65rem]"}>
                                 <div className={"drop-shadow-2xl bg-white w-[90%] rounded-3xl lg:px-20 lg:w-1/2 lg:py-5"}>
                                     <header className={" mt-5 text-center "}>
                                         <h1 className={"font-bold  text-2xl lg:text-3xl xl:text-5xl"}>Corporate Enquiry</h1>
@@ -274,7 +268,6 @@ export default function ContactUsHub()
 
                                             </div>
 
-
                                             {/*Organization Service Description*/}
                                             <div className={"relative flex flex-col mb-5 xl:mb-8"}>
                                                 <span className={"pl-3 absolute inset-y-2 left-0 flex items-center text-gray-500 flex flex-col "}>
@@ -284,9 +277,6 @@ export default function ContactUsHub()
                                                 </span>
                                                 <textarea rows="5" className={"resize-none pl-12 rounded-lg border-0 ring-2 ring-gray-400 transition hover:ring-primary-medium focus:ring-2 focus:ring-primary-dark transition-all ease-linear"} required placeholder={"Your Message"}/>
                                             </div>
-
-
-
 
                                             <button className={"my-5 bg-primary-medium hover:bg-primary-dark transition-all ease-linear py-3 rounded-lg "} type={"submit"}>Submit</button>
 
