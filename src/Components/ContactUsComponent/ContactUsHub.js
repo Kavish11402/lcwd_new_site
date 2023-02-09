@@ -75,7 +75,7 @@ export default function ContactUsHub()
 
                     <Tab.List className={"flex flex-row justify-center"}>
 
-                        <div className={"flex flex-col lg:flex-row justify-center w-fit bg-primary-medium/30 p-2 rounded-xl space-y-2 lg:space-x-2"}>
+                        <div className={"flex flex-col lg:flex-row justify-center w-fit bg-primary-medium/30 p-2 rounded-xl space-y-2 lg:space-y-0 lg:space-x-2 "}>
 
                             {/* Student Enquiry Button */}
                             <Tab className={"transition-all ease-linear w-80 rounded-xl py-2.5 text-xl font-medium text-secondary-dark outline-0 border-2 border-transparent" +

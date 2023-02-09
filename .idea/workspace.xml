@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="update">
+    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="ContactUs Page Fully Responsive">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/ContactUsComponent/ContactUsHub.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ContactUsComponent/ContactUsHub.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675687518605</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ContactUs Page Fully Responsive">
+      <created>1675940537034</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675940537034</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +278,7 @@
     <MESSAGE value="Home Page Complete" />
     <MESSAGE value="Code Decorated" />
     <MESSAGE value="ContactUs Page Semi Responsive Ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="ContactUs Page Semi Responsive Ready" />
+    <MESSAGE value="ContactUs Page Fully Responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="ContactUs Page Fully Responsive" />
   </component>
 </project>
