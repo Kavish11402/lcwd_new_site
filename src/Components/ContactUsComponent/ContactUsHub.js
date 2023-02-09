@@ -82,12 +82,15 @@ export default function ContactUsHub()
                     <Tab.List className={"flex flex-row justify-center"}>
 
                         <div className={"w-fit bg-primary-medium/30 p-2 rounded-xl space-x-2"}>
+
+                            {/* Student Enquiry Button */}
                             <Tab className={"transition-all ease-linear w-80 rounded-xl py-2.5 text-xl font-medium text-secondary-dark outline-0 border-2 border-transparent" +
                                             " ui-selected:bg-white ui-selected:shadow ui-selected:border-secondary-dark" +
                                             " ui-not-selected:text-gray-400 ui-not-selected:hover:bg-white/[0.5] ui-not-selected:hover:text-secondary-dark"}>
                                 Student Query
                             </Tab>
 
+                            {/* Corporate Query Button */}
                             <Tab className={"transition-all ease-linear w-80 rounded-xl py-2.5 text-xl font-medium text-secondary-dark outline-0 border-2 border-transparent" +
                                             " ui-selected:bg-white ui-selected:shadow ui-selected:border-secondary-dark" +
                                             " ui-not-selected:text-gray-400 ui-not-selected:hover:bg-white/[0.5] ui-not-selected:hover:text-secondary-dark"}>
@@ -99,6 +102,7 @@ export default function ContactUsHub()
 
                     <Tab.Panels className={"mt-4"}>
 
+                        {/* Student Enquiry Form */}
                         <Tab.Panel>
                             <div className={"flex flex-col justify-center items-center h-[46rem]"}>
                                 <div className={"drop-shadow-2xl bg-white w-[90%] rounded-3xl lg:px-20 lg:w-1/2 lg:py-5"}>
@@ -149,6 +153,7 @@ export default function ContactUsHub()
                           </div>
                         </Tab.Panel>
 
+                        {/* Corporate Query Form */}
                         <Tab.Panel>
                             <div className={"flex flex-col justify-center items-center h-[65rem]"}>
                                 <div className={"drop-shadow-2xl bg-white w-[90%] rounded-3xl lg:px-20 lg:w-1/2 lg:py-5"}>
@@ -194,13 +199,16 @@ export default function ContactUsHub()
                                             {/*Organization Contacting for what?*/}
                                             <div className={"relative flex flex-row mb-5 xl:mb-8"}>
 
-                                                <div className={"w-2/5"}> <h1>Why Choosing Us ?</h1> </div>
+                                                <div className={"w-2/5 flex flex-col justify-start"}>
+                                                    <h1>Why Choosing Us ?</h1>
+                                                    <p className={"text-sm text-gray-500"}>Choose any one</p>
+                                                </div>
 
                                                 <div className={"w-full"}>
                                                     <RadioGroup value={ selectedOption } onChange={ setSelectedOption }>
                                                         <div className="space-y-2">
 
-                                                            <RadioGroup.Option value={"Development"} className={({ active, checked }) => `   ${ active ? 'ring-2 ring-white ring-opacity-60 ring-offset-2 ring-offset-primary-light' : '' } ${ checked ? 'bg-primary-dark bg-opacity-75 text-white' : 'bg-white' } relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none`}>
+                                                            <RadioGroup.Option value={"Development"} className={({ checked }) => `${ checked ? 'bg-primary-dark bg-opacity-75 text-white' : 'bg-white' } relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none  ring-2 ring-white ring-opacity-60 ring-offset-2 ring-offset-primary-light`}>
                                                                 {({ checked }) => (
                                                                     <>
                                                                         <div className="flex w-full items-center justify-between">
@@ -215,7 +223,7 @@ export default function ContactUsHub()
                                                                 )}
                                                             </RadioGroup.Option>
 
-                                                            <RadioGroup.Option value={"Corporate Training"} className={({ active, checked }) => `   ${ active ? 'ring-2 ring-white ring-opacity-60 ring-offset-2 ring-offset-primary-light' : '' } ${ checked ? 'bg-primary-dark bg-opacity-75 text-white' : 'bg-white' } relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none`}>
+                                                            <RadioGroup.Option value={"Corporate Training"} className={({ checked }) => `${ checked ? 'bg-primary-dark bg-opacity-75 text-white' : 'bg-white' } relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none  ring-2 ring-white ring-opacity-60 ring-offset-2 ring-offset-primary-light`}>
                                                                 {({ checked }) => (
                                                                     <>
                                                                         <div className="flex w-full items-center justify-between">
@@ -230,7 +238,7 @@ export default function ContactUsHub()
                                                                 )}
                                                             </RadioGroup.Option>
 
-                                                            <RadioGroup.Option value={"College Training"} className={({ active, checked }) => `   ${ active ? 'ring-2 ring-white ring-opacity-60 ring-offset-2 ring-offset-primary-light' : '' } ${ checked ? 'bg-primary-dark bg-opacity-75 text-white' : 'bg-white' } relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none`}>
+                                                            <RadioGroup.Option value={"College Training"} className={({ checked }) => `${ checked ? 'bg-primary-dark bg-opacity-75 text-white' : 'bg-white' } relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none  ring-2 ring-white ring-opacity-60 ring-offset-2 ring-offset-primary-light`}>
                                                                 {({ checked }) => (
                                                                     <>
                                                                         <div className="flex w-full items-center justify-between">
@@ -245,7 +253,7 @@ export default function ContactUsHub()
                                                                 )}
                                                             </RadioGroup.Option>
 
-                                                            <RadioGroup.Option value={"Seminar"} className={({ active, checked }) => `   ${ active ? 'ring-2 ring-white ring-opacity-60 ring-offset-2 ring-offset-primary-light' : '' } ${ checked ? 'bg-primary-dark bg-opacity-75 text-white' : 'bg-white' } relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none`}>
+                                                            <RadioGroup.Option value={"Seminar"} className={({ checked }) => `${ checked ? 'bg-primary-dark bg-opacity-75 text-white' : 'bg-white' } relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none  ring-2 ring-white ring-opacity-60 ring-offset-2 ring-offset-primary-light`}>
                                                                 {({ checked }) => (
                                                                     <>
                                                                         <div className="flex w-full items-center justify-between">

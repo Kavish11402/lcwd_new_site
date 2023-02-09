@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/public/Assets/Images/contactBanner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/ContactUsComponent/ContactUsHub.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/ContactUsComponent/temp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/SingleSubCategoryComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ContactUs.js" afterDir="false" />
+    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="ContactUs Page Semi Responsive Ready">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/FooterComponents/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/FooterComponents/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/NavigationBar/DesktopNavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavigationBar/DesktopNavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/NavigationBar/MobileFriendlyNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavigationBar/MobileFriendlyNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ContactUsComponent/ContactUsHub.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ContactUsComponent/ContactUsHub.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +139,7 @@
       <workItem from="1675845413367" duration="369000" />
       <workItem from="1675845946617" duration="13702000" />
       <workItem from="1675879448179" duration="10605000" />
+      <workItem from="1675932951060" duration="768000" />
     </task>
     <task id="LOCAL-00001" summary="Home page Desktop ready">
       <created>1675078250937</created>
@@ -281,6 +270,7 @@
     <MESSAGE value="Nav Bar Altered" />
     <MESSAGE value="Home Page Complete" />
     <MESSAGE value="Code Decorated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code Decorated" />
+    <MESSAGE value="ContactUs Page Semi Responsive Ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="ContactUs Page Semi Responsive Ready" />
   </component>
 </project>
