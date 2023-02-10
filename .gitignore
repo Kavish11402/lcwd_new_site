@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+#JetBrains_WebStorm
+/.idea/
+
 # next.js
 /.next/
 /out/
