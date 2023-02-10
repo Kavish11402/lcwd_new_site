@@ -7,9 +7,16 @@ import facebookPhoto from"@/Assets/Icons/facebook.png";
 import linkedinPhoto from"@/Assets/Icons/linkedin.png";
 import youtubePhoto from"@/Assets/Icons/youtube.png";
 import SocialMediaFollowers from "@/Components/HomePageComponent/SingleReuseableComponents/SocialMediaFollowers";
+import CountUp from "react-countup";
+import ScrollTrigger from "react-scroll-trigger";
+import {useState} from "react";
 
 export default function YoutubeCount()
 {
+
+    const [viewsActiveStatus , setViewsActiveStatus] = useState(false);
+    const [socialMediaActiveStatus , setSocialMediaActiveStatus] = useState(false)
+
   return(
       <div className={"flex flex-col"}>
 
@@ -20,9 +27,11 @@ export default function YoutubeCount()
               <div className={"flex flex-col justify-center mt-8 lg:mt-0"} >
 
                   <div>
-                      <h1 className={"border-b-2 border-t-2 border-red-600 mx-auto w-fit py-2 px-7 text-center text-red-600 font font-semibold text-4xl lg:px-12 lg:text-5xl"}>
-                          2,00,00,000+
-                      </h1>
+                      <ScrollTrigger onEnter={()=>{setViewsActiveStatus(true)}} onExit={ ()=>{setViewsActiveStatus(false)} }>
+                          <h1 className={"border-b-2 border-t-2 border-red-600 mx-auto w-fit py-2 px-7 text-center text-red-600 font font-semibold text-4xl lg:px-12 lg:text-5xl"}>
+                              { viewsActiveStatus && <CountUp start={0} end={20000000} duration={2} delay={0.2} separator={","} /> }+
+                          </h1>
+                      </ScrollTrigger>
                   </div>
 
                   <div className={"mt-5"}>
@@ -59,23 +68,25 @@ export default function YoutubeCount()
           </div>
 
           {/*TODO -> Link To that social media handle lagao consult to durgesh sir*/}
-          <div className={"grid grid-cols-2 gap-3 py-10 px-4 bg-primary-light lg:flex lg:flex-row lg:justify-center"}>
+          <ScrollTrigger onEnter={()=>{setSocialMediaActiveStatus(true)}} onExit={ ()=>{setSocialMediaActiveStatus(false)} }>
+              <div className={"grid grid-cols-2 gap-3 py-10 px-4 bg-primary-light lg:flex lg:flex-row lg:justify-center"}>
 
-              <SocialMediaFollowers handleImage={youtubePhoto} handleFollowers={"175K+"} handleOtherInfo={"Subscribers"}/>
+                  <SocialMediaFollowers handleImage={youtubePhoto} handleFollowers={175} handleFollowersExtention={"K+"} handleOtherInfo={"Subscribers"} socialMediaActiveStatus={socialMediaActiveStatus}/>
 
-              <div className={"hidden lg:block rounded-full border-[1px] border-zinc-500 mx-7"}></div>
+                  <div className={"hidden lg:block rounded-full border-[1px] border-zinc-500 mx-7"}></div>
 
-              <SocialMediaFollowers handleImage={facebookPhoto} handleFollowers={"1.3K+"} handleOtherInfo={"Followers"}/>
+                  <SocialMediaFollowers handleImage={facebookPhoto} handleFollowers={1.3} handleFollowersExtention={"K+"} handleOtherInfo={"Followers"} socialMediaActiveStatus={socialMediaActiveStatus}/>
 
-              <div className={"hidden lg:block rounded-full border-[1px] border-zinc-500 mx-7"}></div>
+                  <div className={"hidden lg:block rounded-full border-[1px] border-zinc-500 mx-7"}></div>
 
-              <SocialMediaFollowers handleImage={instagramPhoto} handleFollowers={"5,926+"} handleOtherInfo={"Followers"}/>
+                  <SocialMediaFollowers handleImage={instagramPhoto} handleFollowers={5989} handleFollowersExtention={"+"} handleOtherInfo={"Followers"} socialMediaActiveStatus={socialMediaActiveStatus}/>
 
-              <div className={"hidden lg:block rounded-full border-[1px] border-zinc-500 mx-7"}></div>
+                  <div className={"hidden lg:block rounded-full border-[1px] border-zinc-500 mx-7"}></div>
 
-              <SocialMediaFollowers handleImage={linkedinPhoto} handleFollowers={"4,096+"} handleOtherInfo={"Followers"} />
+                  <SocialMediaFollowers handleImage={linkedinPhoto} handleFollowers={4096} handleFollowersExtention={"+"} handleOtherInfo={"Followers"} socialMediaActiveStatus={socialMediaActiveStatus}/>
 
-          </div>
+              </div>
+          </ScrollTrigger>
 
       </div>
   );

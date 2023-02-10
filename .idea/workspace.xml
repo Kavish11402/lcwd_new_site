@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="ContactUs Page Modified">
+    <list default="true" id="2a3ac0de-4e03-4f39-a473-8cd1375f0451" name="Changes" comment="Our Community Component Animation added">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09-Feb-23_02_46_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09-Feb-23_02_46_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09-Feb-23_02_47_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_09-Feb-23_02_47_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/SocialMediaFollowers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/SingleReuseableComponents/SocialMediaFollowers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/HomePageComponent/YoutubeCount.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HomePageComponent/YoutubeCount.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +34,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="kavish" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -141,6 +145,7 @@
       <workItem from="1675845946617" duration="13702000" />
       <workItem from="1675879448179" duration="10605000" />
       <workItem from="1675932951060" duration="768000" />
+      <workItem from="1676019697357" duration="9451000" />
     </task>
     <task id="LOCAL-00001" summary="Home page Desktop ready">
       <created>1675078250937</created>
@@ -248,18 +253,34 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="FILTERS">
+              <option name="COLUMN_ID_WIDTH">
                 <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="kavish" />
-                      </list>
-                    </value>
-                  </entry>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="44" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="147" />
+                  <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="24" />
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/kavish" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="kavish_local_repo/main" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -280,6 +301,7 @@
     <MESSAGE value="Code Decorated" />
     <MESSAGE value="ContactUs Page Semi Responsive Ready" />
     <MESSAGE value="ContactUs Page Fully Responsive" />
-    <option name="LAST_COMMIT_MESSAGE" value="ContactUs Page Fully Responsive" />
+    <MESSAGE value="Our Community Component Animation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Our Community Component Animation added" />
   </component>
 </project>
