@@ -21,7 +21,14 @@ export default function TopBanner()
   return(
       <div className={"flex flex-col lg:flex-row lg:h-[89vh]"}>
 
-          <div className={"px-3 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:px-0"}> <Image src={manWithComputer} alt={"Man With Computer"} className={"mx-auto w-[400px] md:w-[500px] lg:w-[400px] xl:w-auto"} /> </div>
+          <div className={"px-3 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:px-0"}>
+
+
+              <Image src={manWithComputer} alt={"Man With Computer"} className={"mx-auto w-[400px] md:w-[500px] lg:w-[400px] xl:w-auto"} />
+
+
+
+          </div>
 
           <div className={"hidden lg:inline-flex rounded-full lg:my-16 xl:my-24 border-[1px] border-zinc-500"}></div>
 
