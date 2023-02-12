@@ -18,11 +18,11 @@ export default function YoutubeCount()
     const [socialMediaActiveStatus , setSocialMediaActiveStatus] = useState(false)
 
   return(
-      <div className={"flex flex-col"}>
+      <div className={"flex flex-col py-10"}>
 
-          <h1 className={"text-center text-2xl font-bold underline underline-offset-8 text-primary-dark lg:text-5xl mt-4 lg:mt-14 mb-8"}> Our Community </h1>
+          <h1 className={"mb-10 lg:mb-16 text-center text-2xl font-bold underline underline-offset-8 text-primary-dark lg:text-5xl"}> Our Community </h1>
 
-          <div className={"flex flex-col-reverse justify-center text-gray-700 py-8 lg:flex-row lg:py-14"}>
+          <div className={"flex flex-col-reverse justify-center text-gray-700 lg:flex-row pb-10"}>
 
               <div className={"flex flex-col justify-center mt-8 lg:mt-0"} >
 

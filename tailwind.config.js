@@ -11,7 +11,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:{
-        "contactBannerImg" : "url('/Assets/Images/contactBanner.jpg')"
+        "contactBannerImg" : "url('/Assets/Images/contactBanner.jpg')",
+        "reviewBannerImg" : "url('/Assets/Images/reviewBanner.jpg')"
       },
       transitionDuration:{
         "400" : "400ms",

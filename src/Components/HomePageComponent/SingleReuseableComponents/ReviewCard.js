@@ -32,13 +32,11 @@ function StarGenerator(rating)
     )
 }
 
-
-
-export default function ReviewCard( { ReviewMsg , ReviewerImg , ReviewerName , ReviewerDesignation , RatingInInteger } )
+export default function ReviewCard( { ReviewMsg , ReviewerImg , ReviewerName , ReviewerDesignation , RatingInInteger , marginX , marginY } )
 {
 
     return(
-        <div className={"flex flex-col justify-center w-[45rem] py-12 px-5 rounded-3xl drop-shadow-2xl bg-stone-100 my-16 mx-28"}>
+        <div className={`flex flex-col justify-center w-[45rem] py-12 px-5 rounded-3xl drop-shadow-2xl bg-stone-200 mx-${marginX.toString()} my-${marginY.toString()}`}>
 
             {/* Review Message Here */}
             <h1 className={"text-xl text-gray-600 text-justify mb-8"}>{ReviewMsg}</h1>

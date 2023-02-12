@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function CourseCard({bannerImage , bannerTitle , bannerDescription , bannerVideoID })
 {
     return(
-        <div className={"mx-auto w-[20rem] flex flex-col justify-center py-5 px-3 rounded-xl drop-shadow-xl bg-stone-100 lg:w-[22rem] lg:px-6 lg:mx-0"} >
+        <div className={"border-b-primary-medium border-t-primary-medium border-b-4 border-t-4 mx-auto w-[20rem] flex flex-col justify-center py-5 px-3 rounded-xl drop-shadow-xl bg-stone-200 lg:w-[22rem] lg:px-6 lg:mx-0"} >
 
             <div className={"w-fit mx-auto"}>
                 <Image className={"w-72 rounded-xl"} src={bannerImage} alt={"Video Image"} />

@@ -10,22 +10,14 @@ export default function ReviewSection()
 {
 
     return(
-        <div className={"py-20"}>
+        <div className={"py-10"}>
 
 
 
-            <div> <h1 className={"text-center font-bold pb-10 underline underline-offset-8 text-primary-dark text-3xl lg:text-5xl pt-7"}> Recent Reviews </h1> </div>
+            {/*<h1 className={"text-center font-bold underline underline-offset-8 text-primary-dark text-3xl lg:text-5xl"}> Recent Reviews </h1>*/}
 
-            <Slider
-                slidesToShow={2}
-                autoplay={true}
-                speed={1500}
-                autoplaySpeed={5000}
-                responsive={
-                    [
-                        {  breakpoint: 480, settings: { slidesToShow: 1 } },
-                        { breakpoint: 768, settings: { slidesToShow: 1 } }
-                    ]} >
+            <Slider className={"w-[90%] mx-auto"} slidesToShow={2} autoplay={true} speed={1500} autoplaySpeed={5000} >
+
 
 
                 <ReviewCard
@@ -34,6 +26,8 @@ export default function ReviewSection()
                     ReviewerName={"Kavish Mathur"}
                     ReviewerDesignation={"Employee"}
                     RatingInInteger={4}
+                    marginX={20}
+                    marginY={16}
                 />
 
 
@@ -44,6 +38,8 @@ export default function ReviewSection()
                     ReviewerName={"Kavish Mathur"}
                     ReviewerDesignation={"Employee"}
                     RatingInInteger={2}
+                    marginX={20}
+                    marginY={16}
                 />
 
 
@@ -54,6 +50,8 @@ export default function ReviewSection()
                     ReviewerName={"Kavish Mathur"}
                     ReviewerDesignation={"Employee"}
                     RatingInInteger={4}
+                    marginX={20}
+                    marginY={16}
                 />
 
 
@@ -64,6 +62,8 @@ export default function ReviewSection()
                     ReviewerName={"Kavish Mathur"}
                     ReviewerDesignation={"Employee"}
                     RatingInInteger={5}
+                    marginX={20}
+                    marginY={16}
                 />
 
 
@@ -74,6 +74,8 @@ export default function ReviewSection()
                     ReviewerName={"Kavish Mathur"}
                     ReviewerDesignation={"Employee"}
                     RatingInInteger={1}
+                    marginX={20}
+                    marginY={16}
                 />
 
 
@@ -84,16 +86,19 @@ export default function ReviewSection()
                     ReviewerName={"Kavish Mathur"}
                     ReviewerDesignation={"Employee"}
                     RatingInInteger={3}
+                    marginX={20}
+                    marginY={16}
                 />
+
 
 
 
             </Slider>
 
-            <div className={"flex flex-row justify-end pr-14"}>
+            <div className={"flex flex-row justify-center lg:justify-end lg:pr-14"}>
 
-                <Link href={'/'}>
-                    <h1 className={"bg-primary-medium hover:bg-amber-300 transition-all ease-in-out rounded-md py-2 text-center text-md font-semibold text-zinc-600 lg:px-16 lg:text-xl"} >
+                <Link href={'/Reviews'}>
+                    <h1 className={"bg-secondary-medium hover:bg-amber-300 transition-all ease-in-out rounded-md py-2 text-center text-xs font-semibold text-black px-3 lg:px-10 lg:text-md"} >
                         More Reviews..
                     </h1>
                 </Link>
