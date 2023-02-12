@@ -26,8 +26,8 @@ export default function ReviewSection()
                     ReviewerName={"Kavish Mathur"}
                     ReviewerDesignation={"Employee"}
                     RatingInInteger={4}
-                    marginX={20}
-                    marginY={16}
+                    marginX={"mx-20"}
+                    marginY={"my-16"}
                 />
 
 
@@ -38,8 +38,8 @@ export default function ReviewSection()
                     ReviewerName={"Kavish Mathur"}
                     ReviewerDesignation={"Employee"}
                     RatingInInteger={2}
-                    marginX={20}
-                    marginY={16}
+                    marginX={"mx-20"}
+                    marginY={"my-16"}
                 />
 
 
@@ -50,8 +50,8 @@ export default function ReviewSection()
                     ReviewerName={"Kavish Mathur"}
                     ReviewerDesignation={"Employee"}
                     RatingInInteger={4}
-                    marginX={20}
-                    marginY={16}
+                    marginX={"mx-20"}
+                    marginY={"my-16"}
                 />
 
 
@@ -62,8 +62,8 @@ export default function ReviewSection()
                     ReviewerName={"Kavish Mathur"}
                     ReviewerDesignation={"Employee"}
                     RatingInInteger={5}
-                    marginX={20}
-                    marginY={16}
+                    marginX={"mx-20"}
+                    marginY={"my-16"}
                 />
 
 
@@ -74,8 +74,8 @@ export default function ReviewSection()
                     ReviewerName={"Kavish Mathur"}
                     ReviewerDesignation={"Employee"}
                     RatingInInteger={1}
-                    marginX={20}
-                    marginY={16}
+                    marginX={"mx-20"}
+                    marginY={"my-16"}
                 />
 
 
@@ -86,8 +86,8 @@ export default function ReviewSection()
                     ReviewerName={"Kavish Mathur"}
                     ReviewerDesignation={"Employee"}
                     RatingInInteger={3}
-                    marginX={20}
-                    marginY={16}
+                    marginX={"mx-20"}
+                    marginY={"my-16"}
                 />
 
 
