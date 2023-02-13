@@ -11,50 +11,59 @@ export default function ReviewHub()
       <HeroCard useCase={"bg-reviewBannerImg"} title={"Our Reviews"} subTitle={"Reviews given by out Students"} showSocialMedia={false} showLogo={true}/>
 
         <div className={"flex flex-col"}>
+
             <ReviewCard
                 ReviewMsg={"It was a great experience having love Durgesh sir as a mentor. Thank you sir for teaching DSA concepts in a graspable manner and supporting us throughout the course"}
                 ReviewerImg={durgesh_sir_DP}
                 ReviewerName={"Kavish Mathur"}
                 ReviewerDesignation={"Intern"}
                 RatingInInteger={3}
-                marginX={"auto"}
-                marginY={10}
+                marginFor={"reviewPage"}
             />
-            <ReviewCard
-                ReviewMsg={"It was a great experience having love Durgesh sir as a mentor. Thank you sir for teaching DSA concepts in a graspable manner and supporting us throughout the course"}
-                ReviewerImg={durgesh_sir_DP}
-                ReviewerName={"Durgesh Kumar Tiwari"}
-                ReviewerDesignation={"Director"}
-                RatingInInteger={5}
-                marginX={"auto"}
-                marginY={10}
-            />
+
             <ReviewCard
                 ReviewMsg={"It was a great experience having love Durgesh sir as a mentor. Thank you sir for teaching DSA concepts in a graspable manner and supporting us throughout the course"}
                 ReviewerImg={durgesh_sir_DP}
                 ReviewerName={"Kavish Mathur"}
-                ReviewerDesignation={"Employee"}
+                ReviewerDesignation={"Intern"}
                 RatingInInteger={3}
-                marginX={"auto"}
-                marginY={10}
+                marginFor={"reviewPage"}
             />
+
             <ReviewCard
                 ReviewMsg={"It was a great experience having love Durgesh sir as a mentor. Thank you sir for teaching DSA concepts in a graspable manner and supporting us throughout the course"}
                 ReviewerImg={durgesh_sir_DP}
                 ReviewerName={"Kavish Mathur"}
-                ReviewerDesignation={"Employee"}
+                ReviewerDesignation={"Intern"}
                 RatingInInteger={3}
-                marginX={"auto"}
-                marginY={10}
+                marginFor={"reviewPage"}
             />
+
             <ReviewCard
                 ReviewMsg={"It was a great experience having love Durgesh sir as a mentor. Thank you sir for teaching DSA concepts in a graspable manner and supporting us throughout the course"}
                 ReviewerImg={durgesh_sir_DP}
                 ReviewerName={"Kavish Mathur"}
-                ReviewerDesignation={"Employee"}
+                ReviewerDesignation={"Intern"}
                 RatingInInteger={3}
-                marginX={"auto"}
-                marginY={10}
+                marginFor={"reviewPage"}
+            />
+
+            <ReviewCard
+                ReviewMsg={"It was a great experience having love Durgesh sir as a mentor. Thank you sir for teaching DSA concepts in a graspable manner and supporting us throughout the course"}
+                ReviewerImg={durgesh_sir_DP}
+                ReviewerName={"Kavish Mathur"}
+                ReviewerDesignation={"Intern"}
+                RatingInInteger={3}
+                marginFor={"reviewPage"}
+            />
+
+            <ReviewCard
+                ReviewMsg={"It was a great experience having love Durgesh sir as a mentor. Thank you sir for teaching DSA concepts in a graspable manner and supporting us throughout the course"}
+                ReviewerImg={durgesh_sir_DP}
+                ReviewerName={"Kavish Mathur"}
+                ReviewerDesignation={"Intern"}
+                RatingInInteger={3}
+                marginFor={"reviewPage"}
             />
 
         </div>

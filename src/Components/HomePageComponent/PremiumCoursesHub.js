@@ -38,7 +38,7 @@ export default function PremiumCoursesHub()
 
         <div className={"flex flex-row justify-center lg:justify-end lg:pr-14"}>
           <Link href={'/FreeCourses'}>
-            <h1 className={"bg-secondary-medium hover:bg-amber-300 transition-all ease-in-out rounded-md py-2 text-center text-xs font-semibold text-black px-3 lg:px-10 lg:text-md"} >
+            <h1 className={"bg-secondary-dark hover:bg-secondary-medium transition-all ease-in-out rounded-md py-2 text-center text-xs font-semibold text-white px-3 lg:px-10 lg:text-md"} >
               More Premium Courses..
             </h1>
           </Link>
