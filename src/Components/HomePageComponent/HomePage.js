@@ -6,13 +6,14 @@ import FreeCoursesHub from "@/Components/HomePageComponent/FreeCoursesHub";
 import ReviewSection from "@/Components/HomePageComponent/ReviewSection";
 import PremiumCoursesHub from "@/Components/HomePageComponent/PremiumCoursesHub";
 import StudentsPlaced from "@/Components/HomePageComponent/StudentsPlaced";
+import OurServices from "@/Components/HomePageComponent/OurServices";
 
 export default function HomePage()
 {
   return(
       <>
           <TopBanner/>
-          {/* TODO -> Add Our Services Here */}
+          <OurServices/>
           <WhyLCWD/>
           <YoutubeCount/>
           <PremiumCoursesHub/>
@@ -20,8 +21,6 @@ export default function HomePage()
           <StudentsPlaced/>
           <ReviewSection/>
           <LCWDStrategy/>
-
-          {/*<Top4LatestVideo/>*/}
       </>
   );
 }

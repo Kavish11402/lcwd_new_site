@@ -40,7 +40,7 @@ export default function TopBanner()
 
               <div className={"mt-1 flex flex-row justify-center font-semibold text-2xl lg:text-3xl xl:text-4xl text-zinc-600"}>
                   <h1 className={"text-center mr-2"}> Master </h1>
-                  <h1 className={"text-center"} ref={typedText} >  </h1>
+                  <h1 className={"text-center text-primary-dark"} ref={typedText} >  </h1>
               </div>
 
               <p className={"mt-4 text-center mx-auto text-zinc-600 lg:mt-7 xl:mt-10 sm:w-[700px] lg:w-[90%] lg:text-base xl:text-lg lg:mx-auto xl:font-semibold xl-w-4/5"}>
