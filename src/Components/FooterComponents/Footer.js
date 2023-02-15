@@ -90,7 +90,7 @@ export default function Footer()
               </div>
 
               {/* Horizontal Divider Line */}
-              <div className={"hidden lg:block rounded-full my-5 border-[1px] border-black mx-20"}></div>
+              <div className={"hidden lg:block rounded-full my-5 border border-black mx-20"}></div>
 
               {/* Get in Touch Section */}
               <div className={"flex flex-col justify-around py-4 px-3 mx-auto lg:mx-0"}>
@@ -126,7 +126,7 @@ export default function Footer()
           </div>
 
           {/* Horizontal Line Divider */}
-          <div className={"border-[1px] border-black my-2 lg:mx-20 lg:my-6"}></div>
+          <div className={"border border-black my-2 lg:mx-20 lg:my-6"}></div>
 
           {/* Copyright info section */}
           <div className={"flex flex-col justify-center text-sm lg:flex-row lg:text-lg"}>

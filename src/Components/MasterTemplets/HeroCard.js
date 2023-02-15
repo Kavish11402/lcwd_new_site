@@ -37,7 +37,7 @@ export default function HeroCard({ title , subTitle , useCase , showSocialMedia 
                     {
                         showSocialMedia&&
                             <>
-                                <div className={"rounded-full border-[1px] border-white"}></div>
+                                <div className={"rounded-full border border-white"}></div>
 
                                 <div className={"flex flex-row justify-center space-x-7 lg:space-x-16 px-5 lg:px-0 my-6"}>
 
@@ -59,7 +59,7 @@ export default function HeroCard({ title , subTitle , useCase , showSocialMedia 
 
                                 </div>
 
-                                <div className={"rounded-full border-[1px] border-white"}></div>
+                                <div className={"rounded-full border border-white"}></div>
                             </>
 
                     }

@@ -9,7 +9,7 @@ export default function CourseCard({bannerImage , bannerTitle , bannerDescriptio
                 <Image className={"w-72 rounded-xl"} src={bannerImage} alt={"Video Image"} />
             </div>
 
-            <div className={"mt-8 mb-3 rounded-full border-[1px] border-gray-400 mx-3"}></div>
+            <div className={"mt-8 mb-3 rounded-full border border-gray-400 mx-3"}></div>
 
             <div className={"text-justify w-72 font-bold text-lg lg:text-xl mx-auto"}>
                 {bannerTitle}
@@ -19,7 +19,7 @@ export default function CourseCard({bannerImage , bannerTitle , bannerDescriptio
                 {bannerDescription}
             </div>
 
-            <div className={"mb-6 mt-3 rounded-full border-[1px] border-gray-400 mx-3"}></div>
+            <div className={"mb-6 mt-3 rounded-full border border-gray-400 mx-3"}></div>
 
             <div>
                 <Link target={`_blank`} href={`https://www.youtube.com/watch?v=${bannerVideoID}`}>

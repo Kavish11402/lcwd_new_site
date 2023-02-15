@@ -59,7 +59,7 @@ export default function YoutubeCount()
 
               </div>
 
-              <div className={"hidden lg:block rounded-full lg:mx-24 xl:mx-36 border-[1px] my-10 border-zinc-400"}></div>
+              <div className={"hidden lg:block rounded-full lg:mx-24 xl:mx-36 border my-10 border-zinc-400"}></div>
 
               <div>
                   <Image className={"rounded-full w-64 lg:w-80 lg:mx-0 mx-auto"} src={durgesh_sir_DP} alt={"Durgesh_Sir_Photo"} />
@@ -73,15 +73,15 @@ export default function YoutubeCount()
 
                   <SocialMediaFollowers handleImage={youtubePhoto} handleFollowers={175} handleFollowersExtention={"K+"} handleOtherInfo={"Subscribers"} socialMediaActiveStatus={socialMediaActiveStatus}/>
 
-                  <div className={"hidden lg:block rounded-full border-[1px] border-zinc-500 mx-7"}></div>
+                  <div className={"hidden lg:block rounded-full border border-zinc-500 mx-7"}></div>
 
                   <SocialMediaFollowers handleImage={facebookPhoto} handleFollowers={1.3} handleFollowersExtention={"K+"} handleOtherInfo={"Followers"} socialMediaActiveStatus={socialMediaActiveStatus}/>
 
-                  <div className={"hidden lg:block rounded-full border-[1px] border-zinc-500 mx-7"}></div>
+                  <div className={"hidden lg:block rounded-full border border-zinc-500 mx-7"}></div>
 
                   <SocialMediaFollowers handleImage={instagramPhoto} handleFollowers={5989} handleFollowersExtention={"+"} handleOtherInfo={"Followers"} socialMediaActiveStatus={socialMediaActiveStatus}/>
 
-                  <div className={"hidden lg:block rounded-full border-[1px] border-zinc-500 mx-7"}></div>
+                  <div className={"hidden lg:block rounded-full border border-zinc-500 mx-7"}></div>
 
                   <SocialMediaFollowers handleImage={linkedinPhoto} handleFollowers={4096} handleFollowersExtention={"+"} handleOtherInfo={"Followers"} socialMediaActiveStatus={socialMediaActiveStatus}/>
 

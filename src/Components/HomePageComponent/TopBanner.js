@@ -30,7 +30,7 @@ export default function TopBanner()
 
           </div>
 
-          <div className={"hidden lg:inline-flex rounded-full lg:my-16 xl:my-24 border-[1px] border-zinc-500"}></div>
+          <div className={"hidden lg:inline-flex rounded-full lg:my-16 xl:my-24 border border-zinc-500"}></div>
 
           <div className={"flex flex-col justify-center lg:w-1/2"}>
 

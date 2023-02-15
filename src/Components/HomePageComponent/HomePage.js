@@ -5,6 +5,7 @@ import YoutubeCount from "@/Components/HomePageComponent/YoutubeCount";
 import FreeCoursesHub from "@/Components/HomePageComponent/FreeCoursesHub";
 import ReviewSection from "@/Components/HomePageComponent/ReviewSection";
 import PremiumCoursesHub from "@/Components/HomePageComponent/PremiumCoursesHub";
+import StudentsPlaced from "@/Components/HomePageComponent/StudentsPlaced";
 
 export default function HomePage()
 {
@@ -16,7 +17,7 @@ export default function HomePage()
           <YoutubeCount/>
           <PremiumCoursesHub/>
           <FreeCoursesHub/>
-          {/* TODO -> Add Students Placed Component here */}
+          <StudentsPlaced/>
           <ReviewSection/>
           <LCWDStrategy/>
 
