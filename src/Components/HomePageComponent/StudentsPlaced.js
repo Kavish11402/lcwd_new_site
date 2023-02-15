@@ -24,9 +24,15 @@ export default function StudentsPlaced()
           <div className={"relative w-fit"}>
 
               <div className={"absolute top-0 bottom-0 left-0 right-0 flex flex-col justify-center"}>
-                  <div className={"border-[13px] lg:border-[25px] border-dotted animate-Border-Rotation border-secondary-dark mx-auto w-fit p-8 lg:p-12 rounded-full"}>
+
+
+                  <div className={"border-[10px] lg:border-[25px] border-dotted animate-Border-Rotation border-secondary-dark mx-auto w-fit p-8 lg:p-12 rounded-full"}>
                       <Image className={"w-[8rem] lg:w-[11rem] animate-Image-Rotation"} src={lcwdLogo} alt={"LCWD Logo"}/>
                   </div>
+
+
+
+
               </div>
 
               <div className={"w-screen lg:w-fit"}>
