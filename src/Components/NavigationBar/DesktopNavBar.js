@@ -25,7 +25,9 @@ export default function DesktopNavBar()
                       Home
                   </Link>
 
-                  <h1 className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>Blogs</h1>
+                  <Link className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"} href={"/blogs"}>
+                      Blogs
+                  </Link>
 
                   <Link className={"mr-5 h-fit my-auto text-red-600 transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"} target={'_blank'} href={"https://courses.learncodewithdurgesh.com/learn"}>
                       Premium Courses

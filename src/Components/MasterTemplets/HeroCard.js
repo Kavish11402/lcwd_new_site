@@ -39,7 +39,7 @@ export default function HeroCard({ title , subTitle , useCase , showSocialMedia 
                             <>
                                 <div className={"rounded-full border border-white"}></div>
 
-                                <div className={"flex flex-row justify-center space-x-7 lg:space-x-16 px-5 lg:px-0 my-6"}>
+                                <div className={"flex flex-row justify-center space-x-7 lg:space-x-16 px-5  my-6"}>
 
                                     <Link href={`https://instagram.com/durgesh_k_t`} rel={'noreferrer'} target={'_blank'}>
                                         <Image className={"w-16 transition-all ease-linear hover:-translate-y-2"} src={instagramLogo} alt={"Instagram Logo"}/>

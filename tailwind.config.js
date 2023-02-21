@@ -42,7 +42,8 @@ module.exports = {
 
       backgroundImage:{
         "contactBannerImg" : "url('/Assets/Images/contactBanner.jpg')",
-        "reviewBannerImg" : "url('/Assets/Images/reviewBanner.jpg')"
+        "reviewBannerImg" : "url('/Assets/Images/reviewBanner.jpg')",
+        "blogBannerImg" : "url('/Assets/Images/blogBanner.jpg')",
       },
       transitionDuration:{
         "400" : "400ms",

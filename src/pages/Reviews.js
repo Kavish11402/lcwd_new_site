@@ -3,6 +3,9 @@ import ReviewHub from "@/Components/ReviewComponent/ReviewHub";
 export default function Reviews()
 {
   return(
-      <ReviewHub/>
+      <>
+        {/* TODO -> ADD HEAD TAG HERE ASAP */}
+        <ReviewHub/>
+      </>
   );
 }

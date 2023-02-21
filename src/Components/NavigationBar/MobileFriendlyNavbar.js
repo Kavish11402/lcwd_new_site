@@ -43,7 +43,9 @@ export default function MobileFriendlyNavbar( { toggle , navbarState } )
                     <h1 className={"mx-auto w-fit text-lg font-semibold"}>Home</h1>
                 </Link>
 
-                <h1 className={"mx-auto w-fit text-lg font-semibold"}>Blogs</h1>
+                <Link href={"/blogs"} onClick={ ()=>{ toggle() } } >
+                    <h1 className={"mx-auto w-fit text-lg font-semibold"}>Blogs</h1>
+                </Link>
 
                 <Link target={'_blank'} href={"https://courses.learncodewithdurgesh.com/learn"} onClick={ ()=>{ toggle() } }>
                     <h1 className={"mx-auto w-fit text-lg font-semibold"}>Premium Courses</h1>
