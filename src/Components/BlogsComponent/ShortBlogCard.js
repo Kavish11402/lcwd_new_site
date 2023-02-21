@@ -5,7 +5,7 @@ export default function ShortBlogCard( { blogTitle , blogShortDescription } )
   return(
       <div className={"py-2 rounded-xl drop-shadow-xl bg-stone-100 px-6 py-8 space-y-7"} >
 
-          <div className={"text-center font-bold text-4xl"}>
+          <div className={"text-center font-bold text-3xl md:text-4xl"}>
             {blogTitle}
         </div>
 
@@ -15,10 +15,12 @@ export default function ShortBlogCard( { blogTitle , blogShortDescription } )
 
           <div className={"flex flex-row justify-end"}>
 
-              <Link href={`/blogs/${ blogTitle.toString().toLowerCase().split(" ").join("-") }`}>
-                  <h1 className={"w-96 bg-primary-medium hover:bg-primary-light transition-all ease-in-out rounded-lg py-2 text-center text-md font-semibold text-zinc-600 lg:text-xl"} >
-                  Read Full Article ...
-              </h1>
+              <Link href={`/blogs/${blogTitle}`}>
+
+                  <h1 className={"w-48 md:w-96 bg-primary-medium hover:bg-primary-light transition-all ease-in-out rounded-lg py-2 text-center text-base font-semibold text-zinc-600 lg:text-xl"} >
+                      Read Full Article ...
+                  </h1>
+
               </Link>
 
 
