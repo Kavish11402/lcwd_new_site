@@ -16,21 +16,24 @@ export default function FreeCoursesHub()
                   bannerImage={bannerBg}
                   bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
                   bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
-                  bannerVideoID={"ekDGDYLEw7Y"}
+                  fullLink={"https://www.youtube.com/watch?v=ekDGDYLEw7Y"}
+                  activeStatus={true}
               />
 
               <CourseCard
                   bannerImage={bannerBg}
                   bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
                   bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
-                  bannerVideoID={"ekDGDYLEw7Y"}
+                  fullLink={"https://www.youtube.com/watch?v=ekDGDYLEw7Y"}
+                  activeStatus={true}
               />
 
               <CourseCard
                   bannerImage={bannerBg}
                   bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
                   bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
-                  bannerVideoID={"ekDGDYLEw7Y"}
+                  fullLink={"https://www.youtube.com/watch?v=ekDGDYLEw7Y"}
+                  activeStatus={true}
               />
 
           </div>

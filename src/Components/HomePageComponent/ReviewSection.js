@@ -1,6 +1,4 @@
 import ReviewCard from "@/Components/HomePageComponent/SingleReuseableComponents/ReviewCard";
-import durgesh_sir_DP from "@/Assets/Images/durgesh_sir.webp"
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -32,56 +30,50 @@ export default function ReviewSection()
             >
 
                 <ReviewCard
-                    ReviewMsg={"It was a great experience having love Durgesh sir as a mentor. Thank you sir for teaching DSA concepts in a graspable manner and supporting us throughout the course"}
-                    ReviewerImg={durgesh_sir_DP}
-                    ReviewerName={"Kavish Mathur"}
-                    ReviewerDesignation={"Employee"}
-                    RatingInInteger={4}
-                    marginFor={"homePageReview"}
-                />
-
-                <ReviewCard
-                    ReviewMsg={"It was a great experience having love Durgesh sir as a mentor. Thank you sir for teaching DSA concepts in a graspable manner and supporting us throughout the course"}
-                    ReviewerImg={durgesh_sir_DP}
-                    ReviewerName={"Kavish Mathur"}
-                    ReviewerDesignation={"Employee"}
-                    RatingInInteger={2}
-                    marginFor={"homePageReview"}
-                />
-
-                <ReviewCard
-                    ReviewMsg={"It was a great experience having love Durgesh sir as a mentor. Thank you sir for teaching DSA concepts in a graspable manner and supporting us throughout the course"}
-                    ReviewerImg={durgesh_sir_DP}
-                    ReviewerName={"Kavish Mathur"}
-                    ReviewerDesignation={"Employee"}
-                    RatingInInteger={4}
-                    marginFor={"homePageReview"}
-                />
-
-                <ReviewCard
-                    ReviewMsg={"It was a great experience having love Durgesh sir as a mentor. Thank you sir for teaching DSA concepts in a graspable manner and supporting us throughout the course"}
-                    ReviewerImg={durgesh_sir_DP}
-                    ReviewerName={"Kavish Mathur"}
-                    ReviewerDesignation={"Employee"}
+                    ReviewMsg={"Hi Sir, I completed this course with project, you have provided awesome contents on this course. Thank you so much.... please bring for this frontEnd course from scratch in ReactJs."}
+                    ReviewerName={"Vithal Nagappa Nivargi"}
+                    ReviewerDesignation={"Student"}
                     RatingInInteger={5}
                     marginFor={"homePageReview"}
                 />
 
                 <ReviewCard
-                    ReviewMsg={"It was a great experience having love Durgesh sir as a mentor. Thank you sir for teaching DSA concepts in a graspable manner and supporting us throughout the course"}
-                    ReviewerImg={durgesh_sir_DP}
-                    ReviewerName={"Kavish Mathur"}
-                    ReviewerDesignation={"Employee"}
-                    RatingInInteger={1}
+                    ReviewMsg={"Excellent teaching. I really enjoyed this course and the format it was presented in. In-depth concepts of spring boot & micros services have been clearly explained. The concepts were explained in a very detailed way using real-world examples. Thanks for this beautiful course."}
+                    ReviewerName={"Chandrashekhar Sharnagat"}
+                    ReviewerDesignation={"Student"}
+                    RatingInInteger={3}
                     marginFor={"homePageReview"}
                 />
 
                 <ReviewCard
-                    ReviewMsg={"It was a great experience having love Durgesh sir as a mentor. Thank you sir for teaching DSA concepts in a graspable manner and supporting us throughout the course"}
-                    ReviewerImg={durgesh_sir_DP}
-                    ReviewerName={"Kavish Mathur"}
-                    ReviewerDesignation={"Employee"}
-                    RatingInInteger={3}
+                    ReviewMsg={"Best Course👌👌👌 जीसको भी spring SpringBoot सिखना होगा durgesh sir से ही सिखे.👍 आसन भाषा मे पढायी है सब चिझे बेहेतरीन कोर्से❤‍🔥☝🏻🔥"}
+                    ReviewerName={"Rakesh Kawade"}
+                    ReviewerDesignation={"Student"}
+                    RatingInInteger={5}
+                    marginFor={"homePageReview"}
+                />
+
+                <ReviewCard
+                    ReviewMsg={"I learn lots of thing by this course. concept are very depth on spring boot. Thanks"}
+                    ReviewerName={"Vikash Mishra"}
+                    ReviewerDesignation={"Student"}
+                    RatingInInteger={5}
+                    marginFor={"homePageReview"}
+                />
+
+                <ReviewCard
+                    ReviewMsg={"Trainer is very friendly with all of us which is very great as we are not hesitating to ask any doubts which makes this training complete in a very cool way. Thanks for the  great  effort you put to explain all the things in a very clear and concise way."}
+                    ReviewerName={"Afjal Karim Ansari"}
+                    ReviewerDesignation={"Student"}
+                    RatingInInteger={5}
+                    marginFor={"homePageReview"}
+                />
+
+                <ReviewCard
+                    ReviewMsg={"Thank you so much sir, you have covered a lot of topics and continuously providing us with new other topics. Since I am a new learner, I found your videos and this batch very helpful. Your detailed explanation and patience are your strength, keep it up! Best wishes to you and your team!"}
+                    ReviewerName={"Pinke.chowdhury"}
+                    ReviewerDesignation={"Student"}
+                    RatingInInteger={5}
                     marginFor={"homePageReview"}
                 />
 

@@ -1,5 +1,6 @@
 import CourseCard from "@/Components/HomePageComponent/SingleReuseableComponents/CourseCard";
 import bannerBg from "@/Assets/Images/banner_bg.jpg";
+import Premium_SpringBoot from "@/Assets/Images/Premium_SpringBoot.png";
 import Link from "next/link";
 
 export default function PremiumCoursesHub()
@@ -14,30 +15,31 @@ export default function PremiumCoursesHub()
         <div className={"mb-9 lg:mb-12 flex flex-col lg:flex-row justify-center space-y-10 lg:space-y-0 lg:space-x-40"}>
 
           <CourseCard
-              bannerImage={bannerBg}
-              bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
-              bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
-              bannerVideoID={"ekDGDYLEw7Y"}
+              bannerImage={Premium_SpringBoot}
+              bannerTitle={"Master Spring Boot with Real time Project"}
+              bannerDescription={"In this course, you will learn everything you need to know about developing applications with Spring Boot, the popular Java framework for building microservices and web applications. (Backend with Java)"}
+              fullLink={"https://courses.learncodewithdurgesh.com/learn/Master-Spring-Boot-With-Project"}
+              activeStatus={true}
           />
 
           <CourseCard
               bannerImage={bannerBg}
               bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
               bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
-              bannerVideoID={"ekDGDYLEw7Y"}
+              activeStatus={false}
           />
 
           <CourseCard
               bannerImage={bannerBg}
               bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
               bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
-              bannerVideoID={"ekDGDYLEw7Y"}
+              activeStatus={false}
           />
 
         </div>
 
         <div className={"flex flex-row justify-center lg:justify-end lg:pr-14"}>
-          <Link href={'/FreeCourses'}>
+          <Link href={'https://courses.learncodewithdurgesh.com/learn'}>
             <h1 className={"bg-secondary-dark hover:bg-secondary-medium transition-all ease-in-out rounded-md py-2 text-center text-xs font-semibold text-white px-3 lg:px-10 lg:text-md"} >
               More Premium Courses..
             </h1>

@@ -1,14 +1,15 @@
 import ExplanationCard from "@/Components/HomePageComponent/SingleReuseableComponents/ExplanationCard";
-import writeCode from "@/Assets/Icons/writeCode.svg";
-import buildSomething from "@/Assets/Icons/buildSomething.svg";
-import watchVideo from "@/Assets/Icons/watchVideo.svg";
+
+import writeCode from "@/Assets/Icons/writeCode.png";
+import buildSomething from "@/Assets/Icons/buildSomething.png";
+import watchVideo from "@/Assets/Icons/watchVideo.png";
 
 export default function LCWDStrategy()
 {
   return(
       <div className={"flex flex-col justify-center py-10 mb-24"}>
 
-          <h1 className={"mb-10 lg:mb-16 text-center text-2xl font-bold underline underline-offset-8 text-primary-dark lg:text-5xl"}> Why Learn Code With Durgesh ? </h1>
+          <h1 className={"mb-10 lg:mb-16 text-center text-2xl font-bold underline underline-offset-8 text-primary-dark lg:text-5xl"}> We follow simple learning strategy </h1>
 
           <div className={"flex flex-col lg:flex-row justify-center space-y-10 lg:space-y-0 lg:space-x-20"}>
 

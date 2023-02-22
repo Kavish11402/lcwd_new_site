@@ -1,6 +1,7 @@
 import ExplanationCard from "@/Components/HomePageComponent/SingleReuseableComponents/ExplanationCard";
-import cardIcon from "@/Assets/Icons/icons8-presentation-100.png";
-
+import bestExplanation from "@/Assets/Icons/businessman.png";
+import qualityContent from "@/Assets/Icons/content.png";
+import languages from "@/Assets/Icons/languages.png";
 export default function WhyLCWD()
 {
   return(
@@ -10,9 +11,9 @@ export default function WhyLCWD()
 
           <div className={"flex flex-col lg:flex-row justify-center space-y-10 lg:space-y-0 lg:space-x-20"}>
 
-              <ExplanationCard icon={cardIcon} title={"Best Explanation"} description={"Each and every concepts are well explained so that you can learn effectively."}/>
-              <ExplanationCard icon={cardIcon} title={"Best Explanation"} description={"Each and every concepts are well explained so that you can learn effectively."}/>
-              <ExplanationCard icon={cardIcon} title={"Best Explanation"} description={"Each and every concepts are well explained so that you can learn effectively."}/>
+              <ExplanationCard icon={languages} title={"Courses In Hindi"} description={"Each and every concepts are well explained so that you can learn effectively."}/>
+              <ExplanationCard icon={qualityContent} title={"Quality Content"} description={"Each and every concepts are well explained so that you can learn effectively."}/>
+              <ExplanationCard icon={bestExplanation} title={"Best Explanation"} description={"Each and every concepts are well explained so that you can learn effectively."}/>
 
           </div>
 

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 
 function OutlineStar()
 {
@@ -39,13 +37,13 @@ function StarGenerator(rating)
     )
 }
 
-export default function ReviewCard( { ReviewMsg , ReviewerImg , ReviewerName , ReviewerDesignation , RatingInInteger , marginFor } )
+export default function ReviewCard( { ReviewMsg  , ReviewerName , ReviewerDesignation , RatingInInteger , marginFor } )
 {
 
     return(
-        <div className={`w-[20rem] sm:w-[35rem] lg:w-[45rem]
+        <div className={`w-[20rem] sm:w-[35rem] lg:w-[45rem] min-h-[35rem] lg:min-h-[20rem]
                         drop-shadow-xl lg:drop-shadow-2xl 
-                        flex flex-col justify-center py-12 px-5 rounded-3xl bg-stone-200 
+                        flex flex-col justify-between py-12 px-5 rounded-3xl bg-stone-200 
                         ${ marginFor==="homePageReview" ? "mx-auto my-6 lg:mx-20 lg:my-16" : "" }
                         ${ marginFor==="reviewPage" ? "mx-auto my-10" : "" }
                         `}
@@ -60,7 +58,10 @@ export default function ReviewCard( { ReviewMsg , ReviewerImg , ReviewerName , R
                 <div className={"flex flex-row justify-center"}>
 
                     {/* Student's Image */}
-                    <Image className={"rounded-full w-20 lg:w-24"} src={ReviewerImg} alt={"Reviewer Image"}/>
+                    {/*<Image className={"rounded-full w-20 lg:w-24"} src={ReviewerImg} alt={"Reviewer Image"}/>*/}
+                    <div className={"rounded-full w-20 h-20 bg-gradient-to-br from-white via-violet-400 to-purple-500 flex flex-col justify-center"}>
+                        <h1 className={"w-fit mx-auto text-4xl font-semibold text-white"}>{ReviewerName.substring(0,1)}</h1>
+                    </div>
 
 
                     {/* Student Name & Designation */}
