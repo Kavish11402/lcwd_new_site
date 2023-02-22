@@ -1,5 +1,4 @@
 import ExplanationCard from "@/Components/HomePageComponent/SingleReuseableComponents/ExplanationCard";
-
 import cardIcon from "@/Assets/Icons/icons8-presentation-100.png";
 
 export default function WhyLCWD()
