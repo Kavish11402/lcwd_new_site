@@ -35,7 +35,7 @@ export default function DesktopNavBar()
 
                   <h1 className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>Free Courses</h1>
 
-                  <h1 className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"}>About</h1>
+                  <Link className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"} href={"/aboutus"}>About</Link>
 
 
                   <Link className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"} href={"/ContactUs"}>

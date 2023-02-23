@@ -36,12 +36,12 @@ export default function CourseCard({bannerImage , bannerTitle , bannerDescriptio
                 {
                     activeStatus?
                         <Link target={`_blank`} href={`${fullLink}`}>
-                            <h1 className={"bg-primary-medium hover:bg-amber-300 transition-all ease-in-out rounded-md py-2 text-center text-md font-semibold text-zinc-600 lg:px-16 lg:text-xl"} >
+                            <h1 title={"Click To Checkout This Course"} className={"bg-primary-medium hover:bg-amber-300 transition-all ease-in-out rounded-md py-2 text-center text-md font-semibold text-zinc-600 lg:px-16 lg:text-xl"} >
                                 Go To Video
                             </h1>
                         </Link>
                         :
-                        <h1 className={"cursor-not-allowed bg-stone-400 transition-all ease-in-out rounded-md py-2 text-center text-md font-semibold text-zinc-600 lg:px-16 lg:text-xl"} >
+                        <h1 title={"This Course Will be Launched Soon"} className={"cursor-not-allowed bg-stone-400 transition-all ease-in-out rounded-md py-2 text-center text-md font-semibold text-zinc-600 lg:px-16 lg:text-xl"} >
                             Go To Video
                         </h1>
                 }

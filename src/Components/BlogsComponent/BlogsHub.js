@@ -8,7 +8,7 @@ export default function BlogsHub()
 {
     return(
         <div className={"w-screen lg:w-auto overflow-x-clip lg:overflow-x-visible"}>
-            <HeroCard showLogo={false} useCase={"bg-blogBannerImg"} title={"Blogs"} subTitle={"Exiting And Hot Topics in Detail"} showSocialMedia={true} />
+            <HeroCard showLogo={false} backgroundCss={"bg-blogBannerImg"} title={"Blogs"} subTitle={"Exiting And Hot Topics in Detail"} showSocialMedia={true} />
 
             <div className={"flex flex-col md:flex-row"}>
 

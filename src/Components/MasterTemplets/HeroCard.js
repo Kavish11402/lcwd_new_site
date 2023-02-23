@@ -7,19 +7,19 @@ import linkedinLogo from "@/Assets/Icons/linkedin.png";
 import facebookLogo from "@/Assets/Icons/facebook.png";
 
 
-function bgGenerator(useCase)
+function bgGenerator(backgroundCss)
 {
     return(
-        <div className={"absolute -z-30 top-0 right-0 left-0 bg-bottom bg-cover brightness-90 h-[36rem] "+useCase.toString()}></div>
+        <div className={"absolute -z-30 top-0 right-0 left-0 bg-bottom bg-cover brightness-90 h-[36rem] "+backgroundCss.toString()}></div>
     )
 }
 
 
-export default function HeroCard({ title , subTitle , useCase , showSocialMedia , showLogo })
+export default function HeroCard({ title , subTitle , backgroundCss , showSocialMedia , showLogo })
 {
     return(
         <div className={"relative"}>
-            {bgGenerator(useCase)}
+            {bgGenerator(backgroundCss)}
             <div className={"z-40 h-[36rem] flex flex-col justify-center"}>
 
 

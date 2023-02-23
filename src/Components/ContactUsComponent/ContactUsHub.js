@@ -23,7 +23,7 @@ export default function ContactUsHub()
     return(
         <div>
 
-            <HeroCard useCase={"bg-contactBannerImg"} title={"Feel Free to Contact Us"} subTitle={"Kindly Follow Us on Different Social Medias"} showSocialMedia={true} showLogo={true}/>
+            <HeroCard backgroundCss={"bg-contactBannerImg"} title={"Feel Free to Contact Us"} subTitle={"Kindly Follow Us on Different Social Medias"} showSocialMedia={true} showLogo={true}/>
 
             <Tab.Group defaultIndex={1}>
 

@@ -6,7 +6,7 @@ export default function ReviewHub()
   return(
     <div>
 
-      <HeroCard useCase={"bg-reviewBannerImg"} title={"Our Reviews"} subTitle={"Reviews given by out Students"} showSocialMedia={false} showLogo={true}/>
+      <HeroCard backgroundCss={"bg-reviewBannerImg"} title={"Our Reviews"} subTitle={"Reviews given by out Students"} showSocialMedia={false} showLogo={true}/>
 
         <div className={"flex flex-col"}>
 

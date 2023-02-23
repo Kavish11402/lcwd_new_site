@@ -53,7 +53,9 @@ export default function MobileFriendlyNavbar( { toggle , navbarState } )
 
                 <h1 className={"mx-auto w-fit text-lg font-semibold"}>Free Courses</h1>
 
-                <h1 className={"mx-auto w-fit text-lg font-semibold"}>About</h1>
+                <Link href={"/aboutus"} onClick={ ()=>{ toggle() } } >
+                    <h1 className={"mx-auto w-fit text-lg font-semibold"}>About</h1>
+                </Link>
 
                 <Link href={"/ContactUs"} onClick={ ()=>{ toggle() } } >
                     <h1 className={"mx-auto w-fit text-lg font-semibold"}>Contact</h1>
