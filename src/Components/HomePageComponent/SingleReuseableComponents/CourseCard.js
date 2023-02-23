@@ -42,7 +42,7 @@ export default function CourseCard({bannerImage , bannerTitle , bannerDescriptio
                         </Link>
                         :
                         <h1 title={"This Course Will be Launched Soon"} className={"cursor-not-allowed bg-stone-400 transition-all ease-in-out rounded-md py-2 text-center text-md font-semibold text-zinc-600 lg:px-16 lg:text-xl"} >
-                            Go To Video
+                            Upcoming..
                         </h1>
                 }
 
