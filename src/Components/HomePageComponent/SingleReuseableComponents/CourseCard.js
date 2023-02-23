@@ -7,9 +7,11 @@ export default function CourseCard({bannerImage , bannerTitle , bannerDescriptio
 
             <div className={"w-fit mx-auto relative overflow-clip"}>
 
+                <div className={"absolute border-8 -left-1 -right-1 -top-1 -bottom-1 border-stone-200 rounded-2xl z-50"}></div>
+
                 {
                     !activeStatus&&
-                        <div className={"absolute rotate-[30deg] top-[4.5rem] -left-[3rem] bg-emerald-500/80 text-white capitalize text-2xl font-bold w-96 py-3 text-center"}>
+                        <div className={"z-40 absolute rotate-[30deg] top-[4.5rem] -left-[3rem] bg-emerald-500/80 text-white capitalize text-2xl font-bold w-96 py-3 text-center"}>
                             Upcoming
                         </div>
                 }
