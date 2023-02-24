@@ -11,6 +11,10 @@ module.exports = {
   theme: {
     extend: {
 
+      screens: {
+        'smd': '700px',
+      },
+
       keyframes: {
         RotateCompanyIcons: {
           '0%': { transform: 'rotate(0deg)' },

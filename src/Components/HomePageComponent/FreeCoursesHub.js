@@ -41,7 +41,7 @@ export default function FreeCoursesHub()
           <div className={"flex flex-row justify-center lg:justify-end lg:pr-14"}>
 
 
-              <Link href={'/FreeCourses'}>
+              <Link href={'/courses'}>
                   <h1 className={"bg-secondary-dark hover:bg-secondary-medium transition-all ease-in-out rounded-md py-2 text-center text-xs font-semibold text-white px-3 lg:px-10 lg:text-md"} >
                       More Free Courses..
                   </h1>
