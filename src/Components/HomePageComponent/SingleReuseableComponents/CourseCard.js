@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function CourseCard({bannerImage , bannerTitle , bannerDescription , fullLink , activeStatus })
 {
     return(
-        <div className={"transition-all ease-linear hover:scale-110 border-b-primary-medium border-t-primary-medium border-b-4 border-t-4 mx-auto w-[20rem] flex flex-col justify-around py-5 px-3 rounded-xl drop-shadow-xl bg-stone-200 lg:w-[22rem] lg:px-6 lg:mx-0"} >
+        <div className={"transition-all ease-linear lg:hover:scale-110 border-b-primary-medium border-t-primary-medium border-b-4 border-t-4 mx-auto w-[20rem] flex flex-col justify-around py-5 px-3 rounded-xl drop-shadow-xl bg-stone-200 lg:w-[22rem] lg:px-6 lg:mx-0"} >
 
             <div className={"w-fit mx-auto relative overflow-clip"}>
 
