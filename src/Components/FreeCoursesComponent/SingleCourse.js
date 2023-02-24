@@ -1,7 +1,7 @@
 import Image from "next/image";
-import bannerImg from "@/Assets/Images/digital_ocean_serias.webp"
 
-export default function SingleCourse()
+
+export default function SingleCourse( {bannerImg , bannerTittle , bannerDesc } )
 {
   return(
 
@@ -11,16 +11,9 @@ export default function SingleCourse()
 
           <div className={"px-5 my-5"}>
 
-              <h1 className={"text-justify font-bold text-lg lg:text-xl mx-auto"} >Digital Ocean Series: Deployment on Cloud</h1>
+              <h1 className={"text-center font-bold text-lg lg:text-xl mx-auto"}> {bannerTittle.toString()} </h1>
 
-              <p className={"text-justify h-[6.5rem] text-zinc-600 mt-3 text-sm lg:h-[7.8rem] lg:text-base line-clamp-5"}>
-                  This course is focused on providing hands-on experience with deploying applications on DigitalOcean's
-                  cloud platform using Droplets. Students will learn how to create and configure Droplets, connect to
-                  them via SSH, and use popular tools such as Git, Nginx, and Node.js to deploy web applications.
-                  The course will also cover best practices for securing and managing Droplets, as well as scaling and
-                  monitoring applications. By the end of the course, students will have the skills and knowledge necessary
-                  to deploy and manage their own applications on DigitalOcean's platform.
-              </p>
+              <p className={"text-justify h-[6.5rem] text-zinc-600 mt-3 text-sm lg:h-[7.8rem] lg:text-base line-clamp-5"}> { bannerDesc.toString() } </p>
 
           </div>
 
