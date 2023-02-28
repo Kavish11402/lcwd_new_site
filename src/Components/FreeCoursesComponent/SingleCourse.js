@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function SingleCourse( {bannerImg , bannerTittle , bannerDesc } )
@@ -17,7 +18,10 @@ export default function SingleCourse( {bannerImg , bannerTittle , bannerDesc } )
 
           </div>
 
-          <button className={"bg-primary-medium hover:bg-primary-light transition-all ease-in-out rounded-3xl py-3 text-center text-md font-semibold text-zinc-600 lg:text-xl w-56 mx-auto"}> Start Learning </button>
+          <Link href={`/course/${bannerTittle.toString().split(" ").join("-")}`} className={"bg-primary-medium hover:bg-primary-light transition-all ease-in-out rounded-3xl py-3 text-center text-md font-semibold text-zinc-600 lg:text-xl w-56 mx-auto"}>
+              <button> Start Learning </button>
+          </Link>
+
 
       </div>
 
