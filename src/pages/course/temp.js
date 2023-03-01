@@ -2,18 +2,18 @@ import courseImage from "@/Assets/Images/digital_ocean_serias.webp"
 import ratingIcon from "@/Assets/Icons/rating.png"
 import enrollmentIcon from "@/Assets/Icons/enrollments.png"
 import videoIcon from "@/Assets/Icons/watchVideo.png"
+import nullIcon from "@/Assets/Icons/null.png"
 
 import Image from "next/image";
 import Link from "next/link";
-import {Disclosure, RadioGroup, Tab, Transition} from "@headlessui/react";
+import {Tab} from "@headlessui/react";
 import ExplanationCard from "@/Components/HomePageComponent/SingleReuseableComponents/ExplanationCard";
-import {ChevronRightIcon} from "@heroicons/react/20/solid";
+import SingleCourseOverview from "@/Components/FreeCoursesComponent/SingleCourseOverview";
 
 export default function temp()
 {
   return(
       <div>
-
 
           <div className={"bg-secondary-dark py-12 pl-32 relative"}>
 
@@ -85,7 +85,7 @@ export default function temp()
                   <Image className={"w-[32rem] mx-auto rounded-[2rem]"} src={courseImage} alt={"Course Banner Image"}/>
 
                   <Link href={`/`}>
-                      <h2 className={"mt-7 bg-primary-medium hover:hover:scale-110 transition-all ease-in-out rounded-3xl py-3 text-center text-md font-semibold text-zinc-600 lg:text-2xl w-96 mx-auto"}>
+                      <h2 className={"mt-7 bg-primary-medium hover:hover:scale-105 transition-all ease-in-out rounded-3xl py-3 text-center text-md font-semibold text-zinc-600 lg:text-2xl w-96 mx-auto"}>
                           Start Learning
                       </h2>
                   </Link>
@@ -172,9 +172,9 @@ export default function temp()
 
           </div>
 
-          <div className={"border-2 border-black my-48"}>
+          <div className={"my-60"}>
 
-              <Tab.Group defaultIndex={1}>
+              <Tab.Group defaultIndex={0}>
 
                   <Tab.List className={"flex flex-row justify-center"}>
 
@@ -240,61 +240,37 @@ export default function temp()
 
                       {/* Course Content View */}
                       <Tab.Panel>
-                          <div className={""}>
+                          <div className={"space-y-6 px-28"}>
 
-
-                              <Disclosure>
-
-                                  <Disclosure.Button className={"bg-primary-light ui-open:bg-primary-medium transition-all ease-in-out font-semibold text-zinc-800 text-2xl w-full rounded-3xl p-5 flex flex-row justify-between"}>
-                                      <h1 className={"w-fit"}>Lets Start new series Deployment Project on Digital Ocean in Hindi</h1>
-                                      <ChevronRightIcon className={"w-10 rotate-90 ui-open:-rotate-90 ui-open:transform transition-all ease-in-out"} />
-                                  </Disclosure.Button>
-
-                                  <Transition
-                                      enter="transition duration-100 ease-out"
-                                      enterFrom="transform scale-95 opacity-0"
-                                      enterTo="transform scale-100 opacity-100"
-                                      leave="transition duration-75 ease-out"
-                                      leaveFrom="transform scale-100 opacity-100"
-                                      leaveTo="transform scale-95 opacity-0"
-                                  >
-                                      <Disclosure.Panel>
-
-                                          <div className={"flex flex-row p-5"}>
-
-                                              <div>
-                                                  <Image className={"w-80 rounded-3xl"} src={courseImage} alt={"Course Banner Image"}/>
-                                              </div>
-
-                                              <div className={"flex flex-col mx-8"}>
-
-                                                  <h1 className={"font-bold text-3xl"}>Lets Start new series Deployment Project on Digital Ocean in Hindi</h1>
-
-                                                  <p className={"mt-7 text-xl text-justify"}>
-                                                      In this video we are going discuss the introduction to new series that LearnCodeWithDurgesh going to start.
-                                                  </p>
-
-                                                  <h2 className={"mt-7 bg-primary-medium hover:hover:bg-primary-light transition-all ease-in-out rounded-3xl py-3 text-center text-md font-semibold text-zinc-600 lg:text-2xl w-72"}>
-                                                      Watch Video
-                                                  </h2>
-                                              </div>
-
-                                          </div>
-
-                                      </Disclosure.Panel>
-                                  </Transition>
-
-
-                              </Disclosure>
-
+                              <SingleCourseOverview courseTitle={"Lets Start new series Deployment Project on Digital Ocean in Hindi"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"What is cloud About Digital Ocean Understanding Client requirements"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Creating First Virtual Machine using Droplet Hindi"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Changing root password droplet very important video"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Using Database on Droplet Database Installation on cloud"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Connecting GUI with MySQL Server running on droplet DB on cloud"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Build Jar With Production environment Variables Spring Boot cloud Spring boot on Digital Ocean"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Uploading Spring Boot Jar to Virtual Machine in Hindi"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Deploying Spring Boot on VM Installing JRE Hindi"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Creating Linux Script for Spring boot startsh stopsh Run spring boot in background Hindi"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Building React App to deploy Preparing react app for hosting on node server in Hindi"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Installing Node JS on VM Deploy React Application on Droplet Deployment on cloud in Hindi"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Working with pm2 how to manage node process Deployment on Digital Ocean"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Buying Cheapest domain for Spring boot Application Buying domain live"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Pointing Domain to IP Working with Nginx Server Working with Ubuntu Firewall Cloud Deployment"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Point domain to Backend Spring Boot Application Step by step Deployment on cloud in Hindi"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Installing Free SSL on Spring Boot and React Application Deployment in Cloud"} courseLink={"#"}/>
+                              <SingleCourseOverview courseTitle={"Finish Deployment Series Why Linux is important for developer"} courseLink={"#"}/>
 
                           </div>
                       </Tab.Panel>
 
                       {/* Materials View */}
                       <Tab.Panel>
-                          <div className={"border-2 border-black"}>
-                              Materials View
+                          <div className={""}>
+                              <div className={"mx-16"}>
+                                  <h1 className={"font-bold text-3xl underline underline-offset-8 mx-auto w-fit"}>Provided Materials</h1>
+                                  <Image className={"mt-28 mx-auto w-72"} title={"Nothing is Uploaded Yet"} src={nullIcon} alt={"Null Icon"}/>
+                              </div>
                           </div>
                       </Tab.Panel>
 
