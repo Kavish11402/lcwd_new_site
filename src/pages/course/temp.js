@@ -25,12 +25,12 @@ export default function temp()
 
                   <h3 className={"text-[1.4rem] text-gray-100 leading-10 mb-6"}>
                       This course is focused on providing hands-on experience with deploying applications on
-                      DigitalOcean's cloud platform using Droplets. Students will learn how to create and configure
+                      DigitalOcean&apos;s cloud platform using Droplets. Students will learn how to create and configure
                       Droplets, connect to them via SSH, and use popular tools such as Git, Nginx, and Node.js to
                       deploy web applications. The course will also cover best practices for securing and managing
                       Droplets, as well as scaling and monitoring applications. By the end of the course, students
                       will have the skills and knowledge necessary to deploy and manage their own applications on
-                      DigitalOcean's platform.
+                      DigitalOcean&apos;s platform.
                   </h3>
 
                   <div className={"flex flex-row text-2xl font-medium mb-3"}>
@@ -73,7 +73,6 @@ export default function temp()
                               />
                           </svg>
                       </div>
-
 
                   </div>
 
@@ -216,12 +215,12 @@ export default function temp()
 
                                   <p className={"text-xl leading-9 mx-24 my-7 text-justify"}>
                                       This course is focused on providing hands-on experience with deploying applications on
-                                      DigitalOcean's cloud platform using Droplets. Students will learn how to create and configure
+                                      DigitalOcean&apos;s cloud platform using Droplets. Students will learn how to create and configure
                                       Droplets, connect to them via SSH, and use popular tools such as Git, Nginx, and Node.js to
                                       deploy web applications. The course will also cover best practices for securing and managing
                                       Droplets, as well as scaling and monitoring applications. By the end of the course, students
                                       will have the skills and knowledge necessary to deploy and manage their own applications on
-                                      DigitalOcean's platform.
+                                      DigitalOcean&apos;s platform.
                                   </p>
 
                               </div>
