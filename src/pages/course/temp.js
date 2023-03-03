@@ -15,15 +15,17 @@ export default function temp()
   return(
       <div>
 
-          <div className={"bg-secondary-dark py-12 pl-32 relative"}>
+          <div className={"bg-secondary-dark  py-12 lg:pl-32 relative"}>
 
-              <div className={"w-[55rem] text-white p-3"}>
 
-                  <h1 className={"font-bold text-6xl mb-8"}>
+
+              <div className={"lg:w-[55rem] text-white p-3"}>
+
+                  <h1 className={"font-bold text-5xl lg:text-6xl mb-8"}>
                       Digital Ocean Series: Deployment on Cloud
                   </h1>
 
-                  <h3 className={"text-[1.4rem] text-gray-100 leading-10 mb-6"}>
+                  <h3 className={"text-lg lg:text-[1.4rem] text-gray-100 leading-10 mb-6"}>
                       This course is focused on providing hands-on experience with deploying applications on
                       DigitalOcean&apos;s cloud platform using Droplets. Students will learn how to create and configure
                       Droplets, connect to them via SSH, and use popular tools such as Git, Nginx, and Node.js to
@@ -79,18 +81,21 @@ export default function temp()
 
               </div>
 
-              <div className={"absolute top-8 right-36 py-8 bg-stone-300/70 backdrop-blur-lg h-[48rem] w-[36rem] rounded-3xl drop-shadow-2xl"}>
 
-                  <Image className={"w-[32rem] mx-auto rounded-[2rem]"} src={courseImage} alt={"Course Banner Image"}/>
+
+
+              <div className={"lg:absolute lg:top-8 lg:lg:right-36 mt-14 lg:mt-0 py-8 bg-stone-300/70 backdrop-blur-lg h-[48rem] mx-auto w-[21rem] md:w-[36rem] rounded-3xl drop-shadow-2xl"}>
+
+                  <Image className={"w-[18rem] md:w-[32rem] mx-auto rounded-[2rem]"} src={courseImage} alt={"Course Banner Image"}/>
 
                   <Link href={`/`}>
-                      <h2 className={"mt-7 bg-primary-medium hover:hover:scale-105 transition-all ease-in-out rounded-3xl py-3 text-center text-md font-semibold text-zinc-600 lg:text-2xl w-96 mx-auto"}>
+                      <h2 className={"mt-7 bg-primary-medium hover:hover:scale-105 transition-all ease-in-out rounded-3xl py-3 text-center text-md font-semibold text-zinc-600 md:text-2xl w-52 lg:w-96 mx-auto"}>
                           Start Learning
                       </h2>
                   </Link>
 
 
-                  <div className={"mx-10"}>
+                  <div className={"mx-7 lg:mx-10"}>
 
                       <h1 className={"mt-5 font-bold text-2xl"}>
                           Features of this Course :
@@ -169,9 +174,12 @@ export default function temp()
 
               </div>
 
+
+
+
           </div>
 
-          <div className={"my-60"}>
+          <div className={"mt-2 mb-28 lg:my-60"}>
 
               <Tab.Group defaultIndex={0}>
 
@@ -204,16 +212,16 @@ export default function temp()
 
                   </Tab.List>
 
-                  <Tab.Panels className={"mt-10 mx-16"}>
+                  <Tab.Panels className={"mt-10 lg:mx-16"}>
 
                       {/* Overview View */}
                       <Tab.Panel>
                           <div>
-                              <div className={"mx-16"}>
+                              <div className={"mx-5 lg:mx-16"}>
 
-                                  <h1 className={"font-bold text-3xl underline underline-offset-8"}>Description of the Course</h1>
+                                  <h1 className={"font-bold text-3xl underline underline-offset-8 text-center lg:text-left"}>Description of the Course</h1>
 
-                                  <p className={"text-xl leading-9 mx-24 my-7 text-justify"}>
+                                  <p className={"text-lg md:text-xl leading-9 lg:mx-24 my-7 text-justify"}>
                                       This course is focused on providing hands-on experience with deploying applications on
                                       DigitalOcean&apos;s cloud platform using Droplets. Students will learn how to create and configure
                                       Droplets, connect to them via SSH, and use popular tools such as Git, Nginx, and Node.js to
@@ -225,8 +233,7 @@ export default function temp()
 
                               </div>
 
-
-                              <h2 className={"w-fit mx-auto font-bold text-4xl underline underline-offset-8 mt-28 mb-14 capitalize"}>Key Highlights off our Course</h2>
+                              <h2 className={"px-2 lg:px-0 w-fit mx-auto font-bold text-3xl lg:text-4xl text-center lg:text-left underline underline-offset-8 mt-28 mb-14 capitalize"}>Key Highlights off our Course</h2>
 
                               <div className={"flex flex-col lg:flex-row justify-center space-y-10 lg:space-y-0 lg:space-x-20"}>
                                   <ExplanationCard icon={videoIcon} title={"18 + Videos"} description={"Each video contain source code if they have."}/>
@@ -239,7 +246,7 @@ export default function temp()
 
                       {/* Course Content View */}
                       <Tab.Panel>
-                          <div className={"space-y-6 px-28"}>
+                          <div className={"space-y-6 px-2 lg:px-28"}>
 
                               <SingleCourseOverview courseTitle={"Lets Start new series Deployment Project on Digital Ocean in Hindi"} courseLink={"#"}/>
                               <SingleCourseOverview courseTitle={"What is cloud About Digital Ocean Understanding Client requirements"} courseLink={"#"}/>
@@ -267,7 +274,7 @@ export default function temp()
                       <Tab.Panel>
                           <div className={""}>
                               <div className={"mx-16"}>
-                                  <h1 className={"font-bold text-3xl underline underline-offset-8 mx-auto w-fit"}>Provided Materials</h1>
+                                  <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>Provided Materials</h1>
                                   <Image className={"mt-28 mx-auto w-72"} title={"Nothing is Uploaded Yet"} src={nullIcon} alt={"Null Icon"}/>
                               </div>
                           </div>
@@ -278,7 +285,6 @@ export default function temp()
               </Tab.Group>
 
           </div>
-
 
       </div>
   );
