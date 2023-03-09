@@ -9,7 +9,7 @@ export default function CourseHome()
     return(
         <div className={"flex flex-row "}>
 
-            <div className={"p-0 lg:p-7"}>
+            <div className={"px-0 py-6 lg:p-7"}>
 
                 <div className={"bg-stone-100 rounded-3xl drop-shadow-xl px-2 py-6 lg:p-6 flex flex-col justify-center space-y-9"}>
 
