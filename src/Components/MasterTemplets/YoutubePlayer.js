@@ -6,7 +6,6 @@ export default function YoutubePlayer({videoId})
       <div>
           <iframe
               className={"rounded-3xl w-[100%] h-[100%] lg:w-[1120px] lg:h-[630px]"}
-
               src={`https://www.youtube.com/embed/${videoId}`}
               title={"Embedded youtube"}
               allow={"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"}
