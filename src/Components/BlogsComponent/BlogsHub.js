@@ -173,6 +173,56 @@ export default function BlogsHub()
 
                 <div className={"w-full md:w-[85%] space-y-20 p-8 md:p-16 mx-auto"}>
 
+
+                    <div className={"w-[50%] mx-auto"}>
+
+                        <div className={"relative my-2 drop-shadow-2xl"}>
+
+                            <span className={"absolute inset-y-0 flex items-center pl-3"} >
+
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                                    />
+                                </svg>
+
+                            </span>
+
+                            <input className={"w-full h-12 pl-12 pr-24 rounded-3xl transition-all border-2 focus:border-secondary-dark focus:outline-0 focus:ring-0 ease-in"} type={"text"} placeholder={"Search For Blog"} />
+
+                            <span className={`  mr-[2.46px]
+                                                absolute 
+                                                right-0 
+                                                inset-y-[2.46px]
+                                                flex 
+                                                items-center 
+                                                px-4 
+                                                bg-primary-medium 
+                                                hover:bg-primary-light 
+                                                transition-all 
+                                                ease-in-out 
+                                                rounded-r-3xl 
+                                                py-2 
+                                                text-center 
+                                                text-base 
+                                                font-semibold 
+                                                text-zinc-600 
+                                                lg:text-xl`} >
+
+                                <button>
+                                    Search
+                                </button>
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
                     <ShortBlogCard blogTitle={"Crucial skills for data analytics"} blogShortDescription={"Data analytics involves utilizing a variety of techniques to make sense of large and complex data sets. This could include collecting data from multiple sources, cleaning and preparing the data, using analytical tools such as Excel or R to uncover insights, and then communicating those findings to others through visualizations and reports. The goal of data analytics is to find useful information and use it to inform decisions and conclusions. People working in data analytics are commonly found in sectors like healthcare, retail, finance, and technology."} />
                     <ShortBlogCard blogTitle={"The role of blockchain technology in various applications"} blogShortDescription={"Blockchain is a distributed ledger technology(DLT) that is used to record and manage digital transactions. Blockchain is basically a decentralized and dispersed database that stores a growing list of records, known as blocks, which are linked and protected through cryptography. Each block comprises a timestamp and a connection to the prior block, creating a chain of blocks, therefore the name blockchain. Blockchain, which originally debuted as the foundation for the digital currency Bitcoin, has progressed greatly in recent years. It has now secured its place as a revolutionary technology that has the ability to disrupt multiple industries and transform the way business is conducted. Today in this post, we will understand the different ways blockchain technology is being applied and how it is being utilized to create so many innovative solutions."}/>
                     <ShortBlogCard blogTitle={"Trending technologies to learn in 2023"} blogShortDescription={"Since Covid 19 came into existence, digital technologies have been evolving very rapidly.Now, even when the effects of covid are fading gradually, business tech is set to continuously grow in 2023. So keeping this in mind, it's high time we focus on mastering these technologies to keep growing with these tech. Industry experts from Forbes Technology Council share their predictions for the business tech trends that will dominate headlines and C-suite meetings in 2023. And these technologies are:"}/>
