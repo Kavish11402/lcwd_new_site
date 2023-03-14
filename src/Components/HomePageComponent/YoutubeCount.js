@@ -69,19 +69,19 @@ export default function YoutubeCount()
 
           {/*TODO -> Link To that social media handle lagao consult to durgesh sir*/}
           <ScrollTrigger onEnter={()=>{setSocialMediaActiveStatus(true)}} onExit={ ()=>{setSocialMediaActiveStatus(false)} }>
-              <div className={"grid grid-cols-2 gap-3 py-10 px-4 bg-primary-light lg:flex lg:flex-row lg:justify-center"}>
+              <div className={"grid grid-cols-2 gap-3 py-10 px-4 bg-primary-light xl:flex xl:flex-row lg:justify-center"}>
 
                   <SocialMediaFollowers handleImage={youtubePhoto} handleFollowers={175} handleFollowersExtention={"K+"} handleOtherInfo={"Subscribers"} socialMediaActiveStatus={socialMediaActiveStatus}/>
 
-                  <div className={"hidden lg:block rounded-full border border-zinc-500 mx-7"}></div>
+                  <div className={"hidden xl:block rounded-full border border-zinc-500 xl:mx-4 2xl:mx-7"}></div>
 
                   <SocialMediaFollowers handleImage={facebookPhoto} handleFollowers={1.3} handleFollowersExtention={"K+"} handleOtherInfo={"Followers"} socialMediaActiveStatus={socialMediaActiveStatus}/>
 
-                  <div className={"hidden lg:block rounded-full border border-zinc-500 mx-7"}></div>
+                  <div className={"hidden xl:block rounded-full border border-zinc-500 xl:mx-4 2xl:mx-7"}></div>
 
                   <SocialMediaFollowers handleImage={instagramPhoto} handleFollowers={5989} handleFollowersExtention={"+"} handleOtherInfo={"Followers"} socialMediaActiveStatus={socialMediaActiveStatus}/>
 
-                  <div className={"hidden lg:block rounded-full border border-zinc-500 mx-7"}></div>
+                  <div className={"hidden xl:block rounded-full border border-zinc-500 xl:mx-4 2xl:mx-7"}></div>
 
                   <SocialMediaFollowers handleImage={linkedinPhoto} handleFollowers={4096} handleFollowersExtention={"+"} handleOtherInfo={"Followers"} socialMediaActiveStatus={socialMediaActiveStatus}/>
 

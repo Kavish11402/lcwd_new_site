@@ -21,10 +21,10 @@ export default function TopBanner()
   return(
       <div className={"flex flex-col lg:flex-row lg:h-[89vh]"}>
 
-          <div className={"px-3 lg:w-1/2 lg:flex lg:flex-col lg:justify-center lg:px-0"}>
+          <div className={"px-4 lg:w-1/2 lg:flex lg:flex-col lg:justify-center"}>
 
 
-              <Image src={manWithComputer} alt={"Man With Computer"} className={"mx-auto w-[400px] md:w-[500px] lg:w-[400px] xl:w-auto"} />
+              <Image src={manWithComputer} alt={"Man With Computer"} className={"mx-auto w-[400px] md:w-[500px]  lg:w-auto"} />
 
 
 
@@ -52,14 +52,14 @@ export default function TopBanner()
               <div className={"mt-10 flex flex-row justify-center font-semibold text-zinc-600 xl:mt-16"}>
 
                   <Link target={'_blank'} href={"https://courses.learncodewithdurgesh.com/learn"}>
-                      <h1 className={"mx-2 border-2 px-3 py-2 rounded-xl border-primary-medium lg:mx-8 xl:mx-16 lg:hover:border-primary-dark lg:hover:bg-primary-dark lg:hover:text-white lg:transition-all lg:ease-in-out lg:px-2 xl:px-5 lg:py-3 lg:text-lg xl:text-2xl lg:text-zinc-600"}>
+                      <h1 className={"mx-2 border-2 px-3 py-2 rounded-xl border-primary-medium lg:mx-8 2xl:mx-16 lg:hover:border-primary-dark lg:hover:bg-primary-dark lg:hover:text-white lg:transition-all lg:ease-in-out lg:px-2 xl:px-5 lg:py-3 lg:text-lg 2xl:text-2xl lg:text-zinc-600"}>
                           Premium Courses
                       </h1>
                   </Link>
 
                   {/* TODO -> Add "/courses" link to the below Link's href */}
                   <Link href={"/"}>
-                      <h1 className={"mx-2 border-2 px-3 py-2 rounded-xl border-secondary-medium lg:mx-8 xl:mx-16 lg:hover:border-secondary-dark lg:hover:bg-secondary-dark lg:hover:text-white lg:transition-all lg:ease-in-out lg:px-2 xl:px-5 lg:py-3 lg:text-lg xl:text-2xl lg:text-zinc-600"}>
+                      <h1 className={"mx-2 border-2 px-3 py-2 rounded-xl border-secondary-medium lg:mx-8 2xl:mx-16 lg:hover:border-secondary-dark lg:hover:bg-secondary-dark lg:hover:text-white lg:transition-all lg:ease-in-out lg:px-2 xl:px-5 lg:py-3 lg:text-lg 2xl:text-2xl lg:text-zinc-600"}>
                           Top Free Courses
                       </h1>
                   </Link>

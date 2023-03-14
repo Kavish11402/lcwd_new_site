@@ -15,7 +15,7 @@ export default function ReviewSection()
             <h1 className={"text-center font-bold underline underline-offset-8 text-primary-dark text-3xl lg:text-5xl"}> Recent Reviews </h1>
 
 
-            <Slider className={"my-6 w-[97%] mx-auto"}
+            <Slider className={"my-6 w-[97%] overflow-clip mx-auto"}
                     slidesToShow={ 2 }
                     autoplay={true}
                     speed={1500}

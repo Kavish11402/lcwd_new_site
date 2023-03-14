@@ -13,6 +13,7 @@ module.exports = {
 
       screens: {
         'smd': '700px',
+        '3xl' : '1540px'
       },
 
       keyframes: {

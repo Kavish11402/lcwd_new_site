@@ -16,7 +16,9 @@ export default function courses()
               <meta name={'description'}
                     content={'Free and Popular courses learn code with durgesh'}/>
           </Head>
-          <CoursesHub/>
+          <div>
+              <CoursesHub/>
+          </div>
       </>
   );
 }

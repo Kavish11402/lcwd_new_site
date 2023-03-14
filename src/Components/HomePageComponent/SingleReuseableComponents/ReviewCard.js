@@ -41,10 +41,10 @@ export default function ReviewCard( { ReviewMsg  , ReviewerName , ReviewerDesign
 {
 
     return(
-        <div className={`w-[20rem] sm:w-[35rem] lg:w-[45rem] min-h-[35rem] lg:min-h-[20rem]
-                        drop-shadow-xl lg:drop-shadow-2xl 
+        <div className={`w-[20rem] sm:w-[35rem] lg:w-[30rem] 2xl:w-[45rem] min-h-[35rem] lg:min-h-[30rem] 2xl:min-h-[20rem]
+                        drop-shadow-xl xl:drop-shadow-2xl 
                         flex flex-col justify-between py-12 px-5 rounded-3xl bg-rose-50
-                        ${ marginFor==="homePageReview" ? "mx-auto my-6 lg:mx-20 lg:my-16" : "" }
+                        ${ marginFor==="homePageReview" ? "mx-auto my-6 lg:mx-12 xl:mx-20 lg:my-16" : "" }
                         ${ marginFor==="reviewPage" ? "mx-auto my-10" : "" }
                         `}
         >
