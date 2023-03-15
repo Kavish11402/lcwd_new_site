@@ -18,7 +18,7 @@ export default function WhyLCWD()
           </div>*/}
 
 
-          <div className={"grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 lg:gap-x-12 2xl:gap-x-28 gap-y-12 w-fit mx-auto px-10"}>
+          <div className={"grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 lg:gap-x-12 2xl:gap-x-28 gap-y-12 w-fit mx-auto lg:px-10"}>
 
               <ExplanationCard icon={languages} title={"Courses In Hindi"} description={"Each and every concepts are well explained so that you can learn effectively."}/>
               <ExplanationCard icon={qualityContent} title={"Quality Content"} description={"Each and every concepts are well explained so that you can learn effectively."}/>
