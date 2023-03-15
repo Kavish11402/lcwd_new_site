@@ -14,7 +14,7 @@ export default function BlogsHub()
 
                 <div className={"hidden md:block w-60 relative bg-stone-50 drop-shadow-xl "}>
 
-                    <div className={"sticky top-28 mx-5"}>
+                    <div className={"sticky top-28 mb-16 mx-5"}>
 
                         <div className={"w-fit py-2 mx-auto font-semibold text-primary-dark my-5 text-3xl flex flex-row space-x-1"}>
 
@@ -33,70 +33,28 @@ export default function BlogsHub()
 
                         <div className={"text-secondary-dark text-lg space-y-4"}>
 
-                            <div className={"flex flex-row cursor-pointer transition-all ease-linear hover:text-green-600"}>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-                                     stroke="currentColor" className="w-6 h-auto">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
-                                </svg>
-
-                                <p className={"transition-all ease-linear font-semibold hover:-translate-y-1"}>All Blogs</p>
-
+                            <div className={`flex flex-row justify-center cursor-pointer border-2 border-sky-400 text-sky-400 hover:text-white bg-white hover:bg-sky-400 transition-all ease-linear text-white rounded-3xl`}>
+                                <p className={"font-medium"}>All Blogs</p>
                             </div>
 
-                            <div className={"flex flex-row cursor-pointer transition-all ease-linear hover:text-green-600"}>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-                                     stroke="currentColor" className="w-6 h-auto">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
-                                </svg>
-
-                                <p className={"transition-all ease-linear font-semibold hover:-translate-y-1"}>Technology</p>
-
+                            <div className={`flex flex-row justify-center cursor-pointer border-2 border-sky-400 text-sky-400 hover:text-white bg-white hover:bg-sky-400 transition-all ease-linear text-white rounded-3xl`}>
+                                <p className={"font-medium"}>Technology</p>
                             </div>
 
-                            <div className={"flex flex-row cursor-pointer transition-all ease-linear hover:text-green-600"}>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-                                     stroke="currentColor" className="w-6 h-auto">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
-                                </svg>
-
-                                <p className={"transition-all ease-linear font-semibold hover:-translate-y-1"}>Food</p>
-
+                            <div className={`flex flex-row justify-center cursor-pointer border-2 border-sky-400 text-sky-400 hover:text-white bg-white hover:bg-sky-400 transition-all ease-linear text-white rounded-3xl`}>
+                                <p className={"font-medium"}>Food</p>
                             </div>
 
-                            <div className={"flex flex-row cursor-pointer transition-all ease-linear hover:text-green-600"}>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-                                     stroke="currentColor" className="w-6 h-auto">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
-                                </svg>
-
-                                <p className={"transition-all ease-linear font-semibold hover:-translate-y-1"}>Cars</p>
-
+                            <div className={`flex flex-row justify-center cursor-pointer border-2 border-sky-400 text-sky-400 hover:text-white bg-white hover:bg-sky-400 transition-all ease-linear text-white rounded-3xl`}>
+                                <p className={"font-medium"}>Cars</p>
                             </div>
 
-                            <div className={"flex flex-row cursor-pointer transition-all ease-linear hover:text-green-600"}>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-                                     stroke="currentColor" className="w-6 h-auto">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
-                                </svg>
-
-                                <p className={"transition-all ease-linear font-semibold hover:-translate-y-1"}>Kitchen</p>
-
+                            <div className={`flex flex-row justify-center cursor-pointer border-2 border-sky-400 text-sky-400 hover:text-white bg-white hover:bg-sky-400 transition-all ease-linear text-white rounded-3xl`}>
+                                <p className={"font-medium"}>Kitchen</p>
                             </div>
 
-                            <div className={"flex flex-row cursor-pointer transition-all ease-linear hover:text-green-600"}>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2"
-                                     stroke="currentColor" className="w-6 h-auto">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
-                                </svg>
-
-                                <p className={"transition-all ease-linear font-semibold hover:-translate-y-1"}>Aviation</p>
-
+                            <div className={`flex flex-row justify-center cursor-pointer border-2 border-sky-400 text-sky-400 hover:text-white bg-white hover:bg-sky-400 transition-all ease-linear text-white rounded-3xl`}>
+                                <p className={"font-medium"}>Aviation</p>
                             </div>
 
                         </div>
@@ -173,8 +131,8 @@ export default function BlogsHub()
 
                 <div className={"w-full md:w-[85%] space-y-20 p-8 md:p-16 mx-auto"}>
 
-
-                    <div className={"w-[50%] mx-auto"}>
+                    {/* Search Box */}
+                    <div className={"w-[80%] 2xl:w-[60%] mx-auto"}>
 
                         <div className={"relative my-2 drop-shadow-2xl"}>
 

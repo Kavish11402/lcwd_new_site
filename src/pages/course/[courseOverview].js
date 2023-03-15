@@ -15,15 +15,14 @@ export default function CourseOverview()
 {
     const router = useRouter()
     const urlPath = router.query.courseOverview
-    console.log(urlPath)
 
 
   return(
       <div>
 
-          <div className={"bg-secondary-dark  py-12 lg:pl-32 relative"}>
+          <div className={"bg-secondary-dark py-12 lg:pl-8 2xl:pl-24 relative"}>
 
-              <div className={"lg:w-[55rem] text-white p-3"}>
+              <div className={"lg:w-[50%] 2xl:w-[52rem] text-white p-3"}>
 
                   <h1 className={"font-bold text-5xl lg:text-6xl mb-8"}>
                       Digital Ocean Series: Deployment on Cloud
@@ -84,9 +83,9 @@ export default function CourseOverview()
 
               </div>
 
-              <div className={"lg:absolute lg:top-8 lg:lg:right-36 mt-14 lg:mt-0 py-8 bg-stone-300/70 backdrop-blur-lg h-[48rem] mx-auto w-[21rem] md:w-[36rem] rounded-3xl drop-shadow-2xl"}>
+              <div className={"lg:absolute lg:top-8 lg:right-8 xl:right-12 2xl:right-28 mt-14 lg:mt-0 py-8 bg-stone-300/70 backdrop-blur-lg h-[48rem] mx-auto w-[21rem] md:w-[36rem] lg:w-[27rem] xl:w-[36rem] rounded-3xl drop-shadow-2xl"}>
 
-                  <Image className={"w-[18rem] md:w-[32rem] mx-auto rounded-[2rem]"} src={courseImage} alt={"Course Banner Image"}/>
+                  <Image className={"w-[18rem] md:w-[32rem] lg:w-[25rem] xl:w-[32rem] mx-auto rounded-[2rem]"} src={courseImage} alt={"Course Banner Image"}/>
 
                   <Link href={`/course/${urlPath}/68`}>
                       <h2 className={"mt-7 bg-primary-medium hover:hover:scale-105 transition-all ease-in-out rounded-3xl py-3 text-center text-md font-semibold text-zinc-600 md:text-2xl w-52 lg:w-96 mx-auto"}>
@@ -170,7 +169,7 @@ export default function CourseOverview()
 
           </div>
 
-          <div className={"mt-2 mb-28 lg:my-60"}>
+          <div className={"mt-2 mb-28 lg:my-24 2xl:my-60"}>
 
               <Tab.Group defaultIndex={0}>
 

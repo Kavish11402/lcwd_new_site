@@ -20,7 +20,7 @@ export default function CourseHome()
 
                     <div className={"hidden lg:block"}>
                         {/* Video Description */}
-                        <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-full lg:w-[70rem]"}>
+                        <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-full lg:w-[52vw] mx-auto 2xl:w-[70rem]"}>
 
                             <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>
                                 Description
@@ -33,10 +33,10 @@ export default function CourseHome()
                         </div>
 
                         {/* Divider Line */}
-                        <div className={"rounded-full border border-gray-400 mx-28"}></div>
+                        <div className={"rounded-full border border-gray-400 my-5 mx-20"}></div>
 
                         {/* Provided Code */}
-                        <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-full lg:w-[70rem]"}>
+                        <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-full lg:w-[52vw] mx-auto 2xl:w-[70rem]"}>
                             <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>
                                 {lSymbol}Code{rSymbol}
                             </h1>
@@ -48,7 +48,7 @@ export default function CourseHome()
                         </div>
 
                         {/* Divider Line */}
-                        <div className={"rounded-full border border-gray-400 mx-28"}></div>
+                        <div className={"rounded-full border border-gray-400 my-5 mx-20"}></div>
                     </div>
 
                     {/* Previous / Next Video Buttons */}
@@ -296,7 +296,7 @@ export default function CourseHome()
 
             </div>
 
-            <div className={"hidden lg:block space-y-5 p-5 overflow-y-scroll my-auto h-[117vh] bg-stone-100 rounded-3xl drop-shadow-xl mr-6"}>
+            <div className={"hidden lg:block space-y-5 p-5 overflow-y-scroll my-7 h-[160vh] bg-stone-100 rounded-3xl drop-shadow-xl mr-6"}>
 
                 <PlayerCourseCard courseTitle={"Lets Start new series Deployment Project on Digital Ocean in Hindi"} courseLink={"#"}/>
                 <PlayerCourseCard courseTitle={"What is cloud About Digital Ocean Understanding Client requirements"} courseLink={"#"}/>

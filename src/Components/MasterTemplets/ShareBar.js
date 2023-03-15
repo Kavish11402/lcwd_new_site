@@ -4,10 +4,10 @@ export default function ShareBar({postTitle , postLink})
     <div className={"bg-gray-500 flex flex-col justify-center py-12"}>
 
 
-        <h3 className={"w-fit mx-auto text-white font-semibold text-4xl"}>Help Others, Please Share</h3>
+        <h3 className={"w-fit mx-auto text-white text-center font-semibold text-3xl lg:text-4xl"}>Help Others, Please Share</h3>
 
 
-        <div className={"mt-8 flex flex-row justify-center space-x-5"}>
+        <div className={"mt-8 grid grid-cols-1 smd:grid-cols-2 smd:gap-x-5 px-11 gap-y-5 lg:space-y-0 lg:px-0 lg:flex lg:flex-row lg:justify-center lg:space-x-5"}>
 
 
             {/*Sharing button Facebook */}

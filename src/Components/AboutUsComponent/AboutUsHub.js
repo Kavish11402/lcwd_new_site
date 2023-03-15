@@ -9,7 +9,7 @@ export default function AboutUsHub()
 
           <HeroCard backgroundCss={"bg-contactBannerImg"} title={"About Us"} subTitle={"Kindly Follow Us on Different Social Medias"} showSocialMedia={true} showLogo={false} />
 
-          <div className={"lg:h-[92vh] py-10 lg:py-0 flex flex-col justify-center"}>
+          <div className={"py-10 lg:py-16 flex flex-col justify-center"}>
 
               <div className={"rounded-3xl bg-stone-200 drop-shadow-xl mx-auto w-[93%] lg:w-[70%] p-5 lg:p-10 flex flex-col justify-center"}>
 
