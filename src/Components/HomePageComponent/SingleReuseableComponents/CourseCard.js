@@ -1,13 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
-export default function CourseCard({bannerImage , bannerTitle , bannerDescription , fullLink , activeStatus })
+
+function imageGenerator(type , bannerImage)
+{
+    if(type==="api")
+    {
+        return (
+            <img className={"w-72 rounded-xl"} src={`${bannerImage}`} alt={"Video Image"} />
+        )
+    }
+    return(
+        <Image className={"w-72 rounded-xl"} src={bannerImage} alt={"Video Image"} />
+    )
+}
+
+export default function CourseCard({bannerImage , bannerTitle , bannerDescription , fullLink , activeStatus , data })
 {
     return(
-        <div className={"transition-all ease-linear lg:hover:scale-105 border-b-primary-medium border-t-primary-medium border-b-4 border-t-4 mx-auto w-[20rem] flex flex-col justify-around py-5 px-3 rounded-xl drop-shadow-xl bg-rose-50 lg:w-[22rem] lg:px-6 lg:mx-0"} >
+        <div className={"transition-all ease-linear lg:hover:scale-105 border-b-primary-medium border-t-primary-medium border-b-4 border-t-4 mx-auto w-[20rem] flex flex-col justify-around py-5 px-3 rounded-xl drop-shadow-xl bg-card-color lg:w-[22rem] lg:px-6 lg:mx-0"} >
 
             <div className={"w-fit mx-auto relative overflow-clip"}>
 
-                <div className={"absolute border-8 -left-1 -right-1 -top-1 -bottom-1 border-rose-50 rounded-2xl z-50"}></div>
+                <div className={"absolute border-8 -left-1 -right-1 -top-1 -bottom-1 border-card-color rounded-2xl z-50"}></div>
 
                 {
                     !activeStatus&&
@@ -16,12 +30,15 @@ export default function CourseCard({bannerImage , bannerTitle , bannerDescriptio
                         </div>
                 }
 
-                <Image className={"w-72 rounded-xl"} src={bannerImage} alt={"Video Image"} />
+                {
+                    imageGenerator(data , bannerImage)
+                }
+
             </div>
 
             <div className={"mt-8 mb-3 rounded-full border border-gray-400 mx-3"}></div>
 
-            <div className={"text-justify w-72 font-bold text-lg lg:text-xl mx-auto"}>
+            <div className={"text-center w-72 font-bold text-lg lg:text-xl mx-auto"}>
                 {bannerTitle}
             </div>
 

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 
@@ -12,7 +11,8 @@ export default function SingleCourse( {bannerImg , bannerTittle , bannerDesc } )
 
                 <div className={"bg-stone-50 drop-shadow-xl rounded-3xl w-[21rem] smd:w-[22rem] flex flex-col justify-between pb-6 transition-all ease-linear 2xl:hover:scale-105"}>
 
-                    <Image className={"rounded-3xl"} src={bannerImg} alt={"Banner Image"}/>
+                    <img className={"rounded-3xl"} src={`${bannerImg}`} alt={"Banner Image"} />
+
 
                     <div className={"px-5 my-5"}>
 

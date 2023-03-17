@@ -1,8 +1,9 @@
 import React from "react";
 import CoursesHub from "@/Components/FreeCoursesComponent/CoursesHub";
 import Head from "next/head";
+import {getFreeCourses} from "@/Api_Services/apiServices";
 
-export default function courses()
+export default function courses( {courses} )
 {
   return(
       <>
@@ -17,8 +18,18 @@ export default function courses()
                     content={'Free and Popular courses learn code with durgesh'}/>
           </Head>
           <div>
-              <CoursesHub/>
+              <CoursesHub courses={courses}/>
           </div>
       </>
   );
+}
+
+export async function getServerSideProps(context)
+{
+    const data = await getFreeCourses();
+    data.sort( (obj1 , obj2) => { return obj1.order - obj2.order } )
+
+    return {
+        props: { courses : data }, // will be passed to the page component as props
+    };
 }

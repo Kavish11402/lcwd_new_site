@@ -43,6 +43,7 @@ export default function PremiumCoursesHub()
           <div className={"grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 lg:gap-x-12 2xl:gap-x-28 gap-y-12 w-fit mx-auto lg:px-10"}>
 
               <CourseCard
+                  data={"hardCoded"}
                   bannerImage={Premium_SpringBoot}
                   bannerTitle={"Master Spring Boot with Real time Project"}
                   bannerDescription={"In this course, you will learn everything you need to know about developing applications with Spring Boot, the popular Java framework for building microservices and web applications. (Backend with Java)"}
@@ -51,6 +52,7 @@ export default function PremiumCoursesHub()
               />
 
               <CourseCard
+                  data={"hardCoded"}
                   bannerImage={bannerBg}
                   bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
                   bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}

@@ -38,7 +38,7 @@ export default function ReviewSection()
                 />
 
                 <ReviewCard
-                    ReviewMsg={"Excellent teaching. I really enjoyed this course and the format it was presented in. In-depth concepts of spring boot & micros services have been clearly explained. The concepts were explained in a very detailed way using real-world examples. Thanks for this beautiful course."}
+                    ReviewMsg={"Excellent teaching. I really enjoyed this course and the format it was presented in. In-depth concepts of spring boot & micros Api_Services have been clearly explained. The concepts were explained in a very detailed way using real-world examples. Thanks for this beautiful course."}
                     ReviewerName={"Chandrashekhar Sharnagat"}
                     ReviewerDesignation={"Student"}
                     RatingInInteger={3}
