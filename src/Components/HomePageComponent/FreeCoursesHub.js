@@ -32,22 +32,19 @@ export default function FreeCoursesHub({top3Courses})
                                       />
                                   )
                               }
-                              else {
-                                  flag++
-                                  return (
-                                      <div className={"lg:col-span-2 xl:col-span-1 lg:flex lg:flex-row lg:justify-center xl:inline"}>
-                                          <CourseCard
-                                              key={singleCourse.id}
-                                              data = {"api"}
-                                              bannerImage={singleCourse.courseBanner}
-                                              bannerTitle={singleCourse.pageTitle}
-                                              bannerDescription={singleCourse.pageDescription}
-                                              fullLink={"https://www.youtube.com/watch?v=ekDGDYLEw7Y"}
-                                              activeStatus={true}
-                                          />
-                                      </div>
-                                  )
-                              }
+                              return (
+                                  <div key={singleCourse.id} className={"lg:col-span-2 xl:col-span-1 lg:flex lg:flex-row lg:justify-center xl:inline"}>
+                                      <CourseCard
+                                          key={singleCourse.id}
+                                          data = {"api"}
+                                          bannerImage={singleCourse.courseBanner}
+                                          bannerTitle={singleCourse.pageTitle}
+                                          bannerDescription={singleCourse.pageDescription}
+                                          fullLink={"https://www.youtube.com/watch?v=ekDGDYLEw7Y"}
+                                          activeStatus={true}
+                                      />
+                                  </div>
+                              )
                           }
 
                       }

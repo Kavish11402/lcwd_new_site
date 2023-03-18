@@ -22,9 +22,9 @@ export default function SingleCourse( {bannerImg , bannerTittle , bannerDesc } )
 
                     </div>
 
-                    <Link href={`/course/${bannerTittle.toString().split(" ").join("-")}`} className={"bg-primary-medium hover:bg-primary-light transition-all ease-in-out rounded-3xl py-3 text-center text-md font-semibold text-zinc-600 2xl:text-xl w-56 mx-auto"}>
-                        <button> Start Learning </button>
-                    </Link>
+                    <button className={"bg-primary-medium hover:bg-primary-light transition-all ease-in-out rounded-3xl py-3 text-center text-md font-semibold text-zinc-600 2xl:text-xl w-56 mx-auto"}>
+                        Start Learning
+                    </button>
 
                 </div>
 
