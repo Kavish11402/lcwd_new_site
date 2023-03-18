@@ -52,7 +52,7 @@ export default function CourseCard({bannerImage , bannerTitle , bannerDescriptio
 
                 {
                     activeStatus?
-                        <Link target={`_blank`} href={`${fullLink}`}>
+                        <Link href={`${fullLink}`}>
                             <h1 title={"Click To Checkout This Course"} className={"bg-primary-medium hover:bg-amber-300 transition-all ease-in-out rounded-md py-2 text-center text-md font-semibold text-zinc-600 lg:px-16 lg:text-xl"} >
                                 Go To Video
                             </h1>

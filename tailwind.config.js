@@ -70,6 +70,12 @@ module.exports = {
         "secondary-light" : "#FBCFE8" /* this colour "pink-200" is in tailwind css predefined Color palette reference (https://tailwindcss.com/docs/background-color#class-reference) */ ,
         "secondary-medium" : "#F472B6" /* this colour "pink-400" is in tailwind css predefined Color palette reference (https://tailwindcss.com/docs/background-color#class-reference) */ ,
         "secondary-dark" : "#EC4899" /* this colour "pink-500" is in tailwind css predefined Color palette reference (https://tailwindcss.com/docs/background-color#class-reference) */ ,
+      },
+      lineClamp: {
+        7: '7',
+        8: '8',
+        9: '9',
+        10: '10',
       }
     }
   },

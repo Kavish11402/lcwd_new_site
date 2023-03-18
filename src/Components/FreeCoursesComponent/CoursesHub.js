@@ -17,6 +17,7 @@ export default function CoursesHub({courses})
                               return(
                                   <SingleCourse
                                       key={singleCourse.id}
+                                      courseUrl={singleCourse.courseUrl}
                                       bannerImg={singleCourse.courseBanner}
                                       bannerTittle={singleCourse.pageTitle}
                                       bannerDesc={singleCourse.pageDescription}

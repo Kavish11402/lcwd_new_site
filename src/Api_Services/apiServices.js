@@ -13,22 +13,30 @@ export function getFreeCourses()
     return axiosURL.get(`/courses/`).then(response=>response.data)
 }
 
-
-
-
-
-
-export function getTopVideos() {
-    return axiosURL.get("/videos/top_videos/").then((res) => res.data);
-}
-
 export function getCourseDetail(slug) {
-    return axiosURL.get(`/courses/url/${slug}`).then((res) => res.data);
+    return axiosURL.get(`/courses/url/${slug}/`).then(response=>response.data)
 }
 
-export function getVideosOfCourse(courseId) {
-    return axiosURL.get(`/courses/${courseId}/videos/`).then((res) => res.data);
+export function getCourseVideos(id) {
+    return axiosURL.get(`/courses/${id}/videos/`).then(response=>response.data)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export function getCodeOfVideo(videoId) {
     return axiosURL.get(`/videos/${videoId}/codes`).then((res) => res.data);

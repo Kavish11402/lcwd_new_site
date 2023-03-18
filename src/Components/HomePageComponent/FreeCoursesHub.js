@@ -27,7 +27,7 @@ export default function FreeCoursesHub({top3Courses})
                                           bannerImage={singleCourse.courseBanner}
                                           bannerTitle={singleCourse.pageTitle}
                                           bannerDescription={singleCourse.pageDescription}
-                                          fullLink={"https://www.youtube.com/watch?v=ekDGDYLEw7Y"}
+                                          fullLink={`/course/${singleCourse.courseUrl}`}
                                           activeStatus={true}
                                       />
                                   )
@@ -40,7 +40,7 @@ export default function FreeCoursesHub({top3Courses})
                                           bannerImage={singleCourse.courseBanner}
                                           bannerTitle={singleCourse.pageTitle}
                                           bannerDescription={singleCourse.pageDescription}
-                                          fullLink={"https://www.youtube.com/watch?v=ekDGDYLEw7Y"}
+                                          fullLink={`/course/${singleCourse.courseUrl}`}
                                           activeStatus={true}
                                       />
                                   </div>

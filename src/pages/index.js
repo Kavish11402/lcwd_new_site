@@ -13,7 +13,7 @@ import {topFreeCourses} from "@/Api_Services/apiServices";
 export default function index({top3Courses})
 {
     return(
-        <>
+        <div>
             <TopBanner/>
             <OurServices/>
             <WhyLCWD/>
@@ -23,7 +23,7 @@ export default function index({top3Courses})
             <StudentsPlaced/>
             <ReviewSection/>
             <LCWDStrategy/>
-          </>
+        </div>
       );
 }
 

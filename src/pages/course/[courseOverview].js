@@ -1,4 +1,3 @@
-import courseImage from "@/Assets/Images/digital_ocean_serias.webp"
 import ratingIcon from "@/Assets/Icons/rating.png"
 import enrollmentIcon from "@/Assets/Icons/enrollments.png"
 import videoIcon from "@/Assets/Icons/watchVideo.png"
@@ -9,33 +8,23 @@ import Link from "next/link";
 import {Tab} from "@headlessui/react";
 import ExplanationCard from "@/Components/HomePageComponent/SingleReuseableComponents/ExplanationCard";
 import SingleCourseOverview from "@/Components/FreeCoursesComponent/SingleCourseOverview";
-import {useRouter} from "next/router";
+import {getCourseDetail, getCourseVideos} from "@/Api_Services/apiServices";
 
-export default function CourseOverview()
+export default function CourseOverview({courseData , courseVideoData})
 {
-    const router = useRouter()
-    const urlPath = router.query.courseOverview
-
-
   return(
       <div>
 
-          <div className={"bg-secondary-dark py-12 lg:pl-8 2xl:pl-24 relative"}>
+          <div className={"bg-secondary-dark lg:min-h-[48rem] 2xl:min-h-[40rem] py-12 lg:pl-8 2xl:pl-24 relative"}>
 
-              <div className={"lg:w-[50%] 2xl:w-[52rem] text-white p-3"}>
+              <div className={"lg:w-[50%]  2xl:w-[52rem] text-white p-3"}>
 
                   <h1 className={"font-bold text-5xl lg:text-6xl mb-8"}>
-                      Digital Ocean Series: Deployment on Cloud
+                      {courseData.courseName}
                   </h1>
 
-                  <h3 className={"text-lg lg:text-[1.4rem] text-gray-100 leading-10 mb-6"}>
-                      This course is focused on providing hands-on experience with deploying applications on
-                      DigitalOcean&apos;s cloud platform using Droplets. Students will learn how to create and configure
-                      Droplets, connect to them via SSH, and use popular tools such as Git, Nginx, and Node.js to
-                      deploy web applications. The course will also cover best practices for securing and managing
-                      Droplets, as well as scaling and monitoring applications. By the end of the course, students
-                      will have the skills and knowledge necessary to deploy and manage their own applications on
-                      DigitalOcean&apos;s platform.
+                  <h3 className={"text-lg lg:text-[1.4rem] text-gray-100 line-clamp-7 leading-10 mb-6"}>
+                      {courseData.courseNameDescription}
                   </h3>
 
                   <div className={"flex flex-row text-2xl font-medium mb-3"}>
@@ -49,31 +38,31 @@ export default function CourseOverview()
                       <div className={"flex flex-row ml-4 translate-y-0.5"}>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-yellow-500">
                               <path fillRule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                    d={"M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"}
                                     clipRule="evenodd"
                               />
                           </svg>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-yellow-500">
                               <path fillRule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                    d={"M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"}
                                     clipRule="evenodd"
                               />
                           </svg>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-yellow-500">
                               <path fillRule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                    d={"M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"}
                                     clipRule="evenodd"
                               />
                           </svg>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-yellow-500">
                               <path fillRule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                    d={"M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"}
                                     clipRule="evenodd"
                               />
                           </svg>
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-yellow-500">
                               <path fillRule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                    d={"M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"}
                                     clipRule="evenodd"
                               />
                           </svg>
@@ -85,9 +74,10 @@ export default function CourseOverview()
 
               <div className={"lg:absolute lg:top-8 lg:right-8 xl:right-12 2xl:right-28 mt-14 lg:mt-0 py-8 bg-stone-300/70 backdrop-blur-lg h-[48rem] mx-auto w-[21rem] md:w-[36rem] lg:w-[27rem] xl:w-[36rem] rounded-3xl drop-shadow-2xl"}>
 
-                  <Image className={"w-[18rem] md:w-[32rem] lg:w-[25rem] xl:w-[32rem] mx-auto rounded-[2rem]"} src={courseImage} alt={"Course Banner Image"}/>
 
-                  <Link href={`/course/${urlPath}/68`}>
+                  <img className={"w-[18rem] md:w-[32rem] lg:w-[25rem] xl:w-[32rem] mx-auto rounded-[2rem]"} src={`${courseData.courseBanner}`} alt={"Course Banner Image"} />
+
+                  <Link href={`/course/${courseData.courseUrl}/${courseVideoData[0].id}`}>
                       <h2 className={"mt-7 bg-primary-medium hover:hover:scale-105 transition-all ease-in-out rounded-3xl py-3 text-center text-md font-semibold text-zinc-600 md:text-2xl w-52 lg:w-96 mx-auto"}>
                           Start Learning
                       </h2>
@@ -99,14 +89,13 @@ export default function CourseOverview()
                           Features of this Course :
                       </h1>
 
-                      <div className={"pl-5 mt-3 space-y-2"}>
+                      <div className={"pl-5 mt-5 space-y-3"}>
 
-                          <div className={"flex flex-row"}>
+                          <div className={"flex flex-row space-x-3"}>
 
-                              <svg className=" w-8 h-8 -translate-y-1" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke="currentColor" >
-                                  <path
-                                      strokeLinecap="round" strokeLinejoin="round"
-                                      d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75"
+                              <svg className="w-6 h-6 translate-y-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
+                                  <path fillRule="evenodd" clipRule="evenodd"
+                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
                                   />
                               </svg>
 
@@ -116,12 +105,11 @@ export default function CourseOverview()
 
                           </div>
 
-                          <div className={"flex flex-row"}>
+                          <div className={"flex flex-row space-x-3"}>
 
-                              <svg className=" w-8 h-8 -translate-y-1" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke="currentColor" >
-                                  <path
-                                      strokeLinecap="round" strokeLinejoin="round"
-                                      d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75"
+                              <svg className="w-6 h-6 translate-y-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
+                                  <path fillRule="evenodd" clipRule="evenodd"
+                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
                                   />
                               </svg>
 
@@ -131,12 +119,11 @@ export default function CourseOverview()
 
                           </div>
 
-                          <div className={"flex flex-row"}>
+                          <div className={"flex flex-row space-x-3"}>
 
-                              <svg className=" w-8 h-8 -translate-y-1" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke="currentColor" >
-                                  <path
-                                      strokeLinecap="round" strokeLinejoin="round"
-                                      d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75"
+                              <svg className="w-6 h-6 translate-y-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
+                                  <path fillRule="evenodd" clipRule="evenodd"
+                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
                                   />
                               </svg>
 
@@ -146,12 +133,11 @@ export default function CourseOverview()
 
                           </div>
 
-                          <div className={"flex flex-row"}>
+                          <div className={"flex flex-row space-x-3"}>
 
-                              <svg className=" w-8 h-8 -translate-y-1" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke="currentColor" >
-                                  <path
-                                      strokeLinecap="round" strokeLinejoin="round"
-                                      d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75"
+                              <svg className="w-6 h-6 translate-y-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
+                                  <path fillRule="evenodd" clipRule="evenodd"
+                                        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
                                   />
                               </svg>
 
@@ -212,13 +198,7 @@ export default function CourseOverview()
                                   <h1 className={"font-bold text-3xl underline underline-offset-8 text-center lg:text-left"}>Description of the Course</h1>
 
                                   <p className={"text-lg md:text-xl leading-9 lg:mx-24 my-7 text-justify"}>
-                                      This course is focused on providing hands-on experience with deploying applications on
-                                      DigitalOcean&apos;s cloud platform using Droplets. Students will learn how to create and configure
-                                      Droplets, connect to them via SSH, and use popular tools such as Git, Nginx, and Node.js to
-                                      deploy web applications. The course will also cover best practices for securing and managing
-                                      Droplets, as well as scaling and monitoring applications. By the end of the course, students
-                                      will have the skills and knowledge necessary to deploy and manage their own applications on
-                                      DigitalOcean&apos;s platform.
+                                      {courseData.courseNameDescription}
                                   </p>
 
                               </div>
@@ -238,24 +218,17 @@ export default function CourseOverview()
                       <Tab.Panel>
                           <div className={"space-y-6 px-2 lg:px-28"}>
 
-                              <SingleCourseOverview courseTitle={"Lets Start new series Deployment Project on Digital Ocean in Hindi"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"What is cloud About Digital Ocean Understanding Client requirements"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Creating First Virtual Machine using Droplet Hindi"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Changing root password droplet very important video"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Using Database on Droplet Database Installation on cloud"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Connecting GUI with MySQL Server running on droplet DB on cloud"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Build Jar With Production environment Variables Spring Boot cloud Spring boot on Digital Ocean"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Uploading Spring Boot Jar to Virtual Machine in Hindi"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Deploying Spring Boot on VM Installing JRE Hindi"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Creating Linux Script for Spring boot startsh stopsh Run spring boot in background Hindi"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Building React App to deploy Preparing react app for hosting on node server in Hindi"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Installing Node JS on VM Deploy React Application on Droplet Deployment on cloud in Hindi"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Working with pm2 how to manage node process Deployment on Digital Ocean"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Buying Cheapest domain for Spring boot Application Buying domain live"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Pointing Domain to IP Working with Nginx Server Working with Ubuntu Firewall Cloud Deployment"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Point domain to Backend Spring Boot Application Step by step Deployment on cloud in Hindi"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Installing Free SSL on Spring Boot and React Application Deployment in Cloud"} courseLink={"#"}/>
-                              <SingleCourseOverview courseTitle={"Finish Deployment Series Why Linux is important for developer"} courseLink={"#"}/>
+                              {
+                                  courseVideoData.map(
+                                      (singleVideoData)=>
+                                      {
+                                          return(
+                                              <SingleCourseOverview key={singleVideoData.id} courseTitle={`${singleVideoData.videoTitle}`} courseLink={"#"}/>
+                                          )
+                                      }
+                                  )
+                              }
+
 
                           </div>
                       </Tab.Panel>
@@ -278,4 +251,20 @@ export default function CourseOverview()
 
       </div>
   );
+}
+
+
+
+
+export async function getServerSideProps(context)
+{
+    const {courseOverview} = context.params;
+    const courseData = await getCourseDetail(courseOverview)
+    const courseVideoData = await getCourseVideos(courseData.id)
+    courseVideoData.sort( (obj1 , obj2) => { return obj1.id - obj2.id } )
+
+    return {
+        props: {courseData , courseVideoData},
+    }
+
 }
