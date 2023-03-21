@@ -1,28 +1,27 @@
 import axios from "axios";
 
-
 const axiosURL = axios.create( { baseURL : process.env.NEXT_PUBLIC_BASE_URL } )
 
+
+
+
 export function topFreeCourses()
-{
-    return axiosURL.get(`/courses/top-courses/`).then(response=>response.data)
-}
+{ return axiosURL.get(`/courses/top-courses/`).then(response=>response.data) }
 
 export function getFreeCourses()
-{
-    return axiosURL.get(`/courses/`).then(response=>response.data)
-}
+{ return axiosURL.get(`/courses/`).then(response=>response.data) }
 
-export function getCourseDetail(slug) {
-    return axiosURL.get(`/courses/url/${slug}/`).then(response=>response.data)
-}
+export function getCourseDetail(slug)
+{ return axiosURL.get(`/courses/url/${slug}/`).then(response=>response.data) }
 
-export function getCourseVideos(id) {
-    return axiosURL.get(`/courses/${id}/videos/`).then(response=>response.data)
-}
+export function getCourseVideos(id)
+{ return axiosURL.get(`/courses/${id}/videos/`).then(response=>response.data) }
 
+export function getBlogs()
+{ return axiosURL.get(`/blogs/`).then(res => res.data) }
 
-
+export function getBlogUsingSlug(slug)
+{ return axiosURL.get(`/blogs/url/${slug}/`).then(res => res.data) }
 
 
 
@@ -65,12 +64,4 @@ export function successPayment(res) {
     f.append("razorpay_payment_id", res.razorpay_payment_id);
     f.append("rid", res.rid);
     return axiosURL.post(`/success-payment/`, f).then(res => res.data);
-}
-
-export function getBlogs() {
-    return axiosURL.get(`/blogs`).then(res => res.data)
-}
-
-export function getBlogUsingSlug(slug) {
-    return axiosURL.get(`/blogs/url/${slug}/`).then(res => res.data)
 }

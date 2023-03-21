@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function ShortBlogCard( { blogTitle , blogShortDescription } )
+export default function ShortBlogCard( { blogTitle , blogShortDescription , blogSlug } )
 {
   return(
       <div className={"py-2 rounded-xl drop-shadow-xl bg-stone-100 px-6 py-8 space-y-7"} >
@@ -15,7 +15,7 @@ export default function ShortBlogCard( { blogTitle , blogShortDescription } )
 
           <div className={"flex flex-row justify-end"}>
 
-              <Link href={`/blogs/${blogTitle}`}>
+              <Link href={`/blogs/${blogSlug}`}>
 
                   <h1 className={"w-48 md:w-96 bg-primary-medium hover:bg-primary-light transition-all ease-in-out rounded-lg py-2 text-center text-base font-semibold text-zinc-600 lg:text-xl"} >
                       Read Full Article ...

@@ -59,7 +59,7 @@ module.exports = {
       colors:{
 
         /* Card Color */
-        "card-color" : "#fff1f2" /* this colour "rose-50" is in tailwind css predefined Color palette reference (https://tailwindcss.com/docs/background-color#class-reference) */ ,
+        "card-color" : "#eef2ff" /* this colour "rose-50" is in tailwind css predefined Color palette reference (https://tailwindcss.com/docs/background-color#class-reference) */ ,
 
         /* Primary Color Shades Used */
         "primary-light" : "#FDE68A" /* this colour "amber-200" is in tailwind css predefined Color palette reference (https://tailwindcss.com/docs/background-color#class-reference) */ ,
