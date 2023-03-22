@@ -15,3 +15,24 @@ html,body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.table td, th {
+    border: 1px solid #e2e2e2;
+    padding: 10px;
+  }
+.table{
+    border-collapse: collapse;
+   
+
+
+
+}
+
+.heading-blog{
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+}
+
+
+.table tr:nth-child(even) {background-color: #f2f2f2;}
