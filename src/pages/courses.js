@@ -26,8 +26,7 @@ export default function courses( {courses} )
 
 export async function getServerSideProps(context)
 {
-    const data = await getFreeCourses();
-    data.sort( (obj1 , obj2) => { return obj1.order - obj2.order } )
+    const data = await getFreeCourses();   
 
     return {
         props: { courses : data }, // will be passed to the page component as props

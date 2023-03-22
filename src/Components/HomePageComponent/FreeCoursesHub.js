@@ -25,8 +25,8 @@ export default function FreeCoursesHub({top3Courses})
                                           key={singleCourse.id}
                                           data = {"api"}
                                           bannerImage={singleCourse.courseBanner}
-                                          bannerTitle={singleCourse.pageTitle}
-                                          bannerDescription={singleCourse.pageDescription}
+                                          bannerTitle={singleCourse.courseName}
+                                          bannerDescription={singleCourse.courseNameDescription}
                                           fullLink={`/course/${singleCourse.courseUrl}`}
                                           activeStatus={true}
                                       />
@@ -38,8 +38,8 @@ export default function FreeCoursesHub({top3Courses})
                                           key={singleCourse.id}
                                           data = {"api"}
                                           bannerImage={singleCourse.courseBanner}
-                                          bannerTitle={singleCourse.pageTitle}
-                                          bannerDescription={singleCourse.pageDescription}
+                                          bannerTitle={singleCourse.courseName}
+                                          bannerDescription={singleCourse.courseNameDescription}
                                           fullLink={`/course/${singleCourse.courseUrl}`}
                                           activeStatus={true}
                                       />
