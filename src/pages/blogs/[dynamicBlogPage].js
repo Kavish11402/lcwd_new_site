@@ -35,8 +35,10 @@ export default function DynamicBlogPage ({blog})
           <main className={""}>
 
               {/* Place for Dynamic Blog Content */}
-              <div className={"border-2 border-black mx-20"}>
-                  {htmlContent ? <HTMLDataParser htmlData={htmlContent}/> : ''}
+              <div className={" mx-2 md:mx-5 grid grid-cols-1 lg:grid-cols-12"}>
+              
+                <div className="lg:col-start-3 lg:col-span-8">  {htmlContent ? <HTMLDataParser htmlData={htmlContent}/> : ''}</div>
+               
               </div>
 
               {/* Share Panel */}
