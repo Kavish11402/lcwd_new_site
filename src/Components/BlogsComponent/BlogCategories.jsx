@@ -72,6 +72,13 @@ const BlogCategories = () => {
           </div>
 
           <div className={"text-secondary-dark text-lg space-y-4"}>
+            <Link className="block" href={`/blogs`}>
+              <div
+                className={`flex flex-row justify-center cursor-pointer border-2 border-sky-300 hover:text-white bg-white hover:bg-sky-400 transition-all ease-linear rounded-xl py-1 uppercase`}
+              >
+                <p className={"font-medium"}>All Blogs</p>
+              </div>
+            </Link>
             {categories &&
               categories.map((cat, index) => (
                 <Link
