@@ -38,11 +38,11 @@ export default function CourseCard({bannerImage , bannerTitle , bannerDescriptio
 
             <div className={"mt-8 mb-3 rounded-full border border-gray-400 mx-3"}></div>
 
-            <div className={"text-center w-72 font-bold text-lg lg:text-xl mx-auto"}>
+            <div className={" w-72 font-bold text-lg lg:text-md mx-auto"}>
                 {bannerTitle}
             </div>
 
-            <div className={"text-justify w-72 h-[7rem] text-zinc-600 mt-3 mx-auto text-sm lg:h-[10rem] lg:text-base"}>
+            <div className={"line-clamp-5 w-72 h-[7rem] text-zinc-600 mt-3 mx-auto text-sm lg:h-[10rem] lg:text-base"}>
                 {bannerDescription}
             </div>
 

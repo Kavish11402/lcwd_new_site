@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import parse from "html-react-parser";
 
 export default function HTMLDataParser({htmlData})
 {
+
+    const currentRef=useRef()
+
+    useEffect(()=>{
+      
+    })
     function changeHtmlData(content) {
         return parse(content, {
             replace: node => {
                 if (node.attribs && node.name === 'img') {
                     node.attribs.src = process.env.NEXT_PUBLIC_BASE_URL_ONLY + '/' + node.attribs.src
 
-                    console.log(node.attribs.src)
-                    console.log(node.attribs.style)
+                
                     return (
 
-                        <div className={"flex flex-row justify-center"}>
+                        <div className={"flex flex-row justify-center "}>
                             <div>
                                 <img src={`${node.attribs.src}`}
                                      width={node.attribs.width}
@@ -27,7 +32,7 @@ export default function HTMLDataParser({htmlData})
                 }
 
                 if (node.attribs && node.name === 'table') {
-                    node.attribs.class += ' w-full max-w-full mb-4 bg-transparent table-bordered table-hover table-striped'
+                    node.attribs.class += 'w-full max-w-full mb-4 bg-transparent table-bordered table-hover table-striped'
                     return node
                 }
 
@@ -39,7 +44,8 @@ export default function HTMLDataParser({htmlData})
     }
 
     return (
-        <div>
+        <div ref={currentRef}>
+            {console.log(changeHtmlData(htmlData))}
             {changeHtmlData(htmlData)}
         </div>
     );
