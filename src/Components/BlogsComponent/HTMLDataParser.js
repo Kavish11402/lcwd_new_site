@@ -15,10 +15,10 @@ export default function HTMLDataParser({htmlData})
 
                         <div className={"flex flex-row justify-center"}>
                             <div>
-                                <img src={`${node.attribs.src}`}
+                                <img src={node.attribs.src}
                                      width={node.attribs.width}
                                      height={node.attribs.height}
-                                     className={'max-w-full h-auto  shadow-sm '}
+                                     className={'rounded-3xl '}
                                      alt={node.attribs.alt}
                                 />
                             </div>
@@ -27,7 +27,7 @@ export default function HTMLDataParser({htmlData})
                 }
 
                 if (node.attribs && node.name === 'table') {
-                    node.attribs.class += ' w-full max-w-full mb-4 bg-transparent table-bordered table-hover table-striped'
+                    node.attribs.class += ' w-full max-w-full mb-4'
                     return node
                 }
 

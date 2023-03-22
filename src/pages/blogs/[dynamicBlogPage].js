@@ -1,3 +1,6 @@
+
+
+
 import {useRouter} from "next/router";
 import ShareBar from "@/Components/MasterTemplets/ShareBar";
 import React, {useEffect, useState} from "react";
@@ -32,12 +35,24 @@ export default function DynamicBlogPage ({blog})
 
           </Head>
 
-          <main className={""}>
+          <main className={"py-14"}>
+
+
+              <div className={"mx-28 mb-28 mt-10"}>
+                  <h1 className={"text-6xl font-bold underline underline-offset-4"} >{blog.title}</h1>
+              </div>
+
+
 
               {/* Place for Dynamic Blog Content */}
-              <div className={"border-2 border-black mx-20"}>
+              {/* border-2 border-black mx-28 my-16 */}
+              <div className={"singleBlog"}>
                   {htmlContent ? <HTMLDataParser htmlData={htmlContent}/> : ''}
               </div>
+
+
+
+
 
               {/* Share Panel */}
               <ShareBar postTitle={blog.title} postLink={`https://learncodewithdurgesh.com/blogs/${blog.slug}`}/>
