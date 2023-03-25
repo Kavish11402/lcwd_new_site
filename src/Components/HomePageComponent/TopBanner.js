@@ -71,9 +71,11 @@ export default function TopBanner() {
             "mt-4 text-center mx-auto text-zinc-600 lg:mt-7 xl:mt-10 sm:w-[700px] lg:w-[90%] lg:text-base xl:text-lg lg:mx-auto xl:font-semibold xl-w-4/5"
           }
         >
-          Best Video Courses in <b>HINDI</b>, These courses are totally free of
-          cost. Thousands of people learn from these courses daily. Our effort
-          is to make you learn the technology in Practical way.
+          Looking to learn programming and coding in Hindi? Look no further! Our
+          website offers a wide range of courses to help you learn programming
+          languages like Java, Python, and more. Our expert instructors provide
+          comprehensive lessons and hands-on projects to help you master coding
+          in very efficent and effective way.
         </p>
 
         <div
@@ -95,7 +97,7 @@ export default function TopBanner() {
           </Link>
 
           {/* TODO -> Add "/courses" link to the below Link's href */}
-          <Link href={"/"}>
+          <Link href={"/courses"}>
             <h1
               className={
                 "mx-2 border-2 px-3 py-2 rounded-xl border-secondary-medium lg:mx-8 2xl:mx-16 lg:hover:border-secondary-dark lg:hover:bg-secondary-dark lg:hover:text-white lg:transition-all lg:ease-in-out lg:px-2 xl:px-5 lg:py-3 lg:text-lg 2xl:text-2xl lg:text-zinc-600"
@@ -212,14 +214,14 @@ export default function TopBanner() {
           </div>
 
           <p className={"text-center font-bold lg:text-2xl xl:text-3xl"}>
-            2000+
+            200000+
           </p>
           <p
             className={
               "text-center text-gray-700 text-lg lg:text-base xl:text-xl"
             }
           >
-            Happy Students
+            Trusted Students and Professionals
           </p>
         </div>
       </div>
