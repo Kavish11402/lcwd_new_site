@@ -3,7 +3,7 @@ import ShareBar from "@/Components/MasterTemplets/ShareBar";
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import { getBlogUsingSlug } from "@/Api_Services/apiServices";
-import HTMLDataParser from "@/Components/BlogsComponent/HTMLDataParser";
+import HTMLDataParser from "@/Components/MasterTemplets/HTMLDataParser";
 import BlogCategories from "@/Components/BlogsComponent/BlogCategories";
 import HeroCard from "@/Components/MasterTemplets/HeroCard";
 import LatestBlog from "@/Components/BlogsComponent/LatestBlog";

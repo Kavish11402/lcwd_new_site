@@ -11,15 +11,9 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>Master Programming in Hindi | Learn Code With Durgesh</title>
 
-        <meta
-          name="keywords"
-          content="lcwd, learn code with durgesh, learn code with durgesh, best hindi courses, free hindi programing courses, java programming in hindi,  python programming hindi, c programming hindi, django in hindi, spring boot in hindi, learn spring boot in hindi"
-        />
+        <meta name="keywords" content="lcwd, learn code with durgesh, learn code with durgesh, best hindi courses, free hindi programing courses, java programming in hindi,  python programming hindi, c programming hindi, django in hindi, spring boot in hindi, learn spring boot in hindi" />
 
-        <meta
-          name="description"
-          content="learn code with Durgesh is online platform which provide free video courses on different type of technologies like , c programming language , java programming language , python programming language , android development"
-        />
+        <meta name="description" content="learn code with Durgesh is online platform which provide free video courses on different type of technologies like , c programming language , java programming language , python programming language , android development" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 

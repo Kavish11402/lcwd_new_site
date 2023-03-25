@@ -21,7 +21,7 @@ export default function HTMLDataParser({htmlData})
 
                         <div className={"flex flex-row justify-center mt-3 "}>
                          
-                                <Image src={`${node.attribs.src}`}
+                                <img src={`${node.attribs.src}`}
                                      width={node.attribs.width}
                                      height={node.attribs.height}
                                      className={'max-w-full h-auto  shadow-sm '}

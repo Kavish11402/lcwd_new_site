@@ -80,7 +80,7 @@ const BlogCategories = () => {
                   key={index}
                 >
                   <div
-                    className={`flex flex-row justify-center cursor-pointer border-2 border-sky-300 hover:text-white bg-white hover:bg-sky-400 transition-all ease-linear rounded-xl py-1 uppercase`}
+                    className={`flex flex-row justify-center cursor-pointer border-2 border-sky-400 hover:border-secondary-dark hover:text-white bg-white hover:bg-sky-400 transition-all ease-linear rounded-xl py-1 uppercase`}
                   >
                     <p className={"font-medium"}>{cat.title}</p>
                   </div>

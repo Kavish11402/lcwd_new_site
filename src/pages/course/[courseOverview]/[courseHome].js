@@ -1,9 +1,22 @@
 import YoutubePlayer from "@/Components/MasterTemplets/YoutubePlayer";
 import PlayerCourseCard from "@/Components/FreeCoursesComponent/PlayerCourseCard";
 import {Tab} from "@headlessui/react";
+import {getCourseDetail, getCourseVideos} from "@/Api_Services/apiServices";
+import React, {useState} from "react";
+import HTMLDataParser from "@/Components/MasterTemplets/HTMLDataParser";
+import Link from "next/link";
 
-export default function CourseHome()
+export default function CourseHome({courseVideoData , courseOverview })
 {
+    const baseArrayIndex  = courseVideoData[0].id
+
+    const [videoDetail , setVideoDetail] = useState(
+        {
+            youtube_embed_Id : courseVideoData[0].get_video_id ,
+            video_id : courseVideoData[0].id
+        }
+    )
+
     let lSymbol = "</"
     let rSymbol = ">"
     return(
@@ -15,7 +28,7 @@ export default function CourseHome()
 
                     {/* Embedded Youtube Video */}
                     <div className={"mx-auto"}>
-                        <YoutubePlayer videoId={"9GCeaRPT9Bc"}/>
+                        <YoutubePlayer videoId={`${videoDetail.youtube_embed_Id}`} autoPlayFeatureSwitch={true} />
                     </div>
 
                     <div className={"hidden lg:block"}>
@@ -26,14 +39,16 @@ export default function CourseHome()
                                 Description
                             </h1>
 
-                            <p className={"mx-6 text-lg mt-8 text-justify"}>
-                                In this video we are going discuss the introduction to new series that LearnCodeWithDurgesh going to start
-                            </p>
+                            <div className={"mx-6 text-lg mt-8"}>
+
+                                <HTMLDataParser htmlData={courseVideoData[videoDetail.video_id-baseArrayIndex].videoDescription} />
+
+                            </div>
 
                         </div>
 
                         {/* Divider Line */}
-                        <div className={"rounded-full border border-gray-400 my-5 mx-20"}></div>
+                        <div className={"rounded-full border border-gray-300 my-10 mx-20"}></div>
 
                         {/* Provided Code */}
                         <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-full lg:w-[52vw] mx-auto 2xl:w-[70rem]"}>
@@ -47,17 +62,26 @@ export default function CourseHome()
                             </p>
                         </div>
 
-                        {/* Divider Line */}
-                        <div className={"rounded-full border border-gray-400 my-5 mx-20"}></div>
                     </div>
 
-                    {/* Previous / Next Video Buttons */}
+{/*                     Previous / Next Video Buttons
                     <div className={"hidden lg:flex flex-row justify-center space-x-20"}>
 
 
-                        {/* Previous Button */}
-                        <a href={"#_"}
-                           className={`   relative 
+                         Previous Button
+                        <Link
+                            href={`/course/${courseOverview}/${(videoDetail.video_id)-1}`}
+                            onClick={ ()=>{
+                                    setVideoDetail(
+                                        {
+                                            youtube_embed_Id : courseVideoData[ (videoDetail.video_id - baseArrayIndex)-1 ].get_video_id ,
+                                            video_id : courseVideoData[ (videoDetail.video_id - baseArrayIndex)-1 ].id
+                                        }
+                                    )
+                            } }
+                           className={`
+                                    ${ baseArrayIndex===videoDetail.video_id ? "hidden" : "block" }
+                                    relative 
                                     inline-flex 
                                     items-center 
                                     justify-center 
@@ -74,7 +98,7 @@ export default function CourseHome()
                                     rounded-full 
                                     shadow-md group`}
                         >
-                      <span className={`absolute 
+                            <span className={`absolute 
                                         inset-0 
                                         flex 
                                         items-center 
@@ -86,29 +110,39 @@ export default function CourseHome()
                                         bg-secondary-medium 
                                         group-hover:translate-x-0 
                                         ease`}>
-                          <svg
-                              className={"w-8 h-8"}
-                              fill={"none"} stroke={"currentColor"}
-                              viewBox={"0 0 24 24"} xmlns={"http://www.w3.org/2000/svg"}
-                          >
-                              <path
-                                  strokeLinecap={"round"} strokeLinejoin={"round"}
-                                  strokeWidth={"3"} d={"M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"}
-                              >
-                              </path>
+                                <svg
+                                    className={"w-8 h-8"}
+                                    fill={"none"} stroke={"currentColor"}
+                                    viewBox={"0 0 24 24"} xmlns={"http://www.w3.org/2000/svg"}
+                                >
+                                    <path
+                                        strokeLinecap={"round"} strokeLinejoin={"round"}
+                                        strokeWidth={"3"} d={"M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"}
+                                    >
+
+                                    </path>
                           </svg>
 
-                      </span>
+                              </span>
                             <span
-                                className={"absolute flex items-center justify-center w-full h-full text-secondary-medium transition-all duration-300 transform group-hover:-translate-x-full ease"}>
-                          Previous Video
-                      </span>
+                                        className={"absolute flex items-center justify-center w-full h-full text-secondary-medium transition-all duration-300 transform group-hover:-translate-x-full ease"}>
+                                  Previous Video
+                              </span>
                             <span className={"relative invisible"}> Previous Video </span>
-                        </a>
+                        </Link>
 
 
-                        {/* Next Button */}
-                        <a href={"#_"}
+                         Next Button
+                        <Link
+                            href={`/course/${courseOverview}/${videoDetail.video_id+1}`}
+                            onClick={ ()=>{
+                                setVideoDetail(
+                                    {
+                                        youtube_embed_Id : courseVideoData[ (videoDetail.video_id - baseArrayIndex)+1 ].get_video_id ,
+                                        video_id : courseVideoData[ (videoDetail.video_id - baseArrayIndex)+1 ].id
+                                    }
+                                )
+                            } }
                            className={`   relative 
                                     inline-flex 
                                     items-center 
@@ -157,13 +191,13 @@ export default function CourseHome()
                             <span className={"relative invisible"}>
                           Next Video
                       </span>
-                        </a>
+                        </Link>
 
                     </div>
 
                     <div className={"lg:hidden flex flex-row justify-around"}>
 
-                        {/* Previous Button */}
+                         Previous Button
                         <a href={"#_"} className={`flex flex-row justify-center px-3 py-3 font-bold text-base text-secondary-medium border-2 border-secondary-medium rounded-full`} >
                             <svg
                                 className={"my-auto w-8 h-8 mr-2"}
@@ -181,7 +215,7 @@ export default function CourseHome()
                             </div>
                         </a>
 
-                        {/* Next Button */}
+                         Next Button
                         <a href={"#_"} className={`flex flex-row justify-center px-3 py-3 font-bold text-base text-secondary-medium border-2 border-secondary-medium rounded-full`} >
                             <div className={"w-max h-fit my-auto"}>
                                 Next Video
@@ -198,7 +232,7 @@ export default function CourseHome()
                             </svg>
                         </a>
 
-                    </div>
+                    </div>*/}
 
                     <div className={"lg:hidden"}>
 
@@ -238,9 +272,9 @@ export default function CourseHome()
                                                 Description
                                             </h1>
 
-                                            <p className={"mx-6 text-lg mt-8 text-justify"}>
-                                                In this video we are going discuss the introduction to new series that LearnCodeWithDurgesh going to start
-                                            </p>
+                                            <div className={"mx-6 text-lg mt-8 text-justify"}>
+                                                <HTMLDataParser htmlData={courseVideoData[videoDetail.video_id-baseArrayIndex].videoDescription} />
+                                            </div>
 
                                         </div>
 
@@ -265,24 +299,15 @@ export default function CourseHome()
                                 {/* Course Content View */}
                                 <Tab.Panel>
                                     <div className={"space-y-6 px-2 lg:px-28"}>
-                                        <PlayerCourseCard courseTitle={"Lets Start new series Deployment Project on Digital Ocean in Hindi"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"What is cloud About Digital Ocean Understanding Client requirements"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Creating First Virtual Machine using Droplet Hindi"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Changing root password droplet very important video"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Using Database on Droplet Database Installation on cloud"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Connecting GUI with MySQL Server running on droplet DB on cloud"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Build Jar With Production environment Variables Spring Boot cloud Spring boot on Digital Ocean"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Uploading Spring Boot Jar to Virtual Machine in Hindi"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Deploying Spring Boot on VM Installing JRE Hindi"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Creating Linux Script for Spring boot startsh stopsh Run spring boot in background Hindi"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Building React App to deploy Preparing react app for hosting on node server in Hindi"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Installing Node JS on VM Deploy React Application on Droplet Deployment on cloud in Hindi"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Working with pm2 how to manage node process Deployment on Digital Ocean"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Buying Cheapest domain for Spring boot Application Buying domain live"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Pointing Domain to IP Working with Nginx Server Working with Ubuntu Firewall Cloud Deployment"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Point domain to Backend Spring Boot Application Step by step Deployment on cloud in Hindi"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Installing Free SSL on Spring Boot and React Application Deployment in Cloud"} courseLink={"#"}/>
-                                        <PlayerCourseCard courseTitle={"Finish Deployment Series Why Linux is important for developer"} courseLink={"#"}/>
+                                        {
+                                            courseVideoData.map(
+                                                (singleVideo)=>{
+                                                    return(
+                                                        <PlayerCourseCard key={singleVideo.id} singleVideo={singleVideo} setVideoDetail={setVideoDetail} courseOverview={courseOverview} selected={ singleVideo.id === videoDetail.video_id } />
+                                                    )
+                                                }
+                                            )
+                                        }
                                     </div>
                                 </Tab.Panel>
 
@@ -298,27 +323,33 @@ export default function CourseHome()
 
             <div className={"hidden lg:block space-y-5 p-5 overflow-y-scroll my-7 h-[160vh] bg-stone-100 rounded-3xl drop-shadow-xl mr-6"}>
 
-                <PlayerCourseCard courseTitle={"Lets Start new series Deployment Project on Digital Ocean in Hindi"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"What is cloud About Digital Ocean Understanding Client requirements"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Creating First Virtual Machine using Droplet Hindi"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Changing root password droplet very important video"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Using Database on Droplet Database Installation on cloud"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Connecting GUI with MySQL Server running on droplet DB on cloud"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Build Jar With Production environment Variables Spring Boot cloud Spring boot on Digital Ocean"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Uploading Spring Boot Jar to Virtual Machine in Hindi"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Deploying Spring Boot on VM Installing JRE Hindi"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Creating Linux Script for Spring boot startsh stopsh Run spring boot in background Hindi"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Building React App to deploy Preparing react app for hosting on node server in Hindi"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Installing Node JS on VM Deploy React Application on Droplet Deployment on cloud in Hindi"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Working with pm2 how to manage node process Deployment on Digital Ocean"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Buying Cheapest domain for Spring boot Application Buying domain live"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Pointing Domain to IP Working with Nginx Server Working with Ubuntu Firewall Cloud Deployment"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Point domain to Backend Spring Boot Application Step by step Deployment on cloud in Hindi"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Installing Free SSL on Spring Boot and React Application Deployment in Cloud"} courseLink={"#"}/>
-                <PlayerCourseCard courseTitle={"Finish Deployment Series Why Linux is important for developer"} courseLink={"#"}/>
+
+                {
+                    courseVideoData.map(
+                        (singleVideo)=>{
+                            return(
+                                <PlayerCourseCard key={singleVideo.id} singleVideo={singleVideo} setVideoDetail={setVideoDetail} courseOverview={courseOverview} selected={ singleVideo.id === videoDetail.video_id } />
+                            )
+                        }
+                    )
+                }
+
 
             </div>
 
         </div>
     );
+}
+
+export async function getServerSideProps(context)
+{
+    const {courseOverview} = context.params;
+    const courseData = await getCourseDetail(courseOverview)
+    const courseVideoData = await getCourseVideos(courseData.id)
+    courseVideoData.sort( (obj1 , obj2) => { return obj1.id - obj2.id } )
+
+    return {
+        props: {courseVideoData , courseOverview},
+    }
+
 }

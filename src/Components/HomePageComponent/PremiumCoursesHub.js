@@ -1,6 +1,9 @@
 import CourseCard from "@/Components/HomePageComponent/SingleReuseableComponents/CourseCard";
 import bannerBg from "@/Assets/Images/banner_bg.jpg";
-import Premium_SpringBoot from "@/Assets/Images/Premium_SpringBoot.png";
+import premiumCourseBanner1 from "@/Assets/Images/premiumCourseBanner1.png";
+import premiumCourseBanner2 from "@/Assets/Images/premiumCourseBanner2.png";
+import premiumCourseBundle1 from "@/Assets/Images/premiumCourseBunddle1.png";
+
 import Link from "next/link";
 
 export default function PremiumCoursesHub()
@@ -44,7 +47,7 @@ export default function PremiumCoursesHub()
 
               <CourseCard
                   data={"hardCoded"}
-                  bannerImage={Premium_SpringBoot}
+                  bannerImage={premiumCourseBanner1}
                   bannerTitle={"Master Spring Boot with Real time Project"}
                   bannerDescription={"In this course, you will learn everything you need to know about developing applications with Spring Boot, the popular Java framework for building microservices and web applications. (Backend with Java)"}
                   fullLink={"https://courses.learncodewithdurgesh.com/learn/Master-Spring-Boot-With-Project"}
@@ -53,19 +56,22 @@ export default function PremiumCoursesHub()
 
               <CourseCard
                   data={"hardCoded"}
-                  bannerImage={bannerBg}
-                  bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
-                  bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
-                  activeStatus={false}
+                  bannerImage={premiumCourseBanner2}
+                  bannerTitle={"Complete Ecommerce Project using  Rect JS (Electronic Store)"}
+                  bannerDescription={"In this project we are going to create E Commerce project using React JS. This is a project-based front-end course in Hindi."}
+                  fullLink={"https://courses.learncodewithdurgesh.com/learn/Ecommerce-using-React-js"}
+                  activeStatus={true}
               />
 
 
               <div className={"lg:col-span-2 xl:col-span-1 lg:flex lg:flex-row lg:justify-center xl:inline"}>
                   <CourseCard
-                      bannerImage={bannerBg}
-                      bannerTitle={"Sending Attachment with email using Java and Gmail in simple way | Hindi"}
-                      bannerDescription={"In this video, we will be learning how to send an email with an attachment using Java and Gmail in Hindi. We will be using the JavaMail API library to accomplish this task."}
-                      activeStatus={false}
+                      data={"hardCoded"}
+                      bannerImage={premiumCourseBundle1}
+                      bannerTitle={"Full Stack React + Spring Boot"}
+                      bannerDescription={"This bundle contain two important front-end and backed course . This is full stack bundle containing full eCommerce project using spring boot and reacts step by step."}
+                      fullLink={"https://courses.learncodewithdurgesh.com/learn/Fullstack-React-Spring-Boot"}
+                      activeStatus={true}
                   />
               </div>
 

@@ -52,7 +52,7 @@ const LatestBlog = () => {
             latestBlogs.map((blog, index) => (
               <div
                 key={index}
-                className="max-w-sm  overflow-hidden shadow-lg  rounded-xl border-b-secondary-medium border-b-8 drop-shadow-xl bg-card-color"
+                className="max-w-sm min-h-[20rem] overflow-hidden shadow-lg  rounded-xl border-b-secondary-medium border-b-8 drop-shadow-xl bg-card-color"
               >
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">{blog.title}</div>

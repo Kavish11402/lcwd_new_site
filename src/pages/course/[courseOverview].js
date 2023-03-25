@@ -157,7 +157,7 @@ export default function CourseOverview({courseData , courseVideoData})
 
           <div className={"mt-2 mb-28 lg:my-24 2xl:my-60"}>
 
-              <Tab.Group defaultIndex={0}>
+              <Tab.Group defaultIndex={1}>
 
                   <Tab.List className={"flex flex-row justify-center"}>
 

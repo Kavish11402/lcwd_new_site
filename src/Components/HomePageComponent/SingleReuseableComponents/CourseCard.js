@@ -17,8 +17,9 @@ function imageGenerator(type , bannerImage)
 export default function CourseCard({bannerImage , bannerTitle , bannerDescription , fullLink , activeStatus , data })
 {
     return(
-        <div className={"transition-all ease-linear lg:hover:scale-105 border-b-primary-medium border-t-primary-medium border-b-4 border-t-4 mx-auto w-[20rem] flex flex-col justify-around py-5 px-3 rounded-xl drop-shadow-xl bg-card-color lg:w-[22rem] lg:px-6 lg:mx-0"} >
+        <div className={"transition-all ease-linear lg:hover:scale-105 border-y-primary-medium border-y-4 mx-auto w-[20rem] flex flex-col justify-around py-5 px-2 rounded-xl drop-shadow-xl bg-card-color lg:w-[23rem] lg:h-[35rem] lg:px-6 lg:mx-0"} >
 
+            {/* Image */}
             <div className={"w-fit mx-auto relative overflow-clip"}>
 
                 <div className={"absolute border-8 -left-1 -right-1 -top-1 -bottom-1 border-card-color rounded-2xl z-50"}></div>
@@ -36,18 +37,23 @@ export default function CourseCard({bannerImage , bannerTitle , bannerDescriptio
 
             </div>
 
+            {/* Divider */}
             <div className={"mt-8 mb-3 rounded-full border border-gray-400 mx-3"}></div>
 
+            {/* Tittle */}
             <div className={" w-72 font-bold text-lg lg:text-md mx-auto"}>
                 {bannerTitle}
             </div>
 
-            <div className={"line-clamp-5 w-72 h-[7rem] text-zinc-600 mt-3 mx-auto text-sm lg:h-[10rem] lg:text-base"}>
+            {/* Description */}
+            <div className={"line-clamp-5 w-72 h-[7rem] text-zinc-600 mt-3 mx-auto text-sm lg:h-[7.8rem] lg:text-base"}>
                 {bannerDescription}
             </div>
 
+            {/* Divider */}
             <div className={"mb-6 mt-3 rounded-full border border-gray-400 mx-3"}></div>
 
+            {/* Button */}
             <div>
 
                 {

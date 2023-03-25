@@ -10,7 +10,7 @@ function bgGenerator(backgroundCss) {
   return (
     <div
       className={
-        "absolute -z-30 top-0 right-0 left-0 bg-bottom bg-cover brightness-90 h-[22rem] " +
+        "absolute -z-30 top-0 right-0 left-0 bg-bottom bg-cover brightness-90 h-[30rem] " +
         backgroundCss.toString()
       }
     ></div>
@@ -27,7 +27,7 @@ export default function HeroCard({
   return (
     <div className={"relative"}>
       {bgGenerator(backgroundCss)}
-      <div className={"z-40 h-[22rem] flex flex-col justify-center"}>
+      <div className={"z-40 h-[30rem] flex flex-col justify-center"}>
         {/* border-l-8 border-r-8 border-primary-dark */}
         <div
           className={
