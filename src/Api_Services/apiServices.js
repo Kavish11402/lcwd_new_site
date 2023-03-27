@@ -37,9 +37,7 @@ export function getCodeOfVideo(videoId) {
 }
 
 export function getResourcesOfCourse(courseId) {
-  return axiosURL
-    .get(`/courses/${courseId}/resources/`)
-    .then((res) => res.data);
+  return axiosURL.get(`/courses/${courseId}/resources/`).then((res) => res.data);
 }
 
 export function downloadFile(id) {

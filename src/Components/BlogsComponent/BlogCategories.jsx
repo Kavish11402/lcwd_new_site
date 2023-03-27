@@ -8,7 +8,6 @@ const BlogCategories = () => {
   const { categories, setCategories } = useContext(blogContext);
 
   useEffect(() => {
-    console.log(categories);
     if (!categories) {
       // load categroies
       loadBlogCategories();

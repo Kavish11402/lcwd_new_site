@@ -1,16 +1,15 @@
 import ratingIcon from "@/Assets/Icons/rating.png"
 import enrollmentIcon from "@/Assets/Icons/enrollments.png"
 import videoIcon from "@/Assets/Icons/watchVideo.png"
-import nullIcon from "@/Assets/Icons/null.png"
-
-import Image from "next/image";
 import Link from "next/link";
 import {Tab} from "@headlessui/react";
 import ExplanationCard from "@/Components/HomePageComponent/SingleReuseableComponents/ExplanationCard";
 import SingleCourseOverview from "@/Components/FreeCoursesComponent/SingleCourseOverview";
-import {getCourseDetail, getCourseVideos} from "@/Api_Services/apiServices";
+import {getCourseDetail, getCourseVideos, getResourcesOfCourse} from "@/Api_Services/apiServices";
+import DownloadSourceCode from "@/Components/Misc/DownloadSourceCode";
+import React from "react";
 
-export default function CourseOverview({courseData , courseVideoData})
+export default function CourseOverview({courseData , courseVideoData , codes})
 {
   return(
       <div>
@@ -100,7 +99,7 @@ export default function CourseOverview({courseData , courseVideoData})
                               </svg>
 
                               <h1 className={"text-lg"}>
-                                  18 + Quality Videos
+                                  { courseVideoData.length } + Quality Videos
                               </h1>
 
                           </div>
@@ -206,7 +205,7 @@ export default function CourseOverview({courseData , courseVideoData})
                               <h2 className={"px-2 lg:px-0 w-fit mx-auto font-bold text-3xl lg:text-4xl text-center lg:text-left underline underline-offset-8 mt-28 mb-14 capitalize"}>Key Highlights off our Course</h2>
 
                               <div className={"flex flex-col lg:flex-row justify-center space-y-10 lg:space-y-0 lg:space-x-20"}>
-                                  <ExplanationCard icon={videoIcon} title={"18 + Videos"} description={"Each video contain source code if they have."}/>
+                                  <ExplanationCard icon={videoIcon} title={`${ courseVideoData.length } + Videos`} description={"Each video contain source code if they have."}/>
                                   <ExplanationCard icon={enrollmentIcon} title={"1000+ Enrollments"} description={"Almost 1000+ user already enrolled for this course"}/>
                                   <ExplanationCard icon={ratingIcon} title={"5.0/5.0 Rating"} description={"Rating, All students likes this course."}/>
                               </div>
@@ -223,7 +222,7 @@ export default function CourseOverview({courseData , courseVideoData})
                                       (singleVideoData)=>
                                       {
                                           return(
-                                              <SingleCourseOverview key={singleVideoData.id} courseTitle={`${singleVideoData.videoTitle}`} courseLink={"#"}/>
+                                              <SingleCourseOverview key={singleVideoData.id} singleVideoData={singleVideoData} courseUrl={courseData.courseUrl} />
                                           )
                                       }
                                   )
@@ -238,7 +237,9 @@ export default function CourseOverview({courseData , courseVideoData})
                           <div className={""}>
                               <div className={"mx-16"}>
                                   <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>Provided Materials</h1>
-                                  <Image className={"mt-28 mx-auto w-72"} title={"Nothing is Uploaded Yet"} src={nullIcon} alt={"Null Icon"}/>
+                                  <div className={"border-2 border-black"}>
+                                      <DownloadSourceCode codes={codes}/>
+                                  </div>
                               </div>
                           </div>
                       </Tab.Panel>
@@ -261,10 +262,11 @@ export async function getServerSideProps(context)
     const {courseOverview} = context.params;
     const courseData = await getCourseDetail(courseOverview)
     const courseVideoData = await getCourseVideos(courseData.id)
+    const codes = await getResourcesOfCourse(courseData.id);
     courseVideoData.sort( (obj1 , obj2) => { return obj1.id - obj2.id } )
 
     return {
-        props: {courseData , courseVideoData},
+        props: {courseData , courseVideoData , codes},
     }
 
 }

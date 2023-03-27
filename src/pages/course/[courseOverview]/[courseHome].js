@@ -4,21 +4,27 @@ import {Tab} from "@headlessui/react";
 import {getCourseDetail, getCourseVideos} from "@/Api_Services/apiServices";
 import React, {useState} from "react";
 import HTMLDataParser from "@/Components/MasterTemplets/HTMLDataParser";
-import Link from "next/link";
 
-export default function CourseHome({courseVideoData , courseOverview })
+
+export default function CourseHome({courseVideoData , courseOverview , videoID })
 {
+
+    console.log(courseVideoData)
+
+
+    const urlVideoIndex = courseVideoData.findIndex( (obj)=> obj.id === videoID )
     const baseArrayIndex  = courseVideoData[0].id
 
     const [videoDetail , setVideoDetail] = useState(
         {
-            youtube_embed_Id : courseVideoData[0].get_video_id ,
-            video_id : courseVideoData[0].id
+            youtube_embed_Id : courseVideoData[urlVideoIndex].get_video_id ,
+            video_id : courseVideoData[urlVideoIndex].id
         }
     )
 
     let lSymbol = "</"
     let rSymbol = ">"
+
     return(
         <div className={"flex flex-row "}>
 
@@ -28,7 +34,7 @@ export default function CourseHome({courseVideoData , courseOverview })
 
                     {/* Embedded Youtube Video */}
                     <div className={"mx-auto"}>
-                        <YoutubePlayer videoId={`${videoDetail.youtube_embed_Id}`} autoPlayFeatureSwitch={true} />
+                        <YoutubePlayer videoId={`${videoDetail.youtube_embed_Id}`} autoPlayFeatureSwitch={false} />
                     </div>
 
                     <div className={"hidden lg:block"}>
@@ -344,12 +350,13 @@ export default function CourseHome({courseVideoData , courseOverview })
 export async function getServerSideProps(context)
 {
     const {courseOverview} = context.params;
+    const videoID = Number(context.query.courseHome);
     const courseData = await getCourseDetail(courseOverview)
     const courseVideoData = await getCourseVideos(courseData.id)
     courseVideoData.sort( (obj1 , obj2) => { return obj1.id - obj2.id } )
 
     return {
-        props: {courseVideoData , courseOverview},
+        props: {courseVideoData , courseOverview , videoID},
     }
 
 }

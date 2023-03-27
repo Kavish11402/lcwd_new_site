@@ -11,10 +11,8 @@ const CategoryBlogs = ({ blogs }) => {
   const [currentCatgory, setCurrentCategory] = useState(null);
   const { id, category } = router.query;
   useEffect(() => {
-    console.log("hi");
     if (categories) {
       const cat = categories.find((cat) => cat.id == id);
-      console.log(cat);
       setCurrentCategory(cat);
     }
   }, [categories, id, category]);

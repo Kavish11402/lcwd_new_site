@@ -1,7 +1,5 @@
 import HeroCard from "@/Components/MasterTemplets/HeroCard";
 import ShortBlogCard from "@/Components/BlogsComponent/ShortBlogCard";
-import { Menu, Transition } from "@headlessui/react";
-import { Fragment } from "react";
 import BlogCategories from "./BlogCategories";
 
 export default function BlogsHub({
@@ -10,7 +8,6 @@ export default function BlogsHub({
   subtitle = "Exiting And Hot Topics in Detail",
   showSocialMedia = true,
 }) {
-  console.log(allBlogs);
   return (
     <div className={"w-screen lg:w-auto overflow-x-clip lg:overflow-x-visible"}>
       <HeroCard

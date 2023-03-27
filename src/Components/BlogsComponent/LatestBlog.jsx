@@ -2,7 +2,6 @@ import { getLatestBlogs } from "@/Api_Services/apiServices";
 import blogContext from "@/Context/BlogContext";
 import React, { useContext, useEffect } from "react";
 import Slider from "react-slick";
-import ReviewCard from "../HomePageComponent/SingleReuseableComponents/ReviewCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
@@ -10,7 +9,6 @@ import Link from "next/link";
 const LatestBlog = () => {
   const { latestBlogs, setLatestBlogs } = useContext(blogContext);
   useEffect(() => {
-    console.log(latestBlogs);
     if (!latestBlogs) {
       loadLatestBlogs();
     }

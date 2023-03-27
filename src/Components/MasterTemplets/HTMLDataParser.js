@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import parse from "html-react-parser";
-import Image from 'next/image';
 
 
 export default function HTMLDataParser({htmlData})
@@ -62,7 +61,6 @@ export default function HTMLDataParser({htmlData})
 
     return (
         <div ref={currentRef}>
-            {console.log(changeHtmlData(htmlData))}
             {changeHtmlData(htmlData)}
         </div>
     );
