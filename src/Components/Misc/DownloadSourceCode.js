@@ -1,4 +1,3 @@
-import {Button, Card, CardBody, CardText, Col, Container, Row} from 'reactstrap'
 import {createOrder, downloadFile, successPayment} from "@/Api_Services/apiServices"
 import {toast} from 'react-toastify'
 import fileDownload from "js-file-download";
@@ -52,10 +51,11 @@ export default function DownloadSourceCode({codes})
                 })
 
                 createOrder(code.price).then((ob) => {
-                    if (ob.msg === 'created') {
+                    if (ob.msg === 'created')
+                    {
                         let options = {
                             // key: 'rzp_test_ur8jU7Ib5K6wfT',
-                            key: "rzp_live_w1ahbys24u9Q5U", // Enter the Key ID generated from the Dashboard
+                            key: "rzp_test_qxy2mqh7szMHP4", // Enter the Key ID generated from the Dashboard
                             amount: ob.price, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
                             currency: "INR",
                             description: "Payment for Resources",
@@ -68,7 +68,7 @@ export default function DownloadSourceCode({codes})
                                 address: "",
                             },
                             theme: {
-                                color: "#3f51b5",
+                                color: "#F59E0B",
                             },
 
                         }
@@ -102,57 +102,63 @@ export default function DownloadSourceCode({codes})
 
                         const rzp = new window.Razorpay(options)
                         rzp.open()
-
-
                     }
-
 
                 })
 
-
             }
-        } else {
+        }
+        else
+        {
             downloadData(code)
         }
     }
     return (
+        <div className={"space-y-10"} >
+            {
+                codes && codes.map((c, i) =>
+                    (
+                        <div key={i} className={"rounded-3xl bg-card-color drop-shadow-xl px-6 py-10 space-y-4"} >
 
-        <div className="" id='download-code'>
 
+                            <h3 className={"text-3xl font-semibold underline underline-offset-4 "}> {c.resourceTitle} </h3>
 
-            <Row>
-                <Col md={12}>
-                    {
-                        codes &&
-                        codes.map((c, i) => (<Card key={i} className="border-0 shadow mt-3">
-                            <CardBody>
-                                <h3>
-                                    {c.resourceTitle}
-                                </h3>
-                                <CardText>
-                                    {c.resourceDescription}
-                                </CardText>
-                                <Container className='text-center my-2'>
-                                    <Button onClick={(event) => downloadSourceCode(c)}
-                                            className={(c.paid ? 'custom-warn' : ' custom-primary') + ' btn border-0'}>Download {c.paid ? '- ₹ ' + c.price : 'Free'} </Button>
-                                </Container>
-                                <div className="divider">
+                            <h4 className={"text-xl"}> {c.resourceDescription} </h4>
 
+                            <div className={"flex flex-row justify-center py-5"} >
+                                <button
+                                    className={`${c.paid? 'bg-rose-500 hover:bg-rose-600' : 'bg-indigo-400 hover:bg-indigo-500'} text-white text-xl md:text-2xl px-16 py-4 rounded-3xl font-semibold underline underline-offset-4 transition-all ease-linear`}
+                                    onClick={() => downloadSourceCode(c)}
+                                >
+                                    Download {c.paid ? `@ ₹ ${c.price}` : 'For Free'}
+                                </button>
+                            </div>
+
+                            <div className={""}> </div>
+
+                            {c.paid ? <p className={"text-xl font-semibold animate-TextWarningColor"} > Money is not refundable.</p> : ''}
+
+                            <div className={"text-lg md:text-xl"}>
+
+                                <div className={"flex flex-row justify-center mb-4"}>
+                                    <div className={"rounded-full border-2 border-gray-300 w-full my-auto h-0"}></div>
+                                    <p className={"px-4 text-2xl font-semibold"}>NOTE</p>
+                                    <div className={"rounded-full border-2 border-gray-300 w-full my-auto h-0"}></div>
                                 </div>
 
-                                {c.paid ? <p className='text-danger my-3'> Money is not refundable.</p> : ''}
-                                <p>Dont run the code directly , First understand then use this resource in your
-                                    code.</p>
-                                <p>For any query  send message to telegram username: <b>@help889</b></p>
-                                <p>you can also send email : <b>support@learncodewithdurgesh.com</b></p>
-
-                            </CardBody>
-                        </Card>))}
-                </Col>
-            </Row>
+                                <div className={"space-y-2"}>
+                                    <p>Dont run the code directly , First understand then use this resource in your code.</p>
+                                    <p>For any query  send message to telegram username: <b>@help889</b></p>
+                                    <p>you can also send email : <b>support@learncodewithdurgesh.com</b></p>
+                                </div>
+                            </div>
 
 
+                        </div>
+                    )
+                )
+
+            }
         </div>
-
     )
 }

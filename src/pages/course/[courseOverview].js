@@ -194,7 +194,7 @@ export default function CourseOverview({courseData , courseVideoData , codes})
                           <div>
                               <div className={"mx-5 lg:mx-16"}>
 
-                                  <h1 className={"font-bold text-3xl underline underline-offset-8 text-center lg:text-left"}>Description of the Course</h1>
+                                  <h1 className={"font-bold text-4xl underline underline-offset-8 text-center lg:text-left"}>Description of the Course</h1>
 
                                   <p className={"text-lg md:text-xl leading-9 lg:mx-24 my-7 text-justify"}>
                                       {courseData.courseNameDescription}
@@ -228,19 +228,14 @@ export default function CourseOverview({courseData , courseVideoData , codes})
                                   )
                               }
 
-
                           </div>
                       </Tab.Panel>
 
                       {/* Materials View */}
                       <Tab.Panel>
-                          <div className={""}>
-                              <div className={"mx-16"}>
-                                  <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>Provided Materials</h1>
-                                  <div className={"border-2 border-black"}>
-                                      <DownloadSourceCode codes={codes}/>
-                                  </div>
-                              </div>
+                          <div className={"mx-4 sm:mx-6"}>
+                              <h1 className={"font-bold mb-10 text-center lg:text-left text-4xl underline underline-offset-8 mx-auto w-fit"}>Provided Materials</h1>
+                              <DownloadSourceCode codes={codes}/>
                           </div>
                       </Tab.Panel>
 
@@ -263,7 +258,7 @@ export async function getServerSideProps(context)
     const courseData = await getCourseDetail(courseOverview)
     const courseVideoData = await getCourseVideos(courseData.id)
     const codes = await getResourcesOfCourse(courseData.id);
-    courseVideoData.sort( (obj1 , obj2) => { return obj1.id - obj2.id } )
+    /*courseVideoData.sort( (obj1 , obj2) => { return obj1.id - obj2.id } )*/
 
     return {
         props: {courseData , courseVideoData , codes},

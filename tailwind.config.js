@@ -17,6 +17,10 @@ module.exports = {
       },
 
       keyframes: {
+        WarningColorKeyFrames: {
+          '0% , 100%' : { color: 'rgb(255,0,0)' },
+          '50%' : { color: 'rgb(0,0,255)' },
+        },
         RotateCompanyIcons: {
           '0%': { transform: 'rotate(0deg)' },
           '12%': { transform: 'rotate(45deg)' },
@@ -42,6 +46,7 @@ module.exports = {
       },
 
       animation: {
+        'TextWarningColor': 'WarningColorKeyFrames 0.4s  infinite',
         'Image-Rotation': 'RotateCompanyIcons 30s linear infinite',
         'Border-Rotation': 'RotateBorder 30s linear infinite'
       },

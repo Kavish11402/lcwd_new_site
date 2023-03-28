@@ -6,6 +6,24 @@ import React, {useState} from "react";
 import HTMLDataParser from "@/Components/MasterTemplets/HTMLDataParser";
 
 
+import Prism from "prismjs";
+import "prismjs/components/prism-jsx.min";
+import "prismjs/plugins/toolbar/prism-toolbar";
+import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
+import "prismjs/components/prism-css";
+import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-java";
+import "prismjs/components/prism-markup";
+import "prismjs/components/prism-typescript";
+import "prismjs/components/prism-sass";
+import "prismjs/components/prism-scss";
+import "prismjs/components/prism-python";
+import "prismjs/components/prism-http";
+import "prismjs/components/prism-xml-doc";
+import "prismjs/plugins/toolbar/prism-toolbar.min.css";
+import "prismjs/plugins/toolbar/prism-toolbar.min";
+
+
 export default function CourseHome({courseVideoData , courseOverview , videoID })
 {
 
@@ -62,10 +80,12 @@ export default function CourseHome({courseVideoData , courseOverview , videoID }
                                 {lSymbol}Code{rSymbol}
                             </h1>
 
-                            <p className={"mx-6 text-lg mt-4"}>
-                                In this video we are going discuss the introduction to new series that LearnCodeWithDurgesh
-                                going to start
-                            </p>
+
+                            <div className={"mx-6 text-lg mt-4"}>
+
+                                
+
+                            </div>
                         </div>
 
                     </div>
@@ -353,7 +373,7 @@ export async function getServerSideProps(context)
     const videoID = Number(context.query.courseHome);
     const courseData = await getCourseDetail(courseOverview)
     const courseVideoData = await getCourseVideos(courseData.id)
-    courseVideoData.sort( (obj1 , obj2) => { return obj1.id - obj2.id } )
+    /*courseVideoData.sort( (obj1 , obj2) => { return obj1.id - obj2.id } )*/
 
     return {
         props: {courseVideoData , courseOverview , videoID},
