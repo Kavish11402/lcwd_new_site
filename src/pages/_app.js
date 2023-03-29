@@ -1,10 +1,12 @@
 import "@/styles/globals.css";
+
 import NavBar from "@/Components/NavigationBar/NavBar";
 import Footer from "@/Components/FooterComponents/Footer";
 import Head from "next/head";
 import MasterContext from "@/Context/MasterContext";
 import BlogProvider from "@/Context/BlogProvider";
 import NextNProgress from "nextjs-progressbar";
+import "prismjs/themes/prism-tomorrow.css";
 export default function App({ Component, pageProps }) {
   return (
     <>

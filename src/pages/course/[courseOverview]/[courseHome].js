@@ -1,9 +1,10 @@
 import YoutubePlayer from "@/Components/MasterTemplets/YoutubePlayer";
 import PlayerCourseCard from "@/Components/FreeCoursesComponent/PlayerCourseCard";
 import {Tab} from "@headlessui/react";
-import {getCourseDetail, getCourseVideos} from "@/Api_Services/apiServices";
-import React, {useState} from "react";
+import {getCodeOfVideo, getCourseDetail, getCourseVideos} from "@/Api_Services/apiServices";
+import React, {useEffect, useState} from "react";
 import HTMLDataParser from "@/Components/MasterTemplets/HTMLDataParser";
+
 
 
 import Prism from "prismjs";
@@ -24,8 +25,22 @@ import "prismjs/plugins/toolbar/prism-toolbar.min.css";
 import "prismjs/plugins/toolbar/prism-toolbar.min";
 
 
-export default function CourseHome({courseVideoData , courseOverview , videoID })
+
+import CustomLoader from "@/Components/Misc/CustomLoader";
+
+
+export default function CourseHome({courseVideoData , courseOverview , videoID ,videoCode })
 {
+
+    console.log(videoCode)
+
+    useEffect(() => {
+        const highlight = async () =>
+        {
+            await Prism.highlightAll(); // <--- prepare Prism
+        };
+        highlight();
+    }, []);
 
     console.log(courseVideoData)
 
@@ -40,8 +55,6 @@ export default function CourseHome({courseVideoData , courseOverview , videoID }
         }
     )
 
-    let lSymbol = "</"
-    let rSymbol = ">"
 
     return(
         <div className={"flex flex-row "}>
@@ -77,13 +90,21 @@ export default function CourseHome({courseVideoData , courseOverview , videoID }
                         {/* Provided Code */}
                         <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-full lg:w-[52vw] mx-auto 2xl:w-[70rem]"}>
                             <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>
-                                {lSymbol}Code{rSymbol}
+                                &lt; Code /&gt;
                             </h1>
 
 
                             <div className={"mx-6 text-lg mt-4"}>
 
-                                
+                                {/*<CustomLoader loading={codes.loading}/>*/}
+                                <div>
+                                    <h4 className={"text-2xl font-semibold"}>{videoCode.codeTitle}</h4>
+                                    <pre>
+                                        <code className={`language-${videoCode.codeLanguage}`}>
+                                            {videoCode.codeSource}
+                                        </code>
+                                    </pre>
+                                </div>
 
                             </div>
                         </div>
@@ -298,7 +319,7 @@ export default function CourseHome({courseVideoData , courseOverview , videoID }
                                                 Description
                                             </h1>
 
-                                            <div className={"mx-6 text-lg mt-8 text-justify"}>
+                                            <div className={"mx-6 text-lg mt-8 text-justify  break-all"}>
                                                 <HTMLDataParser htmlData={courseVideoData[videoDetail.video_id-baseArrayIndex].videoDescription} />
                                             </div>
 
@@ -308,15 +329,28 @@ export default function CourseHome({courseVideoData , courseOverview , videoID }
                                         <div className={"rounded-full border border-gray-400 mx-10 lg:mx-28"}></div>
 
                                         {/* Provided Code */}
-                                        <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-full lg:w-[70rem]"}>
+                                        <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-[22rem] sm:w-[34rem] md:w-[45rem] mx-auto lg:w-[70rem]"}>
                                             <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>
-                                                {lSymbol}Code{rSymbol}
+                                                &lt; Code /&gt;
                                             </h1>
 
-                                            <p className={"mx-6 text-lg mt-4"}>
-                                                In this video we are going discuss the introduction to new series that LearnCodeWithDurgesh
-                                                going to start
-                                            </p>
+                                            <div className={"text-lg mt-4 "}>
+
+                                                {/*<CustomLoader loading={codes.loading}/>*/}
+
+                                                <div className={"px-2"}>
+                                                    <h4 className={"text-2xl font-semibold"}>{videoCode.codeTitle}</h4>
+                                                    <pre>
+                                                        <code className={`language-${videoCode.codeLanguage}`}>
+                                                            {videoCode.codeSource}
+                                                        </code>
+                                                    </pre>
+                                                </div>
+
+
+
+                                            </div>
+
                                         </div>
 
                                     </div>
@@ -324,7 +358,7 @@ export default function CourseHome({courseVideoData , courseOverview , videoID }
 
                                 {/* Course Content View */}
                                 <Tab.Panel>
-                                    <div className={"space-y-6 px-2 lg:px-28"}>
+                                    <div className={"space-y-10 px-2 lg:px-28"}>
                                         {
                                             courseVideoData.map(
                                                 (singleVideo)=>{
@@ -373,10 +407,11 @@ export async function getServerSideProps(context)
     const videoID = Number(context.query.courseHome);
     const courseData = await getCourseDetail(courseOverview)
     const courseVideoData = await getCourseVideos(courseData.id)
+    const videoCode = await getCodeOfVideo(videoID)
     /*courseVideoData.sort( (obj1 , obj2) => { return obj1.id - obj2.id } )*/
 
     return {
-        props: {courseVideoData , courseOverview , videoID},
+        props: {courseVideoData , courseOverview , videoID , videoCode},
     }
 
 }
