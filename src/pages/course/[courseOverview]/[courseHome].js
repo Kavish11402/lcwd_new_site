@@ -1,8 +1,8 @@
 import YoutubePlayer from "@/Components/MasterTemplets/YoutubePlayer";
 import PlayerCourseCard from "@/Components/FreeCoursesComponent/PlayerCourseCard";
 import {Tab} from "@headlessui/react";
-import {getCodeOfVideo, getCourseDetail, getCourseVideos} from "@/Api_Services/apiServices";
-import React, {useEffect, useState} from "react";
+import {getBlogCategories, getCodeOfVideo, getCourseDetail, getCourseVideos} from "@/Api_Services/apiServices";
+import React, {useContext, useEffect, useState} from "react";
 import HTMLDataParser from "@/Components/MasterTemplets/HTMLDataParser";
 
 
@@ -27,34 +27,69 @@ import "prismjs/plugins/toolbar/prism-toolbar.min";
 
 
 import CustomLoader from "@/Components/Misc/CustomLoader";
+import courseHomeContext from "@/Context/CourseHomeContext";
 
 
-export default function CourseHome({courseVideoData , courseOverview , videoID ,videoCode })
+export default function CourseHome({courseOverview , videoID })
 {
+     const { courseDetails, setCourseDetails , courseVideos, setCourseVideos , videoCode, setVideoCode } = useContext(courseHomeContext)
+    const [currentVideo , setCurrentVideo] = useState(null)
 
-    console.log(videoCode)
 
-    useEffect(() => {
-        const highlight = async () =>
+    function load()
+    {
+        try
         {
-            await Prism.highlightAll(); // <--- prepare Prism
-        };
+            getCourseDetail(courseOverview)
+                .then(
+                    (data) =>
+                    {
+                        setCourseDetails(data)
+                        getCourseVideos(data.id) .then( (data2) => {  setCourseVideos(data2) })
+                    })
+
+            getCodeOfVideo(videoID) .then( (data3) => {  setVideoCode(data3) } )
+
+        }
+        catch (error) { console.log(error); }
+    }
+
+    function loadCurrentVideo()
+    {
+        try {
+            getCodeOfVideo(videoID)
+                .then(
+                        (data3) =>
+                            {
+                                setVideoCode(data3)
+
+                            })
+        }
+        catch (error) { console.log(error); }
+
+    }
+
+
+
+    useEffect(() =>
+    {
+        const highlight = async () => { await Prism.highlightAll(); };
         highlight();
+
+        if(!courseDetails || !courseVideos) {load()}
+        loadCurrentVideo()
+
+
+
+
     }, []);
 
-    console.log(courseVideoData)
 
+     console.log(courseDetails)
+     console.log(courseVideos)
+     console.log(videoCode)
 
-    const urlVideoIndex = courseVideoData.findIndex( (obj)=> obj.id === videoID )
-    const baseArrayIndex  = courseVideoData[0].id
-
-    const [videoDetail , setVideoDetail] = useState(
-        {
-            youtube_embed_Id : courseVideoData[urlVideoIndex].get_video_id ,
-            video_id : courseVideoData[urlVideoIndex].id
-        }
-    )
-
+    /* NOTE:- Uncomment Link No. 116 , 136 , 138 , 188 , 207 , 209 , 226 , 249 For Content on the page */
 
     return(
         <div className={"flex flex-row "}>
@@ -65,7 +100,7 @@ export default function CourseHome({courseVideoData , courseOverview , videoID ,
 
                     {/* Embedded Youtube Video */}
                     <div className={"mx-auto"}>
-                        <YoutubePlayer videoId={`${videoDetail.youtube_embed_Id}`} autoPlayFeatureSwitch={false} />
+                        <YoutubePlayer videoId={``} autoPlayFeatureSwitch={true} />
                     </div>
 
                     <div className={"hidden lg:block"}>
@@ -78,7 +113,7 @@ export default function CourseHome({courseVideoData , courseOverview , videoID ,
 
                             <div className={"mx-6 text-lg mt-8"}>
 
-                                <HTMLDataParser htmlData={courseVideoData[videoDetail.video_id-baseArrayIndex].videoDescription} />
+                                {/*<HTMLDataParser htmlData={courseVideoData[videoDetail.video_id-baseArrayIndex].videoDescription} />*/}
 
                             </div>
 
@@ -98,11 +133,11 @@ export default function CourseHome({courseVideoData , courseOverview , videoID ,
 
                                 {/*<CustomLoader loading={codes.loading}/>*/}
                                 <div>
-                                    <h4 className={"text-2xl font-semibold"}>{videoCode.codeTitle}</h4>
+                                    {/*<h4 className={"text-2xl font-semibold"}>{videoCode.codeTitle}</h4>*/}
                                     <pre>
-                                        <code className={`language-${videoCode.codeLanguage}`}>
+                                        {/*<code className={`language-${videoCode.codeLanguage}`}>
                                             {videoCode.codeSource}
-                                        </code>
+                                        </code>*/}
                                     </pre>
                                 </div>
 
@@ -110,176 +145,6 @@ export default function CourseHome({courseVideoData , courseOverview , videoID ,
                         </div>
 
                     </div>
-
-{/*                     Previous / Next Video Buttons
-                    <div className={"hidden lg:flex flex-row justify-center space-x-20"}>
-
-
-                         Previous Button
-                        <Link
-                            href={`/course/${courseOverview}/${(videoDetail.video_id)-1}`}
-                            onClick={ ()=>{
-                                    setVideoDetail(
-                                        {
-                                            youtube_embed_Id : courseVideoData[ (videoDetail.video_id - baseArrayIndex)-1 ].get_video_id ,
-                                            video_id : courseVideoData[ (videoDetail.video_id - baseArrayIndex)-1 ].id
-                                        }
-                                    )
-                            } }
-                           className={`
-                                    ${ baseArrayIndex===videoDetail.video_id ? "hidden" : "block" }
-                                    relative 
-                                    inline-flex 
-                                    items-center 
-                                    justify-center 
-                                    p-4 px-7 py-4 
-                                    overflow-hidden 
-                                    font-bold
-                                    text-xl 
-                                    text-indigo-600 
-                                    transition 
-                                    duration-300 
-                                    ease-out 
-                                    border-2 
-                                    border-secondary-medium 
-                                    rounded-full 
-                                    shadow-md group`}
-                        >
-                            <span className={`absolute 
-                                        inset-0 
-                                        flex 
-                                        items-center 
-                                        justify-center 
-                                        w-full h-full 
-                                        text-white 
-                                        duration-300 
-                                        translate-x-full 
-                                        bg-secondary-medium 
-                                        group-hover:translate-x-0 
-                                        ease`}>
-                                <svg
-                                    className={"w-8 h-8"}
-                                    fill={"none"} stroke={"currentColor"}
-                                    viewBox={"0 0 24 24"} xmlns={"http://www.w3.org/2000/svg"}
-                                >
-                                    <path
-                                        strokeLinecap={"round"} strokeLinejoin={"round"}
-                                        strokeWidth={"3"} d={"M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"}
-                                    >
-
-                                    </path>
-                          </svg>
-
-                              </span>
-                            <span
-                                        className={"absolute flex items-center justify-center w-full h-full text-secondary-medium transition-all duration-300 transform group-hover:-translate-x-full ease"}>
-                                  Previous Video
-                              </span>
-                            <span className={"relative invisible"}> Previous Video </span>
-                        </Link>
-
-
-                         Next Button
-                        <Link
-                            href={`/course/${courseOverview}/${videoDetail.video_id+1}`}
-                            onClick={ ()=>{
-                                setVideoDetail(
-                                    {
-                                        youtube_embed_Id : courseVideoData[ (videoDetail.video_id - baseArrayIndex)+1 ].get_video_id ,
-                                        video_id : courseVideoData[ (videoDetail.video_id - baseArrayIndex)+1 ].id
-                                    }
-                                )
-                            } }
-                           className={`   relative 
-                                    inline-flex 
-                                    items-center 
-                                    justify-center 
-                                    p-4 px-10 py-4 
-                                    overflow-hidden 
-                                    font-bold
-                                    text-xl 
-                                    text-indigo-600 
-                                    transition 
-                                    duration-300 
-                                    ease-out 
-                                    border-2 
-                                    border-secondary-medium 
-                                    rounded-full 
-                                    shadow-md group`}
-                        >
-                      <span className={`absolute 
-                                        inset-0 
-                                        flex 
-                                        items-center 
-                                        justify-center 
-                                        w-full h-full 
-                                        text-white 
-                                        duration-300 
-                                        -translate-x-full 
-                                        bg-secondary-medium 
-                                        group-hover:translate-x-0 
-                                        ease`}>
-                          <svg
-                              className={"w-8 h-8"}
-                              fill={"none"} stroke={"currentColor"}
-                              viewBox={"0 0 24 24"} xmlns={"http://www.w3.org/2000/svg"}
-                          >
-                              <path
-                                  strokeLinecap={"round"} strokeLinejoin={"round"}
-                                  strokeWidth={"3"} d={"M14 5l7 7m0 0l-7 7m7-7H3"}>
-                              </path>
-                          </svg>
-
-                      </span>
-                            <span
-                                className={"absolute flex items-center justify-center w-full h-full text-secondary-medium transition-all duration-300 transform group-hover:translate-x-full ease"}>
-                          Next Video
-                      </span>
-                            <span className={"relative invisible"}>
-                          Next Video
-                      </span>
-                        </Link>
-
-                    </div>
-
-                    <div className={"lg:hidden flex flex-row justify-around"}>
-
-                         Previous Button
-                        <a href={"#_"} className={`flex flex-row justify-center px-3 py-3 font-bold text-base text-secondary-medium border-2 border-secondary-medium rounded-full`} >
-                            <svg
-                                className={"my-auto w-8 h-8 mr-2"}
-                                fill={"none"} stroke={"currentColor"}
-                                viewBox={"0 0 24 24"} xmlns={"http://www.w3.org/2000/svg"}
-                            >
-                                <path
-                                    strokeLinecap={"round"} strokeLinejoin={"round"}
-                                    strokeWidth={"2"} d={"M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"}
-                                >
-                                </path>
-                            </svg>
-                            <div className={"w-max h-fit my-auto"}>
-                                Previous Video
-                            </div>
-                        </a>
-
-                         Next Button
-                        <a href={"#_"} className={`flex flex-row justify-center px-3 py-3 font-bold text-base text-secondary-medium border-2 border-secondary-medium rounded-full`} >
-                            <div className={"w-max h-fit my-auto"}>
-                                Next Video
-                            </div>
-                            <svg
-                                className={"my-auto w-8 h-8 ml-2"}
-                                fill={"none"} stroke={"currentColor"}
-                                viewBox={"0 0 24 24"} xmlns={"http://www.w3.org/2000/svg"}
-                            >
-                                <path
-                                    strokeLinecap={"round"} strokeLinejoin={"round"}
-                                    strokeWidth={"2"} d={"M14 5l7 7m0 0l-7 7m7-7H3"}>
-                                </path>
-                            </svg>
-                        </a>
-
-                    </div>*/}
 
                     <div className={"lg:hidden"}>
 
@@ -320,7 +185,7 @@ export default function CourseHome({courseVideoData , courseOverview , videoID ,
                                             </h1>
 
                                             <div className={"mx-6 text-lg mt-8 text-justify  break-all"}>
-                                                <HTMLDataParser htmlData={courseVideoData[videoDetail.video_id-baseArrayIndex].videoDescription} />
+                                                {/*<HTMLDataParser htmlData={courseVideoData[videoDetail.video_id-baseArrayIndex].videoDescription} />*/}
                                             </div>
 
                                         </div>
@@ -339,11 +204,11 @@ export default function CourseHome({courseVideoData , courseOverview , videoID ,
                                                 {/*<CustomLoader loading={codes.loading}/>*/}
 
                                                 <div className={"px-2"}>
-                                                    <h4 className={"text-2xl font-semibold"}>{videoCode.codeTitle}</h4>
+                                                    {/*<h4 className={"text-2xl font-semibold"}>{videoCode.codeTitle}</h4>*/}
                                                     <pre>
-                                                        <code className={`language-${videoCode.codeLanguage}`}>
+                                                        {/*<code className={`language-${videoCode.codeLanguage}`}>
                                                             {videoCode.codeSource}
-                                                        </code>
+                                                        </code>*/}
                                                     </pre>
                                                 </div>
 
@@ -358,7 +223,7 @@ export default function CourseHome({courseVideoData , courseOverview , videoID ,
 
                                 {/* Course Content View */}
                                 <Tab.Panel>
-                                    <div className={"space-y-10 px-2 lg:px-28"}>
+                                    {/*<div className={"space-y-10 px-2 lg:px-28"}>
                                         {
                                             courseVideoData.map(
                                                 (singleVideo)=>{
@@ -368,7 +233,7 @@ export default function CourseHome({courseVideoData , courseOverview , videoID ,
                                                 }
                                             )
                                         }
-                                    </div>
+                                    </div>*/}
                                 </Tab.Panel>
 
                             </Tab.Panels>
@@ -381,7 +246,7 @@ export default function CourseHome({courseVideoData , courseOverview , videoID ,
 
             </div>
 
-            <div className={"hidden lg:block space-y-5 p-5 overflow-y-scroll my-7 h-[160vh] bg-stone-100 rounded-3xl drop-shadow-xl mr-6"}>
+            {/*<div className={"hidden lg:block space-y-5 p-5 overflow-y-scroll my-7 h-[160vh] bg-stone-100 rounded-3xl drop-shadow-xl mr-6"}>
 
 
                 {
@@ -395,23 +260,20 @@ export default function CourseHome({courseVideoData , courseOverview , videoID ,
                 }
 
 
-            </div>
+            </div>*/}
 
         </div>
     );
 }
 
+
 export async function getServerSideProps(context)
 {
     const {courseOverview} = context.params;
     const videoID = Number(context.query.courseHome);
-    const courseData = await getCourseDetail(courseOverview)
-    const courseVideoData = await getCourseVideos(courseData.id)
-    const videoCode = await getCodeOfVideo(videoID)
-    /*courseVideoData.sort( (obj1 , obj2) => { return obj1.id - obj2.id } )*/
 
     return {
-        props: {courseVideoData , courseOverview , videoID , videoCode},
+        props: {courseOverview , videoID},
     }
 
 }

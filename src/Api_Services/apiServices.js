@@ -33,7 +33,7 @@ export function getBlogUsingSlug(slug) {
 }
 
 export function getCodeOfVideo(videoId) {
-  return axiosURL.get(`/codes/${videoId}/`).then((res) => res.data);
+  return axiosURL.get(`/videos/${videoId}/codes`).then((res) => res.data);
 }
 
 export function getResourcesOfCourse(courseId) {

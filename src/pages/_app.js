@@ -3,10 +3,10 @@ import "@/styles/globals.css";
 import NavBar from "@/Components/NavigationBar/NavBar";
 import Footer from "@/Components/FooterComponents/Footer";
 import Head from "next/head";
-import MasterContext from "@/Context/MasterContext";
 import BlogProvider from "@/Context/BlogProvider";
 import NextNProgress from "nextjs-progressbar";
 import "prismjs/themes/prism-tomorrow.css";
+import CourseHomeProvider from "@/Context/CourseHomeProvider";
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -50,7 +50,7 @@ export default function App({ Component, pageProps }) {
           "w-screen lg:w-auto overflow-x-clip lg:overflow-x-visible mt-[4rem] lg:mt-[4.5rem] select-none"
         }
       >
-        <MasterContext>
+        <CourseHomeProvider>
           <BlogProvider>
             <NextNProgress
               color="#EC4899"
@@ -61,7 +61,7 @@ export default function App({ Component, pageProps }) {
             <Component {...pageProps} />
             <Footer />
           </BlogProvider>
-        </MasterContext>
+        </CourseHomeProvider>
       </main>
     </>
   );
