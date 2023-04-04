@@ -53,7 +53,7 @@ export default function App({ Component, pageProps }) {
         <CourseHomeProvider>
           <BlogProvider>
             <NextNProgress
-              color="#EC4899"
+              color={"#F59E0B"}
               options={{ showSpinner: false, easing: "ease" }}
             />
             <NavBar />

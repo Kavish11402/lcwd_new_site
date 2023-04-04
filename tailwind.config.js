@@ -12,20 +12,6 @@ module.exports = {
 
     extend: {
 
-      minWidth: {
-        '10' : '2.5rem',
-        '28' : '7rem',
-        '32' : '8rem',
-        '36' : '9rem',
-        '40' : '10rem',
-        '44' : '11rem',
-        '48' : '12rem',
-        '52' : '13rem',
-        '56' : '14rem',
-        '60' : '15rem',
-        '64' : '16rem',
-      },
-
       screens: {
         'smd': '700px',
         '3xl' : '1540px'
