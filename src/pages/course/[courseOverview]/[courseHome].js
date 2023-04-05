@@ -29,6 +29,7 @@ import "prismjs/plugins/toolbar/prism-toolbar.min";
 import CustomLoader from "@/Components/Misc/CustomLoader";
 import courseHomeContext from "@/Context/CourseHomeContext";
 import {useRouter} from "next/router";
+import Head from "next/head";
 
 
 export default function CourseHome({courseOverview , videoID })
@@ -121,221 +122,236 @@ export default function CourseHome({courseOverview , videoID })
         ,[currentVideo]
     )
 
-
+    console.log(courseDetails)
 
     return(
 
-        <div>
-            {
-                loadPage ?
-                    <div className={"flex flex-row "}>
-                        <div className={"px-0 py-6 lg:p-7"}>
-                            <div className={"bg-stone-100 rounded-3xl drop-shadow-xl px-2 py-6 lg:p-6 flex flex-col justify-center space-y-9"}>
+        <>
 
 
-                                {/* Embedded Youtube Video */}
-                                <div className={"mx-auto"}>
-                                    <YoutubePlayer videoId={`${currentVideo.get_video_id}`} autoPlayFeatureSwitch={true} />
-                                </div>
 
-                                <div className={"hidden lg:block"}>
-                                    {/* Video Description */}
-                                    <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-full lg:w-[52vw] mx-auto 2xl:w-[70rem]"}>
+            <div>
+                {
+                    loadPage ?
+                        <>
+                            <Head>
+                                <title>{currentVideo.videoTitle} | Learn Code With Durgesh</title>
+                                <meta name="keywords" content={ `${ currentVideo.videoTitle }`  }/>
+                                <meta name="description" content={currentVideo.videoTitle}/>
+                            </Head>
 
-                                        <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>
-                                            Description
-                                        </h1>
+                            <div className={"flex flex-row "}>
+                                <div className={"px-0 py-6 lg:p-7"}>
+                                    <div className={"bg-stone-100 rounded-3xl drop-shadow-xl px-2 py-6 lg:p-6 flex flex-col justify-center space-y-9"}>
 
-                                        <div className={"mx-6 text-lg mt-8"}>
 
-                                            <HTMLDataParser htmlData={currentVideo.videoDescription} />
+                                        {/* Embedded Youtube Video */}
+                                        <div className={"mx-auto"}>
+                                            <YoutubePlayer videoId={`${currentVideo.get_video_id}`} autoPlayFeatureSwitch={true} />
+                                        </div>
+
+                                        <div className={"hidden lg:block"}>
+                                            {/* Video Description */}
+                                            <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-full lg:w-[52vw] mx-auto 2xl:w-[70rem]"}>
+
+                                                <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>
+                                                    Description
+                                                </h1>
+
+                                                <div className={"mx-6 text-lg mt-8"}>
+
+                                                    <HTMLDataParser htmlData={currentVideo.videoDescription} />
+
+                                                </div>
+
+                                            </div>
+
+                                            {/* Divider Line */}
+                                            {
+                                                ( videoCode &&     videoCode.length!==0 ) &&
+                                                <div className={"rounded-full border border-gray-300 my-10 mx-20"}></div>
+                                            }
+
+
+                                            {/* Provided Code */}
+
+                                            {
+                                                ( videoCode && videoCode.length!==0 ) &&
+                                                <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-full lg:w-[52vw] mx-auto 2xl:w-[70rem]"}>
+                                                    <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>
+                                                        &lt; Code /&gt;
+                                                    </h1>
+
+
+                                                    <div className={"mx-6 text-lg mt-4 space-y-20"}>
+
+                                                        {
+                                                            videoCode.map(
+                                                                (singleCode)=>
+                                                                {
+                                                                    return(
+                                                                        <div key={singleCode.id}>
+                                                                            <h4 className={"text-2xl font-bold"}>{singleCode.codeTitle}</h4>
+                                                                            <pre>
+                                                                    <code className={`language-${singleCode.codeLanguage}`}>
+                                                                        {singleCode.codeSource}
+                                                                    </code>
+                                                                </pre>
+                                                                        </div>
+                                                                    )
+                                                                }
+                                                            )
+                                                        }
+
+                                                    </div>
+                                                </div>
+                                            }
+
+                                        </div>
+
+                                        <div className={"lg:hidden"}>
+
+                                            <Tab.Group defaultIndex={0}>
+
+                                                <Tab.List className={"flex flex-row justify-center"}>
+
+                                                    <div className={"flex flex-col lg:flex-row justify-center w-fit bg-primary-medium/30 p-2 rounded-xl space-y-2 lg:space-y-0 lg:space-x-2 mt-4 "}>
+
+                                                        {/* Overview Button */}
+                                                        <Tab className={"transition-all ease-linear w-80 rounded-xl py-2.5 text-xl font-medium text-secondary-dark outline-0 border-2 border-transparent" +
+                                                            " ui-selected:bg-white ui-selected:shadow ui-selected:border-secondary-dark" +
+                                                            " ui-not-selected:text-gray-400 ui-not-selected:hover:bg-white/[0.5] ui-not-selected:hover:text-secondary-dark"}>
+                                                            Overview
+                                                        </Tab>
+
+                                                        {/* Course Content Button */}
+                                                        <Tab className={"transition-all ease-linear w-80 rounded-xl py-2.5 text-xl font-medium text-secondary-dark outline-0 border-2 border-transparent" +
+                                                            " ui-selected:bg-white ui-selected:shadow ui-selected:border-secondary-dark" +
+                                                            " ui-not-selected:text-gray-400 ui-not-selected:hover:bg-white/[0.5] ui-not-selected:hover:text-secondary-dark"}>
+                                                            Course Content
+                                                        </Tab>
+
+                                                    </div>
+
+                                                </Tab.List>
+
+                                                <Tab.Panels className={"mt-10 lg:mx-16"}>
+
+                                                    {/* Overview View */}
+                                                    <Tab.Panel>
+                                                        <div className={"space-y-9"}>
+                                                            {/* Video Description */}
+                                                            <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-full lg:w-[70rem]"}>
+
+                                                                <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>
+                                                                    Description
+                                                                </h1>
+
+                                                                <div className={"mx-6 text-lg mt-8 text-justify  break-all"}>
+                                                                    <HTMLDataParser htmlData={currentVideo.videoDescription} />
+                                                                </div>
+
+                                                            </div>
+
+                                                            {/* Divider Line */}
+                                                            {
+                                                                ( videoCode && videoCode.length!==0 ) &&
+                                                                <div className={"rounded-full border border-gray-400 mx-10 lg:mx-28"}></div>
+                                                            }
+
+
+                                                            {/* Provided Code */}
+                                                            {
+                                                                ( videoCode && videoCode.length!==0 ) &&
+                                                                <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-[22rem] sm:w-[34rem] md:w-[45rem] mx-auto lg:w-[70rem]"}>
+                                                                    <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>
+                                                                        &lt; Code /&gt;
+                                                                    </h1>
+
+                                                                    <div className={"text-lg mt-4 "}>
+
+                                                                        <div className={"px-2 py-10"}>
+
+                                                                            {
+                                                                                videoCode.map(
+                                                                                    (singleCode)=>
+                                                                                    {
+                                                                                        return(
+                                                                                            <div key={singleCode.id}>
+                                                                                                <h4 className={"text-2xl font-semibold"}>{singleCode.codeTitle}</h4>
+                                                                                                <pre>
+                                                                                        <code className={`language-${singleCode.codeLanguage}`}>
+                                                                                            {singleCode.codeSource}
+                                                                                        </code>
+                                                                                    </pre>
+                                                                                            </div>
+                                                                                        )
+                                                                                    }
+                                                                                )
+                                                                            }
+
+                                                                        </div>
+
+
+
+                                                                    </div>
+
+                                                                </div>
+                                                            }
+
+
+                                                        </div>
+                                                    </Tab.Panel>
+
+                                                    {/* Course Content View */}
+                                                    <Tab.Panel>
+                                                        <div className={"space-y-5 px-2 lg:px-28"}>
+                                                            {
+                                                                courseVideos.map(
+                                                                    (singleVideo)=>{
+                                                                        return(
+                                                                            <PlayerCourseCard key={singleVideo.id} singleVideo={singleVideo} courseOverview={courseOverview} selected={ singleVideo.id === videoID } />
+                                                                        )
+                                                                    }
+                                                                )
+                                                            }
+                                                        </div>
+                                                    </Tab.Panel>
+
+                                                </Tab.Panels>
+
+                                            </Tab.Group>
 
                                         </div>
 
                                     </div>
 
-                                    {/* Divider Line */}
-                                    {
-                                        ( videoCode &&     videoCode.length!==0 ) &&
-                                        <div className={"rounded-full border border-gray-300 my-10 mx-20"}></div>
-                                    }
-
-
-                                    {/* Provided Code */}
-
-                                    {
-                                        ( videoCode && videoCode.length!==0 ) &&
-                                        <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-full lg:w-[52vw] mx-auto 2xl:w-[70rem]"}>
-                                            <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>
-                                                &lt; Code /&gt;
-                                            </h1>
-
-
-                                            <div className={"mx-6 text-lg mt-4 space-y-20"}>
-
-                                                {
-                                                    videoCode.map(
-                                                        (singleCode)=>
-                                                        {
-                                                            return(
-                                                                <div key={singleCode.id}>
-                                                                    <h4 className={"text-2xl font-bold"}>{singleCode.codeTitle}</h4>
-                                                                    <pre>
-                                                                    <code className={`language-${singleCode.codeLanguage}`}>
-                                                                        {singleCode.codeSource}
-                                                                    </code>
-                                                                </pre>
-                                                                </div>
-                                                            )
-                                                        }
-                                                    )
-                                                }
-
-                                            </div>
-                                        </div>
-                                    }
-
                                 </div>
 
-                                <div className={"lg:hidden"}>
+                                <div className={"hidden lg:block space-y-5 p-5 overflow-y-scroll my-7 h-[160vh] bg-stone-100 rounded-3xl drop-shadow-xl mr-6"}>
 
-                                    <Tab.Group defaultIndex={0}>
-
-                                        <Tab.List className={"flex flex-row justify-center"}>
-
-                                            <div className={"flex flex-col lg:flex-row justify-center w-fit bg-primary-medium/30 p-2 rounded-xl space-y-2 lg:space-y-0 lg:space-x-2 mt-4 "}>
-
-                                                {/* Overview Button */}
-                                                <Tab className={"transition-all ease-linear w-80 rounded-xl py-2.5 text-xl font-medium text-secondary-dark outline-0 border-2 border-transparent" +
-                                                    " ui-selected:bg-white ui-selected:shadow ui-selected:border-secondary-dark" +
-                                                    " ui-not-selected:text-gray-400 ui-not-selected:hover:bg-white/[0.5] ui-not-selected:hover:text-secondary-dark"}>
-                                                    Overview
-                                                </Tab>
-
-                                                {/* Course Content Button */}
-                                                <Tab className={"transition-all ease-linear w-80 rounded-xl py-2.5 text-xl font-medium text-secondary-dark outline-0 border-2 border-transparent" +
-                                                    " ui-selected:bg-white ui-selected:shadow ui-selected:border-secondary-dark" +
-                                                    " ui-not-selected:text-gray-400 ui-not-selected:hover:bg-white/[0.5] ui-not-selected:hover:text-secondary-dark"}>
-                                                    Course Content
-                                                </Tab>
-
-                                            </div>
-
-                                        </Tab.List>
-
-                                        <Tab.Panels className={"mt-10 lg:mx-16"}>
-
-                                            {/* Overview View */}
-                                            <Tab.Panel>
-                                                <div className={"space-y-9"}>
-                                                    {/* Video Description */}
-                                                    <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-full lg:w-[70rem]"}>
-
-                                                        <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>
-                                                            Description
-                                                        </h1>
-
-                                                        <div className={"mx-6 text-lg mt-8 text-justify  break-all"}>
-                                                            <HTMLDataParser htmlData={currentVideo.videoDescription} />
-                                                        </div>
-
-                                                    </div>
-
-                                                    {/* Divider Line */}
-                                                    {
-                                                        ( videoCode && videoCode.length!==0 ) &&
-                                                        <div className={"rounded-full border border-gray-400 mx-10 lg:mx-28"}></div>
-                                                    }
-
-
-                                                    {/* Provided Code */}
-                                                    {
-                                                        ( videoCode && videoCode.length!==0 ) &&
-                                                        <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-[22rem] sm:w-[34rem] md:w-[45rem] mx-auto lg:w-[70rem]"}>
-                                                            <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>
-                                                                &lt; Code /&gt;
-                                                            </h1>
-
-                                                            <div className={"text-lg mt-4 "}>
-
-                                                                <div className={"px-2 py-10"}>
-
-                                                                    {
-                                                                        videoCode.map(
-                                                                            (singleCode)=>
-                                                                            {
-                                                                                return(
-                                                                                    <div key={singleCode.id}>
-                                                                                        <h4 className={"text-2xl font-semibold"}>{singleCode.codeTitle}</h4>
-                                                                                        <pre>
-                                                                                        <code className={`language-${singleCode.codeLanguage}`}>
-                                                                                            {singleCode.codeSource}
-                                                                                        </code>
-                                                                                    </pre>
-                                                                                    </div>
-                                                                                )
-                                                                            }
-                                                                        )
-                                                                    }
-
-                                                                </div>
-
-
-
-                                                            </div>
-
-                                                        </div>
-                                                    }
-
-
-                                                </div>
-                                            </Tab.Panel>
-
-                                            {/* Course Content View */}
-                                            <Tab.Panel>
-                                                <div className={"space-y-5 px-2 lg:px-28"}>
-                                                    {
-                                                        courseVideos.map(
-                                                            (singleVideo)=>{
-                                                                return(
-                                                                    <PlayerCourseCard key={singleVideo.id} singleVideo={singleVideo} courseOverview={courseOverview} selected={ singleVideo.id === videoID } />
-                                                                )
-                                                            }
-                                                            )
-                                                    }
-                                                </div>
-                                            </Tab.Panel>
-
-                                        </Tab.Panels>
-
-                                    </Tab.Group>
+                                    {
+                                        courseVideos.map(
+                                            (singleVideo)=>{
+                                                return(
+                                                    <PlayerCourseCard key={singleVideo.id} singleVideo={singleVideo} courseOverview={courseOverview} selected={ singleVideo.id === videoID } />
+                                                )
+                                            }
+                                        )
+                                    }
 
                                 </div>
 
                             </div>
+                        </>
+                        :
+                        <CustomLoader/>
+                }
 
-                        </div>
+            </div>
+        </>
 
-                        <div className={"hidden lg:block space-y-5 p-5 overflow-y-scroll my-7 h-[160vh] bg-stone-100 rounded-3xl drop-shadow-xl mr-6"}>
 
-                            {
-                                courseVideos.map(
-                                    (singleVideo)=>{
-                                        return(
-                                            <PlayerCourseCard key={singleVideo.id} singleVideo={singleVideo} courseOverview={courseOverview} selected={ singleVideo.id === videoID } />
-                                        )
-                                    }
-                                    )
-                            }
-
-                        </div>
-
-                    </div>
-                    :
-                    <CustomLoader/>
-            }
-
-        </div>
     );
 }
 

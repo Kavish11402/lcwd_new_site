@@ -17,7 +17,6 @@ export default function Footer() {
       <div className={"flex flex-col justify-center lg:flex-row lg:space-x-12"}>
         {/* About Section */}
         <div className={"flex flex-col w-72 mx-auto lg:mx-0"}>
-          {/* TODO -> lINK THIS IMAGE TO THE ABOUT (Component) SECTION */}
           <Image
             className={"w-20 mx-auto mb-2 lg:w-20 xl:w-24"}
             src={lcwdLogo}
@@ -57,7 +56,6 @@ export default function Footer() {
           </h1>
 
           <div>
-            {/* TODO -> LINK THESE COURSES */}
             <Link
               href={
                 "https://courses.learncodewithdurgesh.com/learn/Master-Spring-Boot-With-Project"
@@ -270,20 +268,33 @@ export default function Footer() {
       <div className={"border border-black my-2 lg:mx-20 lg:my-6"}></div>
 
       {/* Copyright info section */}
-      <div
-        className={
-          "flex flex-col justify-center text-sm lg:flex-row lg:text-lg"
-        }
-      >
+      <div className={ "flex flex-col justify-center text-sm lg:flex-row lg:text-lg" } >
+
         <div className={"flex flex-row justify-center"}>
+
           <p className={"mr-2"}>Copyright © 2023:</p>
-          <p className={"font-bold underline mr-2"}>
-            Substring Technologies Pvt Ltd.
-          </p>
+          <p className={"font-bold underline mr-2"}> Substring Technologies Pvt Ltd. </p>
+
         </div>
 
         <p className={"text-center"}>All Rights Reserved.</p>
+
       </div>
+
+      <div className={"w-fit mx-auto space-x-10 mt-4 font-bold underline"}>
+
+        <a rel={'noreferrer'} href="https://courses.learncodewithdurgesh.com/refund.html" target={"_blank"}>Refund Policy</a>
+
+        <a rel={'noreferrer'} href="https://courses.learncodewithdurgesh.com/privacy-policy.html" target={"_blank"} className={'ms-3'}>Privacy Policy</a>
+
+        <a rel={'noreferrer'} href="https://courses.learncodewithdurgesh.com/terms-of-service.html" target={"_blank"} className={'ms-3'}>Terms of Service</a>
+
+      </div>
+
+
+
+
+
     </div>
   );
 }

@@ -34,7 +34,8 @@ export default function DynamicBlogPage({ blog }) {
         <meta name="author" content="Learn Code With Durgesh" />
       </Head>
 
-      <main className={""}>
+      <main>
+
         <HeroCard
           showLogo={false}
           backgroundCss={"bg-blogBannerImg p-5"}
@@ -42,17 +43,16 @@ export default function DynamicBlogPage({ blog }) {
           showSocialMedia={false}
         />
         {/* Place for Dynamic Blog Content */}
-        <div className={" mx-2 md:mx-5 grid grid-cols-1 lg:grid-cols-12"}>
+        <div className={"mx-2 md:mx-5 grid grid-cols-1 lg:grid-cols-12"}>
           <BlogCategories />
 
           <div className="lg:col-start-3 lg:col-span-8 mt-4">
-            <div>
-              {htmlContent ? <HTMLDataParser htmlData={htmlContent} /> : ""}
-            </div>
+
+            {htmlContent ? <HTMLDataParser htmlData={htmlContent} /> : ""}
 
             {/* latest blogs   */}
             <LatestBlog />
-            <div></div>
+
           </div>
         </div>
 

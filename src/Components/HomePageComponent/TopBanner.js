@@ -1,5 +1,4 @@
 import Image from "next/image";
-import manWithComputer from "@/Assets/Images/manComp.svg";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
@@ -96,7 +95,6 @@ export default function TopBanner() {
             </h1>
           </Link>
 
-          {/* TODO -> Add "/courses" link to the below Link's href */}
           <Link href={"/courses"}>
             <h1
               className={
