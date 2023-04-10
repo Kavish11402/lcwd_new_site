@@ -52,14 +52,12 @@ export default function App({ Component, pageProps }) {
       >
         <CourseHomeProvider>
           <BlogProvider>
-            <NextNProgress
-              color={"#F59E0B"}
-              options={{ showSpinner: false, easing: "ease" }}
-            />
-            <NavBar />
 
+            <NextNProgress color={"#F59E0B"} options={{ showSpinner: false, easing: "ease" }} />
+            <NavBar />
             <Component {...pageProps} />
             <Footer />
+
           </BlogProvider>
         </CourseHomeProvider>
       </main>

@@ -211,7 +211,7 @@ export default function CourseHome({courseOverview , videoID })
 
                                         <div className={"lg:hidden"}>
 
-                                            <Tab.Group defaultIndex={0}>
+                                            <Tab.Group defaultIndex={1}>
 
                                                 <Tab.List className={"flex flex-row justify-center"}>
 

@@ -4,7 +4,7 @@ import React from "react";
 export default function LatestBlogCard({blog})
 {
   return(
-      <div className={"my-12 mx-5 flex flex-col justify-between max-w-sm min-h-[20rem] overflow-hidden shadow-lg  rounded-xl border-b-secondary-medium border-b-8 drop-shadow-xl bg-card-color"}>
+      <div className={"my-12 mx-5 flex flex-col justify-between max-w-sm min-h-[24rem] overflow-hidden shadow-lg  rounded-xl border-b-secondary-medium border-b-8 drop-shadow-xl bg-card-color"}>
 
 
           <div className="px-6 py-4">

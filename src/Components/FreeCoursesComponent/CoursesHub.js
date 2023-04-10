@@ -24,7 +24,7 @@ export default function CoursesHub({ courses }) {
                   key={singleCourse.id}
                   courseUrl={singleCourse.courseUrl}
                   bannerImg={singleCourse.courseBanner}
-                  bannerTittle={singleCourse.pageTitle}
+                  bannerTittle={singleCourse.courseName}
                   bannerDesc={singleCourse.pageDescription}
                 />
               );

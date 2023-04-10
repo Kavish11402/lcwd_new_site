@@ -1,11 +1,7 @@
 import Link from "next/link";
 
-export default function SingleCourse({
-  bannerImg,
-  bannerTittle,
-  bannerDesc,
-  courseUrl,
-}) {
+export default function SingleCourse( { bannerImg, bannerTittle, bannerDesc, courseUrl } )
+{
   return (
     <div>
       <Link href={`/course/${courseUrl}`}>
@@ -23,8 +19,7 @@ export default function SingleCourse({
 
             <div className={"px-5 my-5"}>
               <h1 className={" font-bold text-lg  2xl:text-md mx-auto"}>
-                {" "}
-                {bannerTittle.toString()}{" "}
+                {" "} {bannerTittle.toString()} {" "}
               </h1>
 
               <p

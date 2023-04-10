@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function ShortBlogCard( { blogTitle , blogShortDescription , blogSlug } )
 {
   return(
-      <div className={"py-2 rounded-xl drop-shadow-xl bg-stone-100 px-6 py-8 space-y-7"} >
+      <div className={"rounded-xl drop-shadow-xl bg-stone-100 px-6 py-8 space-y-7"} >
 
           <div className={"text-center font-bold text-3xl md:text-4xl"}>
             {blogTitle}

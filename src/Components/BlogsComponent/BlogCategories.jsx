@@ -28,9 +28,7 @@ const BlogCategories = () => {
     <>
       {/* categories on big screen  */}
 
-      <div
-        className={"hidden md:block w-60 relative bg-stone-50 drop-shadow-xl "}
-      >
+      <div className={"hidden md:block w-60 relative bg-stone-50 drop-shadow-xl "} >
         <div className={"sticky top-28 mb-16 mx-5"}>
           <div
             className={
@@ -71,13 +69,13 @@ const BlogCategories = () => {
           </div>
 
           <div className={"text-secondary-dark text-lg space-y-4"}>
+
             <Link className="block" href={`/blogs`}>
-              <div
-                className={`flex flex-row justify-center cursor-pointer border-2 border-sky-300 hover:text-white bg-white hover:bg-sky-400 transition-all ease-linear rounded-xl py-1 uppercase`}
-              >
+              <div className={`flex flex-row justify-center cursor-pointer border-2 border-sky-300 hover:text-white bg-white hover:bg-sky-400 transition-all ease-linear rounded-xl py-1 uppercase`} >
                 <p className={"font-medium"}>All Blogs</p>
               </div>
             </Link>
+
             {categories &&
               categories.map((cat, index) => (
                 <Link
@@ -96,16 +94,13 @@ const BlogCategories = () => {
         </div>
       </div>
 
-      {/* categroies on mobile phone */}
+      {/* categories on mobile phone */}
 
-      <div className={"md:hidden z-50 flex flex-row justify-end p-4"}>
+      <div className={"md:hidden z-40 flex flex-row justify-end p-4"}>
         <Menu as="div" className={"relative"}>
+
           <div>
-            <Menu.Button
-              className={
-                "text-xl font-semibold rounded-md bg-black bg-opacity-20 px-4 py-2"
-              }
-            >
+            <Menu.Button className={"text-xl font-semibold rounded-md bg-secondary-medium px-4 py-2" } >
               Categories
             </Menu.Button>
           </div>
@@ -119,31 +114,42 @@ const BlogCategories = () => {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg bg-primary-light">
-              <div className={"flex flex-col justify-center p-2 divide-y-2 "}>
-                <Menu.Item className={"py-3"}>
-                  <button className={"text-xl font-medium"}>All Blogs</button>
-                </Menu.Item>
+            <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right rounded-md shadow-lg bg-primary-light">
+              <div className={"flex flex-col justify-center p-2 divide-y-2 divide-black"}>
+
+
 
                 <Menu.Item className={"py-3"}>
-                  <button className={"text-xl font-medium"}>Technology</button>
+
+                  <Link className="block" href={`/blogs`}>
+                    <p className={"text-xl font-medium w-fit mx-auto"}>All Blogs</p>
+                  </Link>
+
+
                 </Menu.Item>
 
-                <Menu.Item className={"py-3"}>
-                  <button className={"text-xl font-medium"}>Food</button>
-                </Menu.Item>
 
-                <Menu.Item className={"py-3"}>
-                  <button className={"text-xl font-medium"}>Cars</button>
-                </Menu.Item>
+                {categories && categories.map((cat, index) =>
+                    (
+                        <Menu.Item key={index} className={"py-3"}>
 
-                <Menu.Item className={"py-3"}>
-                  <button className={"text-xl font-medium"}>Kitchen</button>
-                </Menu.Item>
+                          <Link className="block" href={`/blogs/category/${cat.id}/${cat.title}`} >
+                            <p className={"text-xl font-medium w-fit mx-auto"}>{cat.title}</p>
+                          </Link>
 
-                <Menu.Item className={"py-3"}>
-                  <button className={"text-xl font-medium"}>Aviation</button>
-                </Menu.Item>
+
+                        </Menu.Item>
+                    )
+                )}
+
+
+
+
+
+
+
+
+
               </div>
             </Menu.Items>
           </Transition>

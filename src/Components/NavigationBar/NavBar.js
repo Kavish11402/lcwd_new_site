@@ -11,6 +11,7 @@ export default function NavBar()
     return(
         <div>
             <DesktopNavBar/>
+
             <MobileFriendlyNavbar navbarState={navbarState} toggle={toggle}/>
         </div>
     );
