@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 import durgesh_sir_DP from "@/Assets/Images/durgesh_sir.webp";
-import codeAnimation from "@/Assets/Images/code_animation.gif";
 import instagramPhoto from "@/Assets/Icons/instagram.png";
 import facebookPhoto from "@/Assets/Icons/facebook.png";
 import linkedinPhoto from "@/Assets/Icons/linkedin.png";

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import parse from "html-react-parser";
+import Image from "next/image";
 
 
 export default function HTMLDataParser({htmlData})
@@ -20,7 +21,7 @@ export default function HTMLDataParser({htmlData})
 
                         <div className={"flex flex-row justify-center mt-3 "}>
                          
-                                <img src={`${node.attribs.src}`}
+                                <Image src={`${node.attribs.src}`}
                                      width={node.attribs.width}
                                      height={node.attribs.height}
                                      className={'max-w-full h-auto  shadow-sm '}

@@ -40,7 +40,7 @@ export default function DesktopNavBar()
                   <Link className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"} href={"/aboutus"}>About</Link>
 
 
-                  <Link className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"} href={"/ContactUs"}>
+                  <Link className={"mr-5 h-fit my-auto transition-all ease-linear hover:text-primary-dark hover:-translate-y-1"} href={"/contact-us"}>
                       Contact
                   </Link>
 

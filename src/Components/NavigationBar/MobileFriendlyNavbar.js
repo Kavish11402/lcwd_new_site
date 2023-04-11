@@ -83,7 +83,7 @@ export default function MobileFriendlyNavbar( { toggle , navbarState } )
 
 
 
-                <Link href={"/ContactUs"} onClick={ ()=>{ toggle() } } >
+                <Link href={"/contact-us"} onClick={ ()=>{ toggle() } } >
                     <h1 className={"mb-3 bg-primary-light mx-auto w-48 py-0.5 rounded-xl text-center text-lg font-semibold"}>
                         Contact
                     </h1>

@@ -14,14 +14,14 @@ export default function SocialMediaFollowers({ handleImage , handleFollowers , h
 {
   return(
 
-      <div className={"flex flex-row justify-center py-5"}>
+      <div className={"flex flex-col lg:flex-row justify-center py-5"}>
 
-          <div className={"flex flex-col justify-center"}>
-              <Image className={"w-12 lg:w-20 mr-3"} src={handleImage} alt={"SocialMediaHandleImage"} />
+          <div className={"my-auto mx-auto mb-4 lg:mr-4 w-fit"}>
+              <Image className={"w-12 lg:w-20"} src={handleImage} alt={"SocialMediaHandleImage"} />
           </div>
 
           <div className={"flex flex-col justify-center"}>
-              <h1 className={"!text-black text-center font-semibold text-[1.7rem] lg:text-[3.2rem] px-6"}>
+              <h1 className={"!text-black text-center font-semibold text-[1.7rem] md:text- lg:text-[3.2rem] px-6"}>
                   { socialMediaActiveStatus && checkNum(handleFollowers) }
                   {handleFollowersExtention}
               </h1>
