@@ -187,19 +187,15 @@ export default function Footer() {
         ></div>
 
         {/* Get in Touch Section */}
-        <div
-          className={"flex flex-col justify-around py-4 px-3 mx-auto lg:mx-0"}
-        >
-          <h1
-            className={"font-semibold text-lg text-center underline xl:text-xl"}
-          >
-            {" "}
-            Get In Touch{" "}
+        <div className={"flex flex-col justify-around py-4 px-3 mx-auto lg:mx-0"} >
+
+          <h1 className={"font-semibold text-lg text-center underline xl:text-xl"} >
+            {" "}Get In Touch{" "}
           </h1>
 
-          <div
-            className={"mt-3 flex flex-row lg:flex-col justify-around h-full"}
-          >
+          <div className={"mt-3 flex flex-col justify-around h-full space-y-5"} >
+
+
             <div className={"flex flex-row text-sm mr-3 xl:text-base lg:mr-24"}>
               <Image
                 className={"w-5 lg:w-6 mr-1 lg:mr-4"}
@@ -260,6 +256,8 @@ export default function Footer() {
                 Linkedin
               </a>
             </div>
+
+
           </div>
         </div>
       </div>
@@ -272,22 +270,27 @@ export default function Footer() {
 
         <div className={"flex flex-row justify-center"}>
 
-          <p className={"mr-2"}>Copyright © 2023:</p>
-          <p className={"font-bold underline mr-2"}> Substring Technologies Pvt Ltd. </p>
+          <p>Copyright © 2023: <b><u>Substring Technologies Pvt Ltd.</u></b> </p>
 
         </div>
 
-        <p className={"text-center"}>All Rights Reserved.</p>
+        <p className={"text-center"}>&nbsp;&nbsp;All Rights Reserved.</p>
 
       </div>
 
-      <div className={"w-fit mx-auto space-x-10 mt-4 font-bold underline"}>
+      <div className={"w-fit mx-auto text-center mt-4 font-bold underline flex flex-col md:flex-row md:space-x-10"}>
 
-        <a rel={'noreferrer'} href="https://courses.learncodewithdurgesh.com/refund.html" target={"_blank"}>Refund Policy</a>
+        <a rel={'noreferrer'} href="https://courses.learncodewithdurgesh.com/refund.html" target={"_blank"}>
+          Refund Policy
+        </a>
 
-        <a rel={'noreferrer'} href="https://courses.learncodewithdurgesh.com/privacy-policy.html" target={"_blank"} className={'ms-3'}>Privacy Policy</a>
+        <a rel={'noreferrer'} href="https://courses.learncodewithdurgesh.com/privacy-policy.html" target={"_blank"}>
+          Privacy Policy
+        </a>
 
-        <a rel={'noreferrer'} href="https://courses.learncodewithdurgesh.com/terms-of-service.html" target={"_blank"} className={'ms-3'}>Terms of Service</a>
+        <a rel={'noreferrer'} href="https://courses.learncodewithdurgesh.com/terms-of-service.html" target={"_blank"}>
+          Terms of Service
+        </a>
 
       </div>
 

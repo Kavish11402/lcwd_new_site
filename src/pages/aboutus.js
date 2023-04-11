@@ -5,7 +5,7 @@ export default function aboutus() {
   return (
     <>
       <Head>
-        <title>About Us | Learn Code With Durgesh</title>
+        <title>{"About Us | Learn Code With Durgesh"}</title>
         <meta
           name={"keywords"}
           content={

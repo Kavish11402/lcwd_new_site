@@ -6,7 +6,7 @@ export default function ContactUs()
   return(
       <>
         <Head>
-          <title>Contact Us | Learn Code With Durgesh</title>
+          <title>{"Contact Us | Learn Code With Durgesh"}</title>
           <meta name={"keywords"}
                 content={"contact learn code with durgesh,about lcwd, how to contact durgesh sir, how to contact learn code with durgesh, learn code with durgesh phone number"}/>
           <meta name={"description"}

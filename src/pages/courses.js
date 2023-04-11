@@ -7,7 +7,7 @@ export default function courses({ courses }) {
   return (
     <>
       <Head>
-        <title>Free Courses | Learn Code With Durgesh</title>
+        <title>{"Free Courses | Learn Code With Durgesh"}</title>
         <meta
           name={"keywords"}
           content={

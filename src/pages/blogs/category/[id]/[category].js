@@ -19,7 +19,7 @@ const CategoryBlogs = ({ blogs }) => {
   return (
     <>
       <Head>
-        <title>{category} Blogs | Learn Code With Durgesh</title>
+        <title>{`${ category + " | Learn Code With Durgesh"}`}</title>
         <meta
           name="keywords"
           content="blogs, lcwd blogs page, articles, technology"

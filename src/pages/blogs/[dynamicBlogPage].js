@@ -16,9 +16,7 @@ export default function DynamicBlogPage({ blog }) {
 
   useEffect(() => {
     setCurrentUrl(
-      `${
-        window.location.host.startsWith("localhost") ? "http://" : "https://"
-      }` +
+      `${ window.location.host.startsWith("localhost") ? "http://" : "https://" }` +
         window.location.host +
         router.asPath
     );
@@ -28,7 +26,7 @@ export default function DynamicBlogPage({ blog }) {
   return (
     <>
       <Head>
-        <title>{blog.title} | Learn Code With Durgesh</title>
+        <title>{`${ blog.title + " | Learn Code With Durgesh"}`}</title>
         <meta name="keywords" content={blog.keywords} />
         <meta name="description" content={blog.short_description} />
         <meta name="author" content="Learn Code With Durgesh" />

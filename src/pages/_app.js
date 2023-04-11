@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Master Code | Learn Code With Durgesh</title>
+        <title>{"Master Code | Learn Code With Durgesh"}</title>
 
         <meta
           name="keywords"

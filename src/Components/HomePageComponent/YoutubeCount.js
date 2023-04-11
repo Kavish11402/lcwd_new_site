@@ -6,6 +6,7 @@ import instagramPhoto from "@/Assets/Icons/instagram.png";
 import facebookPhoto from "@/Assets/Icons/facebook.png";
 import linkedinPhoto from "@/Assets/Icons/linkedin.png";
 import youtubePhoto from "@/Assets/Icons/youtube.png";
+import telegramPhoto from "@/Assets/Icons/telegram.png"
 import SocialMediaFollowers from "@/Components/HomePageComponent/SingleReuseableComponents/SocialMediaFollowers";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
@@ -119,18 +120,14 @@ export default function YoutubeCount() {
 
       {/*TODO -> Link To that social media handle lagao consult to durgesh sir*/}
       <ScrollTrigger
-        onEnter={() => {
-          setSocialMediaActiveStatus(true);
-        }}
-        onExit={() => {
-          setSocialMediaActiveStatus(false);
-        }}
+        onEnter={() => {  setSocialMediaActiveStatus(true); }}
+        onExit={() => { setSocialMediaActiveStatus(false); }}
       >
-        <div
-          className={
-            "grid grid-cols-2 gap-3 py-10 px-4 bg-primary-light xl:flex xl:flex-row lg:justify-center"
-          }
-        >
+
+
+        <div className={ "grid grid-cols-2 gap-3 py-10 px-4 bg-primary-light xl:flex xl:flex-row lg:justify-center" } >
+
+
           <SocialMediaFollowers
             handleImage={youtubePhoto}
             handleFollowers={200000}
@@ -139,11 +136,7 @@ export default function YoutubeCount() {
             socialMediaActiveStatus={socialMediaActiveStatus}
           />
 
-          <div
-            className={
-              "hidden xl:block rounded-full border border-zinc-500 xl:mx-4 2xl:mx-7"
-            }
-          ></div>
+          <div className={ "hidden xl:block rounded-full border border-zinc-500 xl:mx-4 2xl:mx-7" }></div>
 
           <SocialMediaFollowers
             handleImage={facebookPhoto}
@@ -153,11 +146,7 @@ export default function YoutubeCount() {
             socialMediaActiveStatus={socialMediaActiveStatus}
           />
 
-          <div
-            className={
-              "hidden xl:block rounded-full border border-zinc-500 xl:mx-4 2xl:mx-7"
-            }
-          ></div>
+          <div className={ "hidden xl:block rounded-full border border-zinc-500 xl:mx-4 2xl:mx-7" }></div>
 
           <SocialMediaFollowers
             handleImage={instagramPhoto}
@@ -167,11 +156,7 @@ export default function YoutubeCount() {
             socialMediaActiveStatus={socialMediaActiveStatus}
           />
 
-          <div
-            className={
-              "hidden xl:block rounded-full border border-zinc-500 xl:mx-4 2xl:mx-7"
-            }
-          ></div>
+          <div className={ "hidden xl:block rounded-full border border-zinc-500 xl:mx-4 2xl:mx-7" }></div>
 
           <SocialMediaFollowers
             handleImage={linkedinPhoto}
@@ -180,7 +165,37 @@ export default function YoutubeCount() {
             handleOtherInfo={"Followers"}
             socialMediaActiveStatus={socialMediaActiveStatus}
           />
+
+          <div className={ "hidden xl:block rounded-full border border-zinc-500 xl:mx-4 2xl:mx-7" }></div>
+
+
+          <div className={"col-span-2 flex flex-row justify-center"}>
+
+            <SocialMediaFollowers
+                handleImage={telegramPhoto}
+                handleFollowers={12000}
+                handleFollowersExtention={"+"}
+                handleOtherInfo={"Followers"}
+                socialMediaActiveStatus={socialMediaActiveStatus}
+            />
+
+          </div>
+
+
+
+
+
+
+
         </div>
+
+
+
+
+
+
+
+
       </ScrollTrigger>
     </div>
   );
