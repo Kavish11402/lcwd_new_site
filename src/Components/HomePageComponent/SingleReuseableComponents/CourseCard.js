@@ -46,7 +46,7 @@ export default function CourseCard({bannerImage , bannerTitle , bannerDescriptio
             </div>
 
             {/* Description */}
-            <div className={"line-clamp-5 w-72 h-[7rem] text-zinc-600 mt-3 mx-auto text-sm lg:h-[7.8rem] lg:text-base"}>
+            <div className={"line-clamp-5 w-72 h-[6.3rem] text-zinc-600 mt-3 mx-auto text-sm lg:h-[7.8rem] lg:text-base"}>
                 {bannerDescription}
             </div>
 
