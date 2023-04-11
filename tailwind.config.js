@@ -87,6 +87,7 @@ module.exports = {
   },
   plugins:
       [
+        require('autoprefixer'),
         require('@tailwindcss/line-clamp'),
         require('@headlessui/tailwindcss'),
         require('@tailwindcss/forms')

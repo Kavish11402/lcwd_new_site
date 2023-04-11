@@ -39,7 +39,7 @@ export default function MobileFriendlyNavbar( { toggle , navbarState } )
 
             </div>
 
-            <div className={`border-b-8 border-primary-dark ${ navbarState? "block" : "hidden" } py-10 rounded-b-xl`}>
+            <div className={`backdrop-blur-lg border-b-8 border-primary-dark ${ navbarState? "block" : "hidden" } py-10 rounded-b-xl`}>
 
 
 
