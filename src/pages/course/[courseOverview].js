@@ -21,7 +21,7 @@ export default function CourseOverview({courseData , courseVideoData , codes})
       <>
 
           <Head>
-              <title>{courseData.courseName} | Learn Code With Durgesh</title>
+              <title>{ courseData.courseName+" | Learn Code With Durgesh"}</title>
               <meta name="keywords" content={courseData.pageKeywords}/>
               <meta name="description" content={courseData.pageDescription}/>
           </Head>

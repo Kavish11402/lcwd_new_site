@@ -93,7 +93,7 @@ export default function ContactUsHub() {
                   </div>
                 </header>
                 <main className={"mt-8 flex flex-col"}>
-                  <form className={"flex flex-col mx-5 lg:mx-0"}>
+                  <form className={"flex flex-col mx-5 lg:mx-0"} >
                     {/*Student's Name*/}
                     <div className={"relative flex flex-col mb-5 xl:mb-8"}>
                       <span
@@ -118,7 +118,7 @@ export default function ContactUsHub() {
                       </span>
                       <input
                         className={
-                          "pl-12 rounded-lg border-0 ring-2 ring-gray-400 transition hover:ring-primary-medium focus:ring-2 focus:ring-primary-dark transition-all ease-linear"
+                          "pl-12 rounded-lg border-0 ring-2 ring-gray-400 hover:ring-primary-medium focus:ring-2 focus:ring-primary-dark transition-all ease-linear"
                         }
                         required
                         type="text"

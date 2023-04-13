@@ -30,6 +30,7 @@ import CustomLoader from "@/Components/Misc/CustomLoader";
 import courseHomeContext from "@/Context/CourseHomeContext";
 import {useRouter} from "next/router";
 import Head from "next/head";
+import Link from "next/link";
 
 
 export default function CourseHome({courseOverview , videoID })
@@ -43,6 +44,26 @@ export default function CourseHome({courseOverview , videoID })
     const { courseDetails, setCourseDetails , courseVideos, setCourseVideos , videoCode, setVideoCode } = useContext(courseHomeContext)
     const [currentVideo , setCurrentVideo] = useState(null)
 
+
+    function previousVideo()
+    {
+        const currentVideoIndex = courseVideos.findIndex(x => x.id ===currentVideo.id )
+
+        if ( currentVideoIndex === 0 )
+            return currentVideo.id
+        else
+            return courseVideos[currentVideoIndex-1].id
+    }
+
+    function nextVideo()
+    {
+        const currentVideoIndex = courseVideos.findIndex(x => x.id ===currentVideo.id )
+
+        if ( currentVideoIndex === ( (courseVideos.length)-1 ) )
+            return currentVideo.id
+        else
+            return courseVideos[currentVideoIndex+1].id
+    }
 
     async function load()
     {
@@ -128,8 +149,6 @@ export default function CourseHome({courseOverview , videoID })
 
         <>
 
-
-
             <div>
                 {
                     loadPage ?
@@ -146,9 +165,201 @@ export default function CourseHome({courseOverview , videoID })
 
 
                                         {/* Embedded Youtube Video */}
-                                        <div className={"mx-auto"}>
-                                            <YoutubePlayer videoId={`${currentVideo.get_video_id}`} autoPlayFeatureSwitch={true} />
+                                        <div>
+                                            <YoutubePlayer videoId={`${currentVideo.get_video_id}`} autoPlayFeatureSwitch={false} />
                                         </div>
+
+
+                                        {/* Previous / Next Video Buttons */}
+
+                                        <div className={"hidden lg:flex flex-row justify-center space-x-20"}>
+
+                                            {/* Previous Button */}
+
+                                            <Link
+                                                href={`/course/${courseDetails.courseUrl}/${ previousVideo() }`}
+                                                className={`
+                                                            ${  (currentVideo.id === courseVideos[0].id )? "hidden" : "block" }
+                                                            relative 
+                                                            inline-flex 
+                                                            items-center 
+                                                            justify-center 
+                                                            p-4 px-7 py-4 
+                                                            overflow-hidden 
+                                                            font-bold
+                                                            text-xl 
+                                                            text-indigo-600 
+                                                            transition 
+                                                            duration-300 
+                                                            ease-out 
+                                                            border-2 
+                                                            border-secondary-medium 
+                                                            rounded-full 
+                                                            shadow-md group`}
+                                            >
+
+                                                <span className={`
+                                                                    absolute 
+                                                                    inset-0 
+                                                                    flex 
+                                                                    items-center 
+                                                                    justify-center 
+                                                                    w-full h-full 
+                                                                    text-white 
+                                                                    duration-300 
+                                                                    translate-x-full 
+                                                                    bg-secondary-medium 
+                                                                    group-hover:translate-x-0 
+                                                                    ease`}
+                                                >
+                                                    <svg
+                                                        className={"w-8 h-8"}
+                                                        fill={"none"} stroke={"currentColor"}
+                                                        viewBox={"0 0 24 24"} xmlns={"http://www.w3.org/2000/svg"}
+                                                    >
+
+                                                        <path
+                                                            strokeLinecap={"round"} strokeLinejoin={"round"}
+                                                            strokeWidth={"3"} d={"M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"}
+                                                        >
+                                                        </path>
+                                                    </svg>
+
+                                                </span>
+
+                                                <span
+                                                    className={"absolute flex items-center justify-center w-full h-full text-secondary-medium transition-all duration-300 transform group-hover:-translate-x-full ease"}>
+                                                    Previous Video
+                                                </span>
+
+                                                <span className={"relative invisible"}> Previous Video </span>
+
+                                            </Link>
+
+                                            {/* Next Button */}
+
+                                            <Link
+                                                href={`/course/${courseDetails.courseUrl}/${ nextVideo() }`}
+                                                className={`
+                                                            ${  (currentVideo.id === courseVideos[ (courseVideos.length)-1 ].id )? "hidden" : "block" }
+                                                            relative 
+                                                            inline-flex 
+                                                            items-center 
+                                                            justify-center 
+                                                            p-4 px-10 py-4 
+                                                            overflow-hidden 
+                                                            font-bold
+                                                            text-xl 
+                                                            text-indigo-600 
+                                                            transition 
+                                                            duration-300 
+                                                            ease-out 
+                                                            border-2 
+                                                            border-secondary-medium 
+                                                            rounded-full 
+                                                            shadow-md group`}
+                                            >
+                                                <span className={`
+                                                                    absolute 
+                                                                    inset-0 
+                                                                    flex 
+                                                                    items-center 
+                                                                    justify-center 
+                                                                    w-full h-full 
+                                                                    text-white 
+                                                                    duration-300 
+                                                                    -translate-x-full 
+                                                                    bg-secondary-medium 
+                                                                    group-hover:translate-x-0 
+                                                                    ease`}
+                                                >
+
+                                                    <svg
+                                                        className={"w-8 h-8"}
+                                                        fill={"none"} stroke={"currentColor"}
+                                                        viewBox={"0 0 24 24"} xmlns={"http://www.w3.org/2000/svg"}
+                                                    >
+
+                                                        <path
+                                                            strokeLinecap={"round"} strokeLinejoin={"round"}
+                                                            strokeWidth={"3"} d={"M14 5l7 7m0 0l-7 7m7-7H3"}>
+
+                                                        </path>
+
+                                                    </svg>
+
+                                                </span>
+
+                                                <span
+                                                    className={"absolute flex items-center justify-center w-full h-full text-secondary-medium transition-all duration-300 transform group-hover:translate-x-full ease"}>
+                                                    Next Video
+                                                </span>
+
+                                                <span className={"relative invisible"}>
+                                                    Next Video
+                                                </span>
+
+                                            </Link>
+
+                                        </div>
+
+
+
+                                        <div className={"lg:hidden flex flex-row justify-around"}>
+
+                                            {/* Previous Button */}
+
+                                            <a href={`/course/${courseDetails.courseUrl}/${ previousVideo() }`} className={` ${  (currentVideo.id === courseVideos[0].id )? "hidden" : "block" } flex flex-row justify-center px-3 py-3 font-bold text-base text-secondary-medium border-2 border-secondary-medium rounded-full`} >
+                                                <svg
+                                                    className={"my-auto w-8 h-8 mr-2"}
+                                                    fill={"none"} stroke={"currentColor"}
+                                                    viewBox={"0 0 24 24"} xmlns={"http://www.w3.org/2000/svg"}
+                                                >
+
+                                                    <path
+                                                        strokeLinecap={"round"} strokeLinejoin={"round"}
+                                                        strokeWidth={"2"} d={"M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"}
+                                                    >
+                                                    </path>
+
+                                                </svg>
+
+                                                <div className={"w-max h-fit my-auto"}>
+                                                    Previous Video
+                                                </div>
+
+                                            </a>
+
+                                            {/* Next Button */}
+
+                                            <a href={`/course/${courseDetails.courseUrl}/${ nextVideo() }`} className={` ${  (currentVideo.id === courseVideos[ (courseVideos.length)-1 ].id )? "hidden" : "block" } flex flex-row justify-center px-3 py-3 font-bold text-base text-secondary-medium border-2 border-secondary-medium rounded-full`} >
+
+                                                <div className={"w-max h-fit my-auto"}>
+                                                    Next Video
+                                                </div>
+
+                                                <svg
+                                                    className={"my-auto w-8 h-8 ml-2"}
+                                                    fill={"none"} stroke={"currentColor"}
+                                                    viewBox={"0 0 24 24"} xmlns={"http://www.w3.org/2000/svg"}
+                                                >
+
+                                                    <path
+                                                        strokeLinecap={"round"} strokeLinejoin={"round"}
+                                                        strokeWidth={"2"} d={"M14 5l7 7m0 0l-7 7m7-7H3"}>
+
+                                                    </path>
+                                                </svg>
+                                            </a>
+                                        </div>
+
+
+
+
+
+
+
+
 
                                         <div className={"hidden lg:block"}>
                                             {/* Video Description */}
@@ -160,7 +371,7 @@ export default function CourseHome({courseOverview , videoID })
 
                                                 <div className={"mx-6 text-lg mt-8"}>
 
-                                                    <HTMLDataParser htmlData={currentVideo.videoDescription} />
+                                                    <HTMLDataParser htmlData={ String(currentVideo.videoDescription) } />
 
                                                 </div>
 
@@ -168,7 +379,7 @@ export default function CourseHome({courseOverview , videoID })
 
                                             {/* Divider Line */}
                                             {
-                                                ( videoCode &&     videoCode.length!==0 ) &&
+                                                ( videoCode && videoCode.length!==0 ) &&
                                                 <div className={"rounded-full border border-gray-300 my-10 mx-20"}></div>
                                             }
 

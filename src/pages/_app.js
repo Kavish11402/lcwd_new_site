@@ -7,6 +7,7 @@ import BlogProvider from "@/Context/BlogProvider";
 import NextNProgress from "nextjs-progressbar";
 import "prismjs/themes/prism-tomorrow.css";
 import CourseHomeProvider from "@/Context/CourseHomeProvider";
+import PaymentDialogBox from "@/Components/Misc/PaymentDialogBox";
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -54,9 +55,11 @@ export default function App({ Component, pageProps }) {
           <BlogProvider>
 
             <NextNProgress color={"#F59E0B"} options={{ showSpinner: false, easing: "ease" }} />
+            <PaymentDialogBox/>
             <NavBar />
             <Component {...pageProps} />
             <Footer />
+
 
           </BlogProvider>
         </CourseHomeProvider>

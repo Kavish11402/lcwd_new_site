@@ -14,9 +14,9 @@ export default function SocialMediaFollowers({ handleImage , handleFollowers , h
 {
   return(
 
-      <div className={"flex flex-col lg:flex-row justify-center py-5"}>
+      <div className={"flex flex-col justify-center py-5"}>
 
-          <div className={"my-auto mx-auto  lg:mr-4 w-fit"}>
+          <div className={"my-auto mx-auto mb-4 w-fit"}>
               <Image className={"w-12 lg:w-20"} src={handleImage} alt={"SocialMediaHandleImage"} />
           </div>
 
