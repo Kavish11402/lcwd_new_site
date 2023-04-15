@@ -8,6 +8,13 @@ import NextNProgress from "nextjs-progressbar";
 import "prismjs/themes/prism-tomorrow.css";
 import CourseHomeProvider from "@/Context/CourseHomeProvider";
 import PaymentDialogBox from "@/Components/Misc/PaymentDialogBox";
+
+
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+import GoToTop from "@/Components/Misc/GoToTop";
+
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -55,10 +62,14 @@ export default function App({ Component, pageProps }) {
           <BlogProvider>
 
             <NextNProgress color={"#F59E0B"} options={{ showSpinner: false, easing: "ease" }} />
+            <ToastContainer />
             <PaymentDialogBox/>
-            <NavBar />
-            <Component {...pageProps} />
-            <Footer />
+            <div className={"relative"}>
+              <NavBar />
+              <Component {...pageProps} />
+              <Footer />
+            </div>
+
 
 
           </BlogProvider>

@@ -1,6 +1,78 @@
 import axios from "axios";
+import {toast} from "react-toastify";
 
 const axiosURL = axios.create({ baseURL: process.env.NEXT_PUBLIC_BASE_URL });
+
+
+
+export function businessEnquiry(userFilledData)
+{
+  axiosURL
+      .post( '/business-enquiry/' , userFilledData )
+      .then( (res)=>
+      {
+        console.log(res)
+        toast.success('Your Query has been send we will contact you soon', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      } )
+      .catch( (res)=>
+      {
+        console.log(res)
+        toast.error('There is some Problem in sending Query wait and try again', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      } )
+}
+
+
+
+export function studentEnquiry(userFilledData)
+{
+  axiosURL
+      .post( '/student-enquiry/' , userFilledData )
+      .then( () =>
+      {
+        toast.success('Your Query has been send we will contact you soon', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      } )
+      .catch( ()=>
+      {
+        toast.error('There is some Problem in sending Query wait and try again', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      } )
+}
+
 
 export function topFreeCourses() {
   return axiosURL
