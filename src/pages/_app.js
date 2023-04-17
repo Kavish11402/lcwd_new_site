@@ -65,6 +65,7 @@ export default function App({ Component, pageProps }) {
             <ToastContainer />
             <PaymentDialogBox/>
             <div className={"relative"}>
+              <GoToTop/>
               <NavBar />
               <Component {...pageProps} />
               <Footer />

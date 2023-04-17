@@ -28,21 +28,13 @@ const BlogCategories = () => {
     <>
       {/* categories on big screen  */}
 
-      <div className={"hidden md:block w-60 relative bg-stone-50 drop-shadow-xl "} >
+      <div className={"hidden lg:block w-60 relative bg-stone-50 drop-shadow-xl"} >
         <div className={"sticky top-28 mb-16 mx-5"}>
-          <div
-            className={
-              "w-fit py-2 mx-auto font-semibold text-primary-dark my-5 text-3xl flex flex-row space-x-1"
-            }
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="3"
-              stroke="currentColor"
-              className="w-6 h-auto"
-            >
+
+          {/* Category Text */}
+          <div className={ "w-fit py-2 mx-auto font-semibold text-primary-dark my-5 text-3xl flex flex-row space-x-1" } >
+
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-auto" >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -52,20 +44,14 @@ const BlogCategories = () => {
 
             <h1 className={"underline underline-offset-4"}>Categories</h1>
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="3"
-              stroke="currentColor"
-              className="w-6 h-auto"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-6 h-auto" >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 d="M19.5 12h-15"
               />
             </svg>
+
           </div>
 
           <div className={"text-secondary-dark text-lg space-y-4"}>
@@ -96,7 +82,7 @@ const BlogCategories = () => {
 
       {/* categories on mobile phone */}
 
-      <div className={"md:hidden z-40 flex flex-row justify-end p-4"}>
+      <div className={"lg:hidden z-40 flex flex-row justify-end p-4"}>
         <Menu as="div" className={"relative"}>
 
           <div>

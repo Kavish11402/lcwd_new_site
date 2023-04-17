@@ -41,10 +41,10 @@ export default function DynamicBlogPage({ blog }) {
           showSocialMedia={false}
         />
         {/* Place for Dynamic Blog Content */}
-        <div className={"mx-2 md:mx-5 grid grid-cols-1 lg:grid-cols-12"}>
+        <div className={"mx-2 md:mx-0  grid grid-cols-1 lg:grid-cols-12"}>
           <BlogCategories />
 
-          <div className="lg:col-start-3 lg:col-span-8 mt-4">
+          <div className="lg:col-start-4 xl:col-start-3 lg:col-span-8 lg:pl-2 xl:pl-8 2xl:pl-0 mt-4">
 
             {htmlContent ? <HTMLDataParser htmlData={htmlContent} /> : ""}
 

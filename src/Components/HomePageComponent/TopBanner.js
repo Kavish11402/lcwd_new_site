@@ -48,7 +48,7 @@ export default function TopBanner() {
       <div className={"flex flex-col justify-center lg:w-1/2"}>
         <h1
           className={
-            "text-center text-[2.5rem] xl:text-6xl font-bold py-6 lg:py-7 bg-gradient-to-r from-secondary-dark to-primary-dark bg-clip-text text-transparent"
+            "text-center text-[2.5rem] xl:text-5xl 2xl:text-6xl font-bold py-6 lg:py-7 bg-gradient-to-r from-secondary-dark to-primary-dark bg-clip-text text-transparent"
           }
         >
           Learn Code With Durgesh
