@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import ShareBar from "@/Components/MasterTemplets/ShareBar";
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
