@@ -18,7 +18,7 @@ function bgGenerator(backgroundCss)
   );
 }
 
-export default function HeroCard({ title, subTitle, backgroundCss, showSocialMedia, showLogo }) {
+export default function HeroCard({ title, blogTitle , subTitle, backgroundCss, showSocialMedia, showLogo }) {
   return (
     <div className={"relative"}>
       {bgGenerator(backgroundCss)}
@@ -36,6 +36,10 @@ export default function HeroCard({ title, subTitle, backgroundCss, showSocialMed
           <h1 className={"text-center text-primary-dark text-4xl lg:text-7xl font-semibold px-5 lg:px-24 mt-3"} >
             {title}
           </h1>
+
+            <h1 className={"text-center text-primary-dark text-4xl lg:text-5xl font-semibold px-2 lg:px-12 mt-3"} >
+                {blogTitle}
+            </h1>
 
           <h2 className={"text-center text-white px-5 lg:px-5 font-semibold lg:text-2xl my-4"} >
             {subTitle}

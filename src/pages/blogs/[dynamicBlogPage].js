@@ -30,7 +30,7 @@ export default function DynamicBlogPage({ blog }) {
         <HeroCard
           showLogo={false}
           backgroundCss={"bg-singleBlogBannerImg p-5"}
-          title={blog.title}
+          blogTitle={blog.title}
           showSocialMedia={false}
         />
         {/* Place for Dynamic Blog Content */}
