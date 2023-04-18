@@ -9,9 +9,8 @@ export function businessEnquiry(userFilledData)
 {
   axiosURL
       .post( '/business-enquiry/' , userFilledData )
-      .then( (res)=>
+      .then( ()=>
       {
-        console.log(res)
         toast.success('Your Query has been send we will contact you soon', {
           position: "top-center",
           autoClose: 5000,
@@ -23,9 +22,8 @@ export function businessEnquiry(userFilledData)
           theme: "colored",
         });
       } )
-      .catch( (res)=>
+      .catch( ()=>
       {
-        console.log(res)
         toast.error('There is some Problem in sending Query wait and try again', {
           position: "top-center",
           autoClose: 5000,

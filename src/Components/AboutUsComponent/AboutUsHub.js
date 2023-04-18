@@ -7,7 +7,7 @@ export default function AboutUsHub()
   return(
       <div>
 
-          <HeroCard backgroundCss={"bg-contactBannerImg"} title={"About Us"} subTitle={"Kindly Follow Us on Different Social Medias"} showSocialMedia={true} showLogo={false} />
+          <HeroCard backgroundCss={"bg-aboutUsBannerImg"} title={"About Us"} subTitle={"Kindly Follow Us on Different Social Medias"} showSocialMedia={true} showLogo={false} />
 
           <div className={"py-10 lg:py-16 flex flex-col justify-center"}>
 

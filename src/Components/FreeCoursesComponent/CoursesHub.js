@@ -15,7 +15,7 @@ export default function CoursesHub({ courses }) {
         <div className={"pt-5 lg:pt-10"}>
           <div
             className={
-              "mx-auto w-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 md:gap-x-4  2xl:gap-x-10 gap-y-20 mb-20"
+              "mx-auto w-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 md:gap-x-10  2xl:gap-x-10 gap-y-20 mb-20"
             }
           >
             {courses.map((singleCourse) => {

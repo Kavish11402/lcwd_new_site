@@ -28,8 +28,7 @@ export default function Footer() {
               "font-bold text-lg text-center underline mb-3 xl:text-xl"
             }
           >
-            {" "}
-            Learn Code With Durgesh{" "}
+            Learn Code With Durgesh
           </h1>
 
           <p
@@ -37,7 +36,7 @@ export default function Footer() {
               "text-justify lg:text-left xl:text-justify text-sm xl:text-base"
             }
           >
-            Learn Code With Durgesh offers wide varity of free and Premium
+            Learn Code With Durgesh offers wide variety of free and Premium
             courses on YouTube channel and website. We are serving lakhs of
             students and professionals.
           </p>
@@ -51,8 +50,7 @@ export default function Footer() {
           <h1
             className={"font-semibold text-lg text-center underline xl:text-xl"}
           >
-            {" "}
-            Products{" "}
+            Products
           </h1>
 
           <div>
@@ -101,8 +99,7 @@ export default function Footer() {
           <h1
             className={"font-semibold text-lg text-center underline xl:text-xl"}
           >
-            {" "}
-            Contact{" "}
+            Contact
           </h1>
 
           <div
@@ -190,7 +187,7 @@ export default function Footer() {
         <div className={"flex flex-col justify-around py-4 px-3 mx-auto lg:mx-0"} >
 
           <h1 className={"font-semibold text-lg text-center underline xl:text-xl"} >
-            {" "}Get In Touch{" "}
+            Get In Touch
           </h1>
 
           <div className={"mt-3 flex flex-col justify-around h-full space-y-5"} >
@@ -207,8 +204,8 @@ export default function Footer() {
                 rel={"noreferrer"}
                 target={"_blank"}
               >
-                {" "}
-                YouTube{" "}
+                
+                YouTube
               </a>
             </div>
 

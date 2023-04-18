@@ -23,8 +23,8 @@ export default function YoutubeCount() {
           "mb-10 lg:mb-16 text-center text-2xl font-bold underline underline-offset-8 text-primary-dark lg:text-5xl"
         }
       >
-        {" "}
-        Our Community{" "}
+        
+        Our Community
       </h1>
 
       <div

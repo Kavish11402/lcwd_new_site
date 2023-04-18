@@ -9,7 +9,7 @@ const BlogCategories = () => {
 
   useEffect(() => {
     if (!categories) {
-      // load categroies
+      // load categories
       loadBlogCategories();
     }
   }, []);
@@ -18,10 +18,7 @@ const BlogCategories = () => {
     try {
       const cats = await getBlogCategories();
       setCategories(cats);
-      console.log(cats);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) { }
   };
 
   return (
@@ -57,7 +54,7 @@ const BlogCategories = () => {
           <div className={"text-secondary-dark text-lg space-y-4"}>
 
             <Link className="block" href={`/blogs`}>
-              <div className={`flex flex-row justify-center cursor-pointer border-2 border-sky-300 hover:text-white bg-white hover:bg-sky-400 transition-all ease-linear rounded-xl py-1 uppercase`} >
+              <div className={`flex flex-row justify-center cursor-pointer border-2 border-sky-400 hover:border-secondary-dark hover:text-white bg-white hover:bg-sky-400 transition-all ease-linear rounded-xl py-1 uppercase`} >
                 <p className={"font-medium"}>All Blogs</p>
               </div>
             </Link>

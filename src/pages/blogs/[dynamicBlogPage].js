@@ -9,17 +9,10 @@ import HeroCard from "@/Components/MasterTemplets/HeroCard";
 import LatestBlog from "@/Components/BlogsComponent/LatestBlog";
 
 export default function DynamicBlogPage({ blog }) {
-  let router = useRouter();
 
-  const [currentUrl, setCurrentUrl] = useState("");
   const [htmlContent, setHtmlContent] = useState(null);
 
   useEffect(() => {
-    setCurrentUrl(
-      `${ window.location.host.startsWith("localhost") ? "http://" : "https://" }` +
-        window.location.host +
-        router.asPath
-    );
     setHtmlContent("<div>" + blog.content + "</div>");
   }, [blog.content]);
 
@@ -36,8 +29,8 @@ export default function DynamicBlogPage({ blog }) {
 
         <HeroCard
           showLogo={false}
-          backgroundCss={"bg-blogBannerImg p-5"}
-          subTitle={blog.title}
+          backgroundCss={"bg-singleBlogBannerImg p-5"}
+          title={blog.title}
           showSocialMedia={false}
         />
         {/* Place for Dynamic Blog Content */}

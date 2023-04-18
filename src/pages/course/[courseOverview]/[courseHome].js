@@ -39,7 +39,6 @@ export default function CourseHome({courseOverview , videoID })
 
     const router = useRouter()
     const {courseHome} = router.query
-    console.log(courseHome)
 
     const { courseDetails, setCourseDetails , courseVideos, setCourseVideos , videoCode, setVideoCode } = useContext(courseHomeContext)
     const [currentVideo , setCurrentVideo] = useState(null)
@@ -109,13 +108,10 @@ export default function CourseHome({courseOverview , videoID })
 
     useEffect( ()=>
         {
-            console.log("running")
-            console.log(courseVideos)
             if(courseVideos!==null)
             {
 
                 const temp = courseVideos.find( (obj)=> obj.id === videoID  )
-                console.log(temp)
                 setCurrentVideo({...temp} )
 
 
@@ -131,10 +127,8 @@ export default function CourseHome({courseOverview , videoID })
 
     useEffect(
         ()=>{
-            console.log(currentVideo)
             if(currentVideo) {
                 setLoadPage(true)
-                console.log("test")
             }
             else {
                 setLoadPage(false)
@@ -142,8 +136,6 @@ export default function CourseHome({courseOverview , videoID })
         }
         ,[currentVideo]
     )
-
-    console.log(courseDetails)
 
     return(
 

@@ -9,11 +9,9 @@ function CheckIcon(props) {
     <svg viewBox="0 0 24 24" fill="none" {...props}>
       <circle cx={12} cy={12} r={12} fill="#00FF00" opacity="0.7" />
       <path
-        d="M7 13l3 3 7-7"
-        stroke="#fff"
-        strokeWidth={3}
-        strokeLinecap="round"
-        strokeLinejoin="round"
+          d={"M7 13l3 3 7-7"}
+        stroke={"#fff"} strokeWidth={3}
+        strokeLinecap={"round"} strokeLinejoin={"round"}
       />
     </svg>
   );
@@ -63,7 +61,6 @@ export default function ContactUsHub() {
           "why_choosing_us": `For : ${selectedOption}`,
           "message": `${corporateMessage.current.value}`
         };
-    console.log(data)
     businessEnquiry(data)
     event.target.reset()
   }
@@ -73,7 +70,7 @@ export default function ContactUsHub() {
   return (
     <div>
       <HeroCard
-        backgroundCss={"bg-contactBannerImg"}
+        backgroundCss={"bg-contactUsBannerImg"}
         title={"Feel Free to Contact Us"}
         subTitle={"Kindly Follow Us on Different Social Medias"}
         showSocialMedia={true}
@@ -279,9 +276,6 @@ export default function ContactUsHub() {
                     </button>
 
 
-
-
-
                   </form>
                 </main>
               </div>
@@ -312,8 +306,8 @@ export default function ContactUsHub() {
                   >
                     <p>
                       For any Corporate training/College training requirement
-                      please reach out to us on{" "}
-                      <b>learncodewithdurgesh@gmail.com</b>{" "}
+                      please reach out to us on
+                      <b>learncodewithdurgesh@gmail.com</b>
                     </p>
                   </div>
                 </header>
@@ -352,8 +346,6 @@ export default function ContactUsHub() {
                     </div>
 
 
-
-
                     {/*Organization's Email*/}
                     <div className={"relative flex flex-col mb-5 xl:mb-8"}>
                       <span
@@ -388,8 +380,6 @@ export default function ContactUsHub() {
                     </div>
 
 
-
-
                     {/*Organization's Contact Number*/}
                     <div className={"relative flex flex-col mb-5 xl:mb-8"}>
 
@@ -420,9 +410,6 @@ export default function ContactUsHub() {
                         placeholder={"Organization Contact No."}
                       />
                     </div>
-
-
-
 
 
                     {/*Organization Contacting for what?*/}
@@ -466,8 +453,8 @@ export default function ContactUsHub() {
                                     </div>
                                     {checked && (
                                       <div className="shrink-0 text-white">
-                                        {" "}
-                                        <CheckIcon className="h-6 w-6" />{" "}
+                                        
+                                        <CheckIcon className="h-6 w-6" />
                                       </div>
                                     )}
                                   </div>
@@ -504,8 +491,8 @@ export default function ContactUsHub() {
                                     </div>
                                     {checked && (
                                       <div className="shrink-0 text-white">
-                                        {" "}
-                                        <CheckIcon className="h-6 w-6" />{" "}
+                                        
+                                        <CheckIcon className="h-6 w-6" />
                                       </div>
                                     )}
                                   </div>
@@ -542,8 +529,8 @@ export default function ContactUsHub() {
                                     </div>
                                     {checked && (
                                       <div className="shrink-0 text-white">
-                                        {" "}
-                                        <CheckIcon className="h-6 w-6" />{" "}
+                                        
+                                        <CheckIcon className="h-6 w-6" />
                                       </div>
                                     )}
                                   </div>
@@ -580,8 +567,8 @@ export default function ContactUsHub() {
                                     </div>
                                     {checked && (
                                       <div className="shrink-0 text-white">
-                                        {" "}
-                                        <CheckIcon className="h-6 w-6" />{" "}
+                                        
+                                        <CheckIcon className="h-6 w-6" />
                                       </div>
                                     )}
                                   </div>
@@ -592,8 +579,6 @@ export default function ContactUsHub() {
                         </RadioGroup>
                       </div>
                     </div>
-
-
 
 
 
@@ -631,15 +616,9 @@ export default function ContactUsHub() {
                     </div>
 
 
-
-
-
-
                     <button className={"my-5 bg-primary-medium hover:bg-primary-dark transition-all ease-linear py-3 rounded-lg "} type={"submit"} >
                       Submit
                     </button>
-
-
 
                   </form>
                 </main>

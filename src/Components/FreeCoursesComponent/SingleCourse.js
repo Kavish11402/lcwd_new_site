@@ -12,23 +12,18 @@ export default function SingleCourse( { bannerImg, bannerTittle, bannerDesc, cou
         >
           <div>
             <img
-              className={"rounded-3xl"}
+              className={"rounded-3xl mx-auto w-full"}
               src={`${bannerImg}`}
               alt={"Banner Image"}
             />
 
             <div className={"px-5 my-5"}>
-              <h1 className={" font-bold text-lg  2xl:text-md mx-auto"}>
-                {" "} {bannerTittle.toString()} {" "}
+              <h1 className={"font-bold text-lg mx-auto"}>
+                {bannerTittle}
               </h1>
 
-              <p
-                className={
-                  " h-[6.5rem] text-zinc-600 mt-3 text-sm 2xl:h-[7.8rem] 2xl:text-base line-clamp-5"
-                }
-              >
-                {" "}
-                {bannerDesc.toString()}{" "}
+              <p className={ " h-[6.5rem] text-zinc-600 mt-3 text-sm 2xl:h-[7.8rem] 2xl:text-base line-clamp-5" } >
+                {bannerDesc}
               </p>
             </div>
           </div>

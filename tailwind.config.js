@@ -53,9 +53,11 @@ module.exports = {
       },
 
       backgroundImage:{
-        "contactBannerImg" : "url('/Assets/Images/contactBanner.jpg')",
+        "aboutUsBannerImg" : "url('/Assets/Images/aboutUsBanner.jpg')",
+        "contactUsBannerImg" : "url('/Assets/Images/contactUsBanner.jpg')",
         "reviewBannerImg" : "url('/Assets/Images/reviewBanner.jpg')",
         "blogBannerImg" : "url('/Assets/Images/blogBanner.jpg')",
+        "singleBlogBannerImg" : "url('/Assets/Images/singleBlogBanner.jpg')"
       },
 
       transitionDuration:{

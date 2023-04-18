@@ -20,7 +20,7 @@ export default function LatestBlog()
         try {
             const blogs = await getLatestBlogs();
             setLatestBlogs(blogs);
-        } catch (error) { console.log(error); }
+        } catch (error) {}
     }
 
     return (

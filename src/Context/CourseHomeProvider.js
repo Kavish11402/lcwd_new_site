@@ -38,8 +38,7 @@ export default function CourseHomeProvider ({ children })
             toast.success("File Downloaded", {
                 position: 'bottom-center'
             })
-        }).catch(error => {
-            console.log(error)
+        }).catch(() => {
             toast.error("Error in downloading file")
         })
     }
@@ -82,9 +81,6 @@ export default function CourseHomeProvider ({ children })
 
                     options.handler = (response) => {
                         // create success call
-                        console.log(response.razorpay_payment_id);
-                        console.log(response.razorpay_order_id);
-                        console.log(response.razorpay_signature);
                         let res = {
                             razorpay_payment_id: response.razorpay_payment_id,
                             razorpay_order_id: response.razorpay_order_id,
@@ -93,7 +89,6 @@ export default function CourseHomeProvider ({ children })
                         }
 
                         successPayment(res).then((data) => {
-                            console.log(data)
                             if (data.payment_captured) {
                                 toast.success("All done.. downloading the file..", { position: 'bottom-center' })
                                 downloadData(code)

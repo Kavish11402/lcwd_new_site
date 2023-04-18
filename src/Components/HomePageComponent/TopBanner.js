@@ -61,7 +61,7 @@ export default function TopBanner() {
         >
           <h1 className={"text-center mr-2"}> Master </h1>
           <h1 className={"text-center text-primary-dark"} ref={typedText}>
-            {" "}
+            
           </h1>
         </div>
 

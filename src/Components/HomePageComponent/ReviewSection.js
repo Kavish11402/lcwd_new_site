@@ -12,8 +12,8 @@ export default function ReviewSection() {
           "text-center font-bold underline underline-offset-8 text-primary-dark text-3xl lg:text-5xl"
         }
       >
-        {" "}
-        Recent Reviews{" "}
+        
+        Recent Reviews
       </h1>
 
       <Slider
