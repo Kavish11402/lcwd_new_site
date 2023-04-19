@@ -151,8 +151,10 @@ export default function CourseHome({courseOverview , videoID })
                                 <meta name="description" content={currentVideo.videoTitle}/>
                             </Head>
 
-                            <div className={"flex flex-row "}>
-                                <div className={"px-0 py-6 lg:p-7"}>
+                            <div className={"flex flex-row p-6 space-x-6"}>
+
+
+                                <div className={"lg:w-[70%] xl:w-[80%] w-[100%]"}>
                                     <div className={"bg-stone-100 rounded-3xl drop-shadow-xl px-2 py-6 lg:p-6 flex flex-col justify-center space-y-9"}>
 
 
@@ -296,7 +298,6 @@ export default function CourseHome({courseOverview , videoID })
                                         </div>
 
 
-
                                         <div className={"lg:hidden flex flex-row justify-around"}>
 
                                             {/* Previous Button */}
@@ -346,16 +347,9 @@ export default function CourseHome({courseOverview , videoID })
                                         </div>
 
 
-
-
-
-
-
-
-
                                         <div className={"hidden lg:block"}>
                                             {/* Video Description */}
-                                            <div className={"border-x-2 border-primary-medium rounded-3xl py-6 w-full lg:w-[52vw] mx-auto 2xl:w-[70rem]"}>
+                                            <div className={"border-x-2 border-primary-medium rounded-3xl py-6"}>
 
                                                 <h1 className={"font-bold text-center lg:text-left text-3xl underline underline-offset-8 mx-auto w-fit"}>
                                                     Description
@@ -531,7 +525,7 @@ export default function CourseHome({courseOverview , videoID })
 
                                 </div>
 
-                                <div className={"hidden lg:block space-y-5 p-5 overflow-y-scroll my-7 h-[160vh] bg-stone-100 rounded-3xl drop-shadow-xl mr-6"}>
+                                <div className={"hidden lg:block space-y-5 overflow-y-scroll px-4 py-6 lg:w-[30%] xl:w-[20%] h-[180vh] bg-stone-100 rounded-3xl drop-shadow-xl"}>
 
                                     {
                                         courseVideos.map(

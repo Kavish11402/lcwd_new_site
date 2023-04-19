@@ -7,7 +7,7 @@ export default function PlayerCourseCard({ singleVideo , selected , courseOvervi
   return(
       <Link href={`/course/${courseOverview}/${singleVideo.id}`} className={`${ selected ? 'bg-cyan-400' : 'bg-primary-light hover:bg-primary-medium'  } cursor-pointer w-full transition-all ease-linear rounded-3xl p-4 flex flex-col lg:flex-row justify-between`} title={`${ selected ? 'You are Already Watching this video' : 'Click here to Watch Video'  }`} >
               <div className={"flex flex-row"}>
-                  <Image className={"w-9 h-9 lg:w-10 lg:h-10 my-auto mr-8"} src={videoIcon} alt={" Video Icon "}/>
+                  <Image className={"w-9 h-9 my-auto mr-5"} src={videoIcon} alt={" Video Icon "}/>
                   <h1 className={"font-semibold text-zinc-800 text-base lg:text-md h-fit my-auto"}> { singleVideo.videoTitle } </h1>
               </div>
       </Link>
