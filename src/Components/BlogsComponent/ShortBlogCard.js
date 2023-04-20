@@ -5,11 +5,11 @@ export default function ShortBlogCard( { blogTitle , blogShortDescription , blog
   return(
       <div className={"rounded-xl drop-shadow-xl bg-stone-100 px-6 py-8 space-y-7"} >
 
-          <div className={"text-center font-bold text-3xl md:text-4xl"}>
+          <div className={"text-center font-bold text-2xl md:text-4xl  lg:text-4xl"}>
             {blogTitle}
           </div>
 
-          <div className={"px-3 text-justify text-zinc-600 text-lg line-clamp-7"}>
+          <div className={"px-3 text-justify text-zinc-600 text-md md:text-lg line-clamp-7"}>
             {blogShortDescription}
           </div>
 
@@ -17,7 +17,7 @@ export default function ShortBlogCard( { blogTitle , blogShortDescription , blog
 
               <Link href={`/blogs/${blogSlug}`}>
 
-                  <h1 className={"w-48 md:w-96 bg-primary-medium hover:bg-primary-light transition-all ease-in-out rounded-lg py-2 text-center text-base font-semibold text-zinc-600 lg:text-xl"} >
+                  <h1 className={"w-40 md:w-96 bg-primary-medium hover:bg-primary-light transition-all ease-in-out rounded-lg py-2 text-center text-sm md:text-base font-semibold text-zinc-600 lg:text-xl"} >
                       Read Full Article ...
                   </h1>
 
