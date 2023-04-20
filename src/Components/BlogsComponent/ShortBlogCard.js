@@ -7,11 +7,11 @@ export default function ShortBlogCard( { blogTitle , blogShortDescription , blog
 
           <div className={"text-center font-bold text-3xl md:text-4xl"}>
             {blogTitle}
-        </div>
+          </div>
 
-          <div className={"px-3 text-justify text-zinc-600 text-lg"}>
+          <div className={"px-3 text-justify text-zinc-600 text-lg line-clamp-7"}>
             {blogShortDescription}
-        </div>
+          </div>
 
           <div className={"flex flex-row justify-end"}>
 
@@ -22,7 +22,6 @@ export default function ShortBlogCard( { blogTitle , blogShortDescription , blog
                   </h1>
 
               </Link>
-
 
           </div>
 
