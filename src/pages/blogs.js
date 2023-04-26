@@ -1,9 +1,14 @@
 import Head from "next/head";
 import BlogsHub from "@/Components/BlogsComponent/BlogsHub";
 import {getBlogs} from "@/Api_Services/apiServices";
+import {useContext, useEffect} from "react";
+import courseHomeContext from "@/Context/CourseHomeContext";
 
 export default function blogs({allBlogs})
 {
+    const { allGlobalBlogs , setAllGlobalBlogs } = useContext(courseHomeContext)
+    setAllGlobalBlogs(allBlogs)
+    console.log("blogs =>", allGlobalBlogs )
   return(
       <>
           <Head>
@@ -20,7 +25,6 @@ export default function blogs({allBlogs})
 export async function getServerSideProps(context)
 {
     const data = await getBlogs();
-
     return {
         props: { allBlogs : data }, // will be passed to the page component as props
     };

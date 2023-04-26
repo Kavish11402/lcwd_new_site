@@ -3,9 +3,11 @@ import blogContext from "@/Context/BlogContext";
 import React, { Fragment, useContext, useEffect } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 const BlogCategories = () => {
   const { categories, setCategories } = useContext(blogContext);
+  const router = useRouter()
 
   useEffect(() => {
     if (!categories) {
@@ -51,10 +53,10 @@ const BlogCategories = () => {
 
           </div>
 
-          <div className={"text-secondary-dark text-lg space-y-4"}>
+          <div className={" text-lg space-y-4"}>
 
             <Link className="block" href={`/blogs`}>
-              <div className={`flex flex-row justify-center cursor-pointer border-2 border-sky-400 hover:border-secondary-dark hover:text-white bg-white hover:bg-sky-400 transition-all ease-linear rounded-xl py-1 uppercase`} >
+              <div className={`flex flex-row justify-center cursor-pointer border-2 ${ ( ((router.asPath).replace("/blogs/category/",""))===(`/blogs`) ) ? "border-secondary-dark text-white bg-sky-400" :"border-sky-400 text-secondary-dark bg-white" } hover:border-secondary-dark hover:text-white hover:bg-sky-400 transition-all ease-linear rounded-xl py-1 uppercase`} >
                 <p className={"font-medium"}>All Blogs</p>
               </div>
             </Link>
@@ -66,9 +68,7 @@ const BlogCategories = () => {
                   href={`/blogs/category/${cat.id}/${cat.title}`}
                   key={index}
                 >
-                  <div
-                    className={`flex flex-row justify-center cursor-pointer border-2 border-sky-400 hover:border-secondary-dark hover:text-white bg-white hover:bg-sky-400 transition-all ease-linear rounded-xl py-1 uppercase`}
-                  >
+                  <div className={`flex flex-row justify-center cursor-pointer border-2  ${ ( ((router.asPath).replace("/blogs/category/",""))===(`${cat.id}/${cat.title}`) ) ? "border-secondary-dark text-white bg-sky-400" :"border-sky-400 text-secondary-dark bg-white" } hover:border-secondary-dark hover:text-white hover:bg-sky-400  transition-all ease-linear rounded-xl py-1 uppercase`} >
                     <p className={"font-medium"}>{cat.title}</p>
                   </div>
                 </Link>
@@ -102,7 +102,7 @@ const BlogCategories = () => {
 
 
 
-                <Menu.Item className={"py-3"}>
+                <Menu.Item className={`py-3 ${ ( ((router.asPath).replace("/blogs/category/",""))===(`/blogs`) ) ? "bg-sky-400" :"" }`}>
 
                   <Link className="block" href={`/blogs`}>
                     <p className={"text-xl font-medium w-fit mx-auto"}>All Blogs</p>
@@ -114,7 +114,7 @@ const BlogCategories = () => {
 
                 {categories && categories.map((cat, index) =>
                     (
-                        <Menu.Item key={index} className={"py-3"}>
+                        <Menu.Item key={index} className={`py-3 ${ ( ((router.asPath).replace("/blogs/category/",""))===(`${cat.id}/${cat.title}`) ) ? "bg-sky-400" :"" }`}>
 
                           <Link className="block" href={`/blogs/category/${cat.id}/${cat.title}`} >
                             <p className={"text-xl font-medium w-fit mx-auto"}>{cat.title}</p>

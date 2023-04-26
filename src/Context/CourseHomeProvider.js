@@ -10,10 +10,10 @@ export default function CourseHomeProvider ({ children })
     const [courseDetails, setCourseDetails] = useState(null);
     const [courseVideos, setCourseVideos] = useState(null);
     const [videoCode, setVideoCode] = useState(null);
-
     const [isOpen, setIsOpen] = useState(false)
-
     const [code,setCode] = useState(null)
+
+    const [ allGlobalBlogs , setAllGlobalBlogs ] = useState(null)
 
 
     const initializeRazorpay = () => {
@@ -124,7 +124,9 @@ export default function CourseHomeProvider ({ children })
                     code,
                     setCode,
                     downloadPaidMaterial,
-                    downloadData
+                    downloadData,
+                    allGlobalBlogs,
+                    setAllGlobalBlogs
 
                 }
         }

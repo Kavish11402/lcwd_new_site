@@ -67,7 +67,7 @@ export default function TopBanner() {
 
         <p
           className={
-            "mt-4 text-center mx-auto text-zinc-600 lg:mt-7 xl:mt-10 sm:w-[700px] lg:w-[90%] lg:text-base xl:text-lg lg:mx-auto xl:font-semibold xl-w-4/5"
+            "mt-4 text-center mx-auto text-zinc-600 lg:mt-7 xl:mt-10 sm:w-[700px] lg:w-[90%] text-sm p-3 lg:text-base xl:text-lg lg:mx-auto xl:font-semibold xl-w-4/5"
           }
         >
           Looking to learn programming and coding in Hindi? Look no further! Our
@@ -88,7 +88,7 @@ export default function TopBanner() {
           >
             <h1
               className={
-                "mx-2 border-2 px-3 py-2 rounded-xl border-primary-medium lg:mx-8 2xl:mx-16 lg:hover:border-primary-dark lg:hover:bg-primary-dark lg:hover:text-white lg:transition-all lg:ease-in-out lg:px-2 xl:px-5 lg:py-3 lg:text-lg 2xl:text-2xl lg:text-zinc-600"
+                "mx-2 border-2 px-3 py-2 rounded-xl border-primary-medium lg:mx-8 2xl:mx-16 lg:hover:border-primary-dark lg:hover:bg-primary-dark lg:hover:text-white lg:transition-all lg:ease-in-out lg:px-2 xl:px-5 lg:py-3 text-sm lg:text-lg 2xl:text-2xl lg:text-zinc-600"
               }
             >
               Premium Courses
@@ -98,7 +98,7 @@ export default function TopBanner() {
           <Link href={"/courses"}>
             <h1
               className={
-                "mx-2 border-2 px-3 py-2 rounded-xl border-secondary-medium lg:mx-8 2xl:mx-16 lg:hover:border-secondary-dark lg:hover:bg-secondary-dark lg:hover:text-white lg:transition-all lg:ease-in-out lg:px-2 xl:px-5 lg:py-3 lg:text-lg 2xl:text-2xl lg:text-zinc-600"
+                "mx-2 border-2 px-3 py-2 rounded-xl border-secondary-medium lg:mx-8 2xl:mx-16 lg:hover:border-secondary-dark lg:hover:bg-secondary-dark lg:hover:text-white lg:transition-all lg:ease-in-out lg:px-2 xl:px-5 lg:py-3 text-sm lg:text-lg 2xl:text-2xl lg:text-zinc-600"
               }
             >
               Top Free Courses
