@@ -1,7 +1,7 @@
 import Head from "next/head";
 import BlogsHub from "@/Components/BlogsComponent/BlogsHub";
 import {getBlogs} from "@/Api_Services/apiServices";
-import {useContext, useEffect} from "react";
+import {useContext} from "react";
 import courseHomeContext from "@/Context/CourseHomeContext";
 
 export default function blogs({allBlogs})

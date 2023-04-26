@@ -2,7 +2,6 @@ import HeroCard from "@/Components/MasterTemplets/HeroCard";
 import ShortBlogCard from "@/Components/BlogsComponent/ShortBlogCard";
 import BlogCategories from "./BlogCategories";
 import {useContext, useEffect, useRef, useState} from "react";
-import {useRouter} from "next/router";
 import courseHomeContext from "@/Context/CourseHomeContext";
 import {toast} from "react-toastify";
 
@@ -45,7 +44,6 @@ export default function BlogsHub({
     const { allGlobalBlogs } = useContext(courseHomeContext)
     const  [allShortBlogs , setAllShortBlogs ] = useState([])
     const searchText = useRef("")
-    const router = useRouter()
 
 
     function handleSearch(e)

@@ -4,7 +4,6 @@ import React, { useContext, useEffect, useState } from "react";
 import Head from "next/head";
 import BlogsHub from "@/Components/BlogsComponent/BlogsHub";
 import blogContext from "@/Context/BlogContext";
-import courseHomeContext from "@/Context/CourseHomeContext";
 
 const CategoryBlogs = ({ blogs }) => {
   const router = useRouter();
