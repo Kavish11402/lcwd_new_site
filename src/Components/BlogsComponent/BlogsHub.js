@@ -106,32 +106,32 @@ export default function BlogsHub({ allBlogs = [], title = "Blogs", subtitle = "E
 
                     {/* Search Box */}
                     <div className={"w-[90%] 2xl:w-[60%] mx-auto"}>
-            <div className={"relative my-2 drop-shadow-2xl"}>
+                        <div className={"relative my-2 drop-shadow-2xl"}>
               <span className={"absolute inset-y-0 flex items-center pl-3"}>
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
                 >
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
                   />
                 </svg>
               </span>
 
-                <form onSubmit={ (e)=>{ handleSearch(e) } }>
-              <input required ref={searchText} className={ "w-full h-12 pl-12 pr-24 rounded-3xl transition-all border-2 focus:border-secondary-dark focus:outline-0 focus:ring-0 ease-in" }
-                type={"text"} placeholder={"Search For Blog"}  />
+                            <form onSubmit={ (e)=>{ handleSearch(e) } }>
+                                <input required ref={searchText} className={ "w-full h-12 pl-12 pr-24 rounded-3xl transition-all border-2 focus:border-secondary-dark focus:outline-0 focus:ring-0 ease-in" }
+                                       type={"text"} placeholder={"Search For Blog"}  />
 
 
-                <button
-                    type={"submit"}
-                    className={`mr-[2.46px]
+                                <button
+                                    type={"submit"}
+                                    className={`mr-[2.46px]
                             absolute
                             right-0
                             inset-y-[2.46px]
@@ -149,12 +149,12 @@ export default function BlogsHub({ allBlogs = [], title = "Blogs", subtitle = "E
                             font-semibold
                             text-zinc-600
                             lg:text-xl`}
-                >
-                    Search
-                </button>
-                </form>
-            </div>
-          </div>
+                                >
+                                    Search
+                                </button>
+                            </form>
+                        </div>
+                    </div>
 
 
                     {/* Single Blogs */}
