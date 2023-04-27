@@ -4,6 +4,7 @@ import BlogCategories from "./BlogCategories";
 import {useContext, useEffect, useRef, useState} from "react";
 import courseHomeContext from "@/Context/CourseHomeContext";
 import {toast} from "react-toastify";
+import {useRouter} from "next/router";
 
 
 function blogNotFoundComponent(keyword)
@@ -24,26 +25,37 @@ function blogNotFoundComponent(keyword)
 
 
 
-export default function BlogsHub({
-                                     allBlogs = [],
-                                     title = "Blogs",
-                                     subtitle = "Exiting And Hot Topics in Detail",
-                                     showSocialMedia = true,
-                                 }) {
+export default function BlogsHub({ allBlogs = [], title = "Blogs", subtitle = "Exiting And Hot Topics in Detail", showSocialMedia = true })
+{
+
+    const { allGlobalBlogs , setAllGlobalBlogs } = useContext(courseHomeContext)
+    const  [allShortBlogs , setAllShortBlogs ] = useState([])
+    const searchText = useRef("")
+    const router = useRouter()
 
 
     useEffect(
-        ()=>{ setAllShortBlogs(allBlogs) }
+        ()=>{
+            setAllShortBlogs(allBlogs)
+            if(router.asPath==="/blogs")
+            {
+                setAllGlobalBlogs(allBlogs)
+            }
+        }
         ,[]
     )
     useEffect(
-        ()=>{ setAllShortBlogs(allBlogs) }
+        ()=>{
+            setAllShortBlogs(allBlogs)
+            if(router.asPath==="/blogs")
+            {
+                setAllGlobalBlogs(allBlogs)
+            }
+        }
         ,[allBlogs]
     )
 
-    const { allGlobalBlogs } = useContext(courseHomeContext)
-    const  [allShortBlogs , setAllShortBlogs ] = useState([])
-    const searchText = useRef("")
+
 
 
     function handleSearch(e)
