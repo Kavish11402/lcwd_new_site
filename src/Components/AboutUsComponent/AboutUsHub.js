@@ -1,6 +1,8 @@
 import lcwd_logo from "@/Assets/Logos/lcwd_logo.png"
 import HeroCard from "@/Components/MasterTemplets/HeroCard";
+
 import Image from "next/image";
+import About_Instructor from "@/Components/AboutUsComponent/About_Instructor";
 
 export default function AboutUsHub()
 {
@@ -9,9 +11,35 @@ export default function AboutUsHub()
 
           <HeroCard backgroundCss={"bg-aboutUsBannerImg"} title={"About Us"} subTitle={"Kindly Follow Us on Different Social Medias"} showSocialMedia={true} showLogo={false} />
 
-          <div className={"py-10 lg:py-16 flex flex-col justify-center"}>
+          <div className={"py-10 lg:py-16 flex flex-col justify-center border-2 border-black"}>
 
-              <div className={"rounded-3xl bg-stone-200 drop-shadow-xl mx-auto w-[93%] lg:w-[70%] p-5 lg:p-10 flex flex-col justify-center"}>
+
+
+
+
+
+
+
+
+              <About_Instructor/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div className={"border-2 border-red-600 rounded-3xl bg-stone-200 drop-shadow-xl mx-auto w-[93%] lg:w-[70%] p-5 lg:p-10 flex flex-col justify-center"}>
 
                   <Image className={"mx-auto w-36 lg:w-52"} src={lcwd_logo} alt={"LCWD Logo"}/>
 

@@ -27,7 +27,7 @@ const BlogCategories = () => {
     <>
       {/* categories on big screen  */}
 
-      <div className={"hidden lg:block w-60 relative bg-stone-50 drop-shadow-xl"} >
+      <div className={"hidden lg:block w-64 relative bg-stone-50 drop-shadow-xl"} >
         <div className={"sticky top-28 mb-16 mx-5"}>
 
           {/* Category Text */}

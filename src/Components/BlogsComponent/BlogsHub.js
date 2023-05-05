@@ -99,10 +99,19 @@ export default function BlogsHub({ allBlogs = [], title = "Blogs", subtitle = "E
                 subTitle={subtitle}
                 showSocialMedia={showSocialMedia}
             />
+
+
             {console.log(allBlogs)}
+
+
+
             <div className={"flex flex-col md:flex-row"}>
+
+
                 <BlogCategories />
-                <div className={"w-full md:w-[85%]  md:py-16 mx-auto"}>
+
+
+                <div className={"w-full md:w-[75%] md:py-16"}>
 
                     {/* Search Box */}
                     <div className={"w-[90%] 2xl:w-[60%] mx-auto"}>
@@ -175,7 +184,30 @@ export default function BlogsHub({ allBlogs = [], title = "Blogs", subtitle = "E
                                 blogNotFoundComponent(searchText.current.value)
                         }
                     </div>
+
+
                 </div>
+
+
+
+                <div className={"bg-stone-50 drop-shadow-xl w-[13%] mx-auto relative"}>
+                    <div className={"sticky top-28"}>
+                        {/* Add Ad. Here  */}
+                        <div></div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
         </div>
     );

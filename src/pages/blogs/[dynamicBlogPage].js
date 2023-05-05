@@ -26,6 +26,23 @@ export default function DynamicBlogPage({ blog }) {
 
       <main>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <HeroCard
           showLogo={false}
           backgroundCss={"bg-singleBlogBannerImg p-5"}
@@ -44,6 +61,18 @@ export default function DynamicBlogPage({ blog }) {
             <LatestBlog />
 
           </div>
+
+          <div className={"ml-8 bg-stone-50 drop-shadow-xl col-span-2 relative"}>
+            <div className={"sticky top-28"}>
+
+              {/* Add Ad. Here  */}
+              <div></div>
+
+            </div>
+          </div>
+
+
+
         </div>
 
         {/* Share Panel */}
@@ -51,6 +80,18 @@ export default function DynamicBlogPage({ blog }) {
           postTitle={blog.title}
           postLink={`https://learncodewithdurgesh.com/blogs/${blog.slug}`}
         />
+
+
+
+
+
+
+
+
+
+
+
+
       </main>
     </>
   );

@@ -92,6 +92,6 @@ module.exports = {
         require('autoprefixer'),
         require('@tailwindcss/line-clamp'),
         require('@headlessui/tailwindcss'),
-        require('@tailwindcss/forms')
+        require('@tailwindcss/forms'),
       ],
 }

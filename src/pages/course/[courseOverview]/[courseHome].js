@@ -151,6 +151,9 @@ export default function CourseHome({courseOverview , videoID })
                                 <meta name="description" content={currentVideo.videoTitle}/>
                             </Head>
 
+                            {/* Add Ad. Here  */}
+                            <div></div>
+
                             <div className={"flex flex-row p-6 space-x-6"}>
 
 
@@ -163,6 +166,8 @@ export default function CourseHome({courseOverview , videoID })
                                             <YoutubePlayer videoId={`${currentVideo.get_video_id}`} autoPlayFeatureSwitch={false} />
                                         </div>
 
+                                        {/* Add Ad. Here  */}
+                                        <div></div>
 
                                         {/* Previous / Next Video Buttons */}
 
@@ -536,6 +541,7 @@ export default function CourseHome({courseOverview , videoID })
                                             }
                                         )
                                     }
+                                    
 
                                 </div>
 
