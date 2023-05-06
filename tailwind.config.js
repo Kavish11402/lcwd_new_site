@@ -14,7 +14,8 @@ module.exports = {
 
       screens: {
         'smd': '700px',
-        '3xl' : '1540px'
+        '3xl' : '1540px',
+        '4xl' : '2000px'
       },
 
       keyframes: {
