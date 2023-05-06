@@ -73,6 +73,14 @@ export default function YoutubeCount() {
               Strong community we are building for coders.
             </h2>
 
+
+
+
+
+
+
+
+
             <div className={"mt-6 flex flex-row justify-center space-x-8"}>
               <Link
                 target={`_blank`}
@@ -115,6 +123,11 @@ export default function YoutubeCount() {
             src={durgesh_sir_DP}
             alt={"Durgesh_Sir_Photo"}
           />
+          <Link href={"/about-durgesh-tiwari"} className={"text-zinc-800 hover:text-red-500 transition-all ease-linear"} title={"Click here to learn more"}>
+            <h2 className={"mt-4  font-bold text-center text-md lg:text-lg"}>
+              About Durgesh Sir
+            </h2>
+          </Link>
         </div>
       </div>
 

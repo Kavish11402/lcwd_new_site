@@ -12,7 +12,7 @@ function bgGenerator(backgroundCss)
     <div
       className={
         "absolute -z-30 top-0 right-0 left-0 bg-bottom bg-cover brightness-90 h-[30rem] " +
-        backgroundCss.toString()
+        backgroundCss
       }
     ></div>
   );

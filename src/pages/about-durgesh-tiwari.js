@@ -3,6 +3,10 @@ import About_Instructor from "@/Components/AboutUsComponent/About_Instructor";
 export default function aboutDurgeshTiwari()
 {
   return(
-      <About_Instructor/>
+      <div className={"p-24"}>
+
+        <About_Instructor/>
+
+      </div>
   );
 }
