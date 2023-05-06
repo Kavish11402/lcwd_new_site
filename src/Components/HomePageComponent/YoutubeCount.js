@@ -74,13 +74,6 @@ export default function YoutubeCount() {
             </h2>
 
 
-
-
-
-
-
-
-
             <div className={"mt-6 flex flex-row justify-center space-x-8"}>
               <Link
                 target={`_blank`}
