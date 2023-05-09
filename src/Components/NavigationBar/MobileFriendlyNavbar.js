@@ -59,7 +59,7 @@ export default function MobileFriendlyNavbar( { toggle , navbarState } )
 
 
 
-                <Link href={"/premium-courses"} onClick={ ()=>{ toggle() } }>
+                <Link target={'_blank'} href={"https://courses.learncodewithdurgesh.com/learn"} onClick={ ()=>{ toggle() } }>
                     <h1 className={"mb-3 bg-primary-light mx-auto w-48 py-0.5 rounded-xl text-center text-lg font-semibold"}>
                         Premium Courses
                     </h1>

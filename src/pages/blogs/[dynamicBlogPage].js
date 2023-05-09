@@ -75,7 +75,9 @@ export default function DynamicBlogPage({ blog }) {
             <div className={"sticky top-28"}>
 
               {/* Add Ad. Here  */}
-              <div></div>
+              <div className={"border-2 border-black w-fit mx-auto"}>
+                hi
+              </div>
 
             </div>
           </div>
