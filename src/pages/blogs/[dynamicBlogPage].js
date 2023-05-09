@@ -57,12 +57,21 @@ export default function DynamicBlogPage({ blog }) {
 
             {htmlContent ? <HTMLDataParser htmlData={htmlContent} /> : ""}
 
+            <div className={"mx-auto w-[90%] bg-stone-50 drop-shadow-xl lg:hidden"}>
+              <div>
+
+                {/* Add Ad. Here  */}
+                <div>ad.. here</div>
+
+              </div>
+            </div>
+
             {/* latest blogs   */}
             <LatestBlog />
 
           </div>
 
-          <div className={"ml-8 bg-stone-50 drop-shadow-xl col-span-2 relative"}>
+          <div className={"hidden lg:block ml-8 bg-stone-50 drop-shadow-xl col-span-2 relative"}>
             <div className={"sticky top-28"}>
 
               {/* Add Ad. Here  */}

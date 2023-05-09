@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {Tab} from "@headlessui/react";
 import ExplanationCard from "@/Components/HomePageComponent/SingleReuseableComponents/ExplanationCard";
-import SingleCourseOverview from "@/Components/FreeCoursesComponent/SingleCourseOverview";
+import SingleCourseOverview from "@/Components/CoursesComponent/SingleCourseOverview";
 import {getCourseDetail, getCourseVideos, getResourcesOfCourse} from "@/Api_Services/apiServices";
 import DownloadSourceCode from "@/Components/Misc/DownloadSourceCode";
 import React, {useState} from "react";

@@ -1,4 +1,4 @@
-import SingleCourse from "@/Components/FreeCoursesComponent/SingleCourse";
+import SingleCourse from "@/Components/CoursesComponent/SingleCourse";
 import HeroCard from "../MasterTemplets/HeroCard";
 import {toast} from "react-toastify";
 import {useContext, useEffect, useRef, useState} from "react";
@@ -45,7 +45,7 @@ function displayCourse(allShortCourses)
 }
 
 
-export default function CoursesHub({ courses })
+export default function FreeCoursesHub({ courses })
 {
     const { allGlobalCourses , setAllGlobalCourses } = useContext(courseHomeContext)
     const  [allShortCourses , setAllShortCourses ] = useState([])

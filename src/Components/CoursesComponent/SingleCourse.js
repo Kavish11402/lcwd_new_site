@@ -1,6 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 
-export default function SingleCourse( { bannerImg, bannerTittle, bannerDesc, courseUrl } )
+
+export default function SingleCourse( { bannerImg, bannerTittle, bannerDesc, courseUrl,data="api" } )
 {
   return (
     <div>
@@ -11,11 +13,22 @@ export default function SingleCourse( { bannerImg, bannerTittle, bannerDesc, cou
           }
         >
           <div>
-            <img
-              className={"rounded-3xl mx-auto w-full"}
-              src={`${bannerImg}`}
-              alt={"Banner Image"}
-            />
+            {
+
+              data==="api"?
+                  <img
+                      className={"rounded-3xl mx-auto w-full"}
+                      src={`${bannerImg}`}
+                      alt={"Banner Image"}
+                  />
+                  :
+                  <Image
+                      className={"rounded-3xl mx-auto w-full"}
+                      src={bannerImg}
+                      alt={"Banner Image"}
+                  />
+
+            }
 
             <div className={"px-5 my-5"}>
               <h1 className={"font-bold text-lg mx-auto"}>

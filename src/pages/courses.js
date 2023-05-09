@@ -1,5 +1,5 @@
 import React from "react";
-import CoursesHub from "@/Components/FreeCoursesComponent/CoursesHub";
+import FreeCoursesHub from "@/Components/CoursesComponent/FreeCoursesHub";
 import Head from "next/head";
 import { getFreeCourses } from "@/Api_Services/apiServices";
 
@@ -21,7 +21,7 @@ export default function courses({ courses }) {
         />
       </Head>
       <div>
-        <CoursesHub courses={courses} />
+        <FreeCoursesHub courses={courses} />
       </div>
     </>
   );
