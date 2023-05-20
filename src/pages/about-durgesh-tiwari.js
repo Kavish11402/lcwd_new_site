@@ -21,7 +21,9 @@ export default function aboutDurgeshTiwari()
               />
               <meta name={"author"} content={"Learn Code With Durgesh"} />
           </Head>
-          <div className={"p-24"}>
+
+
+          <div className={"py-10 lg:py-16 flex flex-col justify-center space-y-20"}>
 
               <About_Instructor/>
 
