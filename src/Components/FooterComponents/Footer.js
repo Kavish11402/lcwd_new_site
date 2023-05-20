@@ -156,7 +156,7 @@ export default function Footer() {
                 clipRule="evenodd"
               />
             </svg>
-            <p>+91-919839466732</p>
+            <p>+91-9839466732</p>
           </div>
 
         </div>
