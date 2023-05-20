@@ -40,7 +40,7 @@ export default function Footer() {
             courses on YouTube channel and website. We are serving lakhs of
             students and professionals.
           </p>
-          <h3 className="text-2xl font-bold text-center">Happy Coding !!</h3>
+          <h3 className="mt-4 text-2xl font-bold text-center">!! Happy Coding !!</h3>
         </div>
 
         {/* Products */}
@@ -55,36 +55,33 @@ export default function Footer() {
 
           <div>
             <Link
-              href={
-                "https://courses.learncodewithdurgesh.com/learn/Master-Spring-Boot-With-Project"
-              }
+              href={ "https://courses.learncodewithdurgesh.com/learn/Master-Spring-Boot-With-Project" }
               target={"_blank"}
+              className={"hover:text-secondary-dark transition-all ease-linear"}
             >
               <p className={"my-3 text-sm lg:mb-5 lg:my-0 xl:text-base"}>
                 Master Spring Boot With Project Course
               </p>
             </Link>
             <Link
-              href={
-                "https://courses.learncodewithdurgesh.com/learn/Ecommerce-using-React-js"
-              }
+              href={ "https://courses.learncodewithdurgesh.com/learn/Ecommerce-using-React-js" }
               target={"_blank"}
+              className={"hover:text-secondary-dark transition-all ease-linear"}
             >
               <p className={"my-3 text-sm lg:mb-5 lg:my-0 xl:text-base"}>
                 React Js Ecommerce Project Course
               </p>
             </Link>
             <Link
-              href={
-                "https://courses.learncodewithdurgesh.com/learn/Fullstack-React-Spring-Boot"
-              }
+              href={ "https://courses.learncodewithdurgesh.com/learn/Fullstack-React-Spring-Boot" }
               target={"_blank"}
+              className={"hover:text-secondary-dark transition-all ease-linear"}
             >
               <p className={"my-3 text-sm lg:mb-5 lg:my-0 xl:text-base"}>
                 React + Spring Boot Full Stack
               </p>
             </Link>
-            <Link href={"/courses"}>
+            <Link href={"/courses"} className={"hover:text-secondary-dark transition-all ease-linear"}>
               <p className={"my-3 text-sm lg:mb-5 lg:my-0 xl:text-base"}>
                 Free Courses
               </p>
@@ -119,7 +116,10 @@ export default function Footer() {
                 clipRule="evenodd"
               />
             </svg>
-            <p> Uttar Pradesh, India </p>
+            <div>
+              <p> Substring Technologies, Vijayeepur ,</p>
+              <p> Vishesh Khand 2 Gomti Nagar, Lucknow </p>
+            </div>
           </div>
 
           <div
@@ -156,26 +156,9 @@ export default function Footer() {
                 clipRule="evenodd"
               />
             </svg>
-            <p> + 01 234 567 88 </p>
+            <p>+91-919839466732</p>
           </div>
 
-          <div
-            className={"flex flex-row justify-start text-sm mb-3 xl:text-base"}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="w-5 h-5 lg:w-6 lg:h-6 mr-4"
-            >
-              <path
-                fillRule="evenodd"
-                d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
-                clipRule="evenodd"
-              />
-            </svg>
-            <p>+ 01 234 567 89</p>
-          </div>
         </div>
 
         {/* Horizontal Divider Line */}
@@ -193,23 +176,20 @@ export default function Footer() {
           <div className={"mt-3 flex flex-col justify-around h-full space-y-5"} >
 
 
-            <div className={"flex flex-row text-sm mr-3 xl:text-base lg:mr-24"}>
+            <div className={"flex flex-row text-sm mr-3 xl:text-base lg:mr-24 hover:text-secondary-dark transition-all ease-linear"}>
               <Image
                 className={"w-5 lg:w-6 mr-1 lg:mr-4"}
-                src={youtubeLogo}
-                alt={"youtubeLogo"}
+                src={youtubeLogo} alt={"youtubeLogo"}
               />
               <a
                 href={`https://www.youtube.com/learncodewithdurgesh`}
-                rel={"noreferrer"}
-                target={"_blank"}
+                rel={"noreferrer"} target={"_blank"}
               >
-                
                 YouTube
               </a>
             </div>
 
-            <div className={"flex flex-row text-sm mr-3 xl:text-base"}>
+            <div className={"flex flex-row text-sm mr-3 xl:text-base hover:text-secondary-dark transition-all ease-linear"}>
               <Image
                 className={"w-5 lg:w-6 mr-1 lg:mr-4"}
                 src={facebookLogo}
@@ -224,31 +204,27 @@ export default function Footer() {
               </a>
             </div>
 
-            <div className={"flex flex-row text-sm mr-3 xl:text-base"}>
+            <div className={"flex flex-row text-sm mr-3 xl:text-base hover:text-secondary-dark transition-all ease-linear"}>
               <Image
                 className={"w-5 lg:w-6 mr-1 lg:mr-4"}
-                src={instagramLogo}
-                alt={"instagramLogo"}
+                src={instagramLogo} alt={"instagramLogo"}
               />
               <a
                 href={`https://instagram.com/durgesh_k_t`}
-                rel={"noreferrer"}
-                target={"_blank"}
+                rel={"noreferrer"} target={"_blank"}
               >
                 Instagram
               </a>
             </div>
 
-            <div className={"flex flex-row text-sm mr-3 xl:text-base"}>
+            <div className={"flex flex-row text-sm mr-3 xl:text-base hover:text-secondary-dark transition-all ease-linear"}>
               <Image
                 className={"w-5 lg:w-6 mr-1 lg:mr-4"}
-                src={linkedinLogo}
-                alt={"linkedinLogo"}
+                src={linkedinLogo} alt={"linkedinLogo"}
               />
               <a
                 href={`https://www.linkedin.com/in/durgeshkumartiwari/`}
-                rel={"noreferrer"}
-                target={"_blank"}
+                rel={"noreferrer"} target={"_blank"}
               >
                 Linkedin
               </a>
@@ -259,6 +235,14 @@ export default function Footer() {
         </div>
       </div>
 
+
+
+
+
+
+
+
+
       {/* Horizontal Line Divider */}
       <div className={"border border-black my-2 lg:mx-20 lg:my-6"}></div>
 
@@ -267,7 +251,10 @@ export default function Footer() {
 
         <div className={"flex flex-row justify-center"}>
 
-          <p>Copyright © 2023: <b><u>Substring Technologies Pvt Ltd.</u></b> </p>
+          <p>
+            Copyright © 2023:
+            <a className={"font-bold underline cursor-pointer hover:text-secondary-dark transition-all ease-linear"}> Substring Technologies Pvt Ltd. </a>
+          </p>
 
         </div>
 
@@ -277,15 +264,15 @@ export default function Footer() {
 
       <div className={"w-fit mx-auto text-center mt-4 font-bold underline flex flex-col md:flex-row md:space-x-10"}>
 
-        <a rel={'noreferrer'} href="https://courses.learncodewithdurgesh.com/refund.html" target={"_blank"}>
+        <a className={"hover:text-secondary-dark transition-all ease-linear"} rel={'noreferrer'} href="https://courses.learncodewithdurgesh.com/refund.html" target={"_blank"}>
           Refund Policy
         </a>
 
-        <a rel={'noreferrer'} href="https://courses.learncodewithdurgesh.com/privacy-policy.html" target={"_blank"}>
+        <a className={"hover:text-secondary-dark transition-all ease-linear"} rel={'noreferrer'} href="https://courses.learncodewithdurgesh.com/privacy-policy.html" target={"_blank"}>
           Privacy Policy
         </a>
 
-        <a rel={'noreferrer'} href="https://courses.learncodewithdurgesh.com/terms-of-service.html" target={"_blank"}>
+        <a className={"hover:text-secondary-dark transition-all ease-linear"} rel={'noreferrer'} href="https://courses.learncodewithdurgesh.com/terms-of-service.html" target={"_blank"}>
           Terms of Service
         </a>
 

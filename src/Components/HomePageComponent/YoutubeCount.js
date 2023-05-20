@@ -136,7 +136,7 @@ export default function YoutubeCount() {
 
           <SocialMediaFollowers
             handleImage={youtubePhoto}
-            handleFollowers={200000}
+            handleFollowers={250000}
             handleFollowersExtention={"+"}
             handleOtherInfo={"Subscribers"}
             socialMediaActiveStatus={socialMediaActiveStatus}
@@ -179,7 +179,7 @@ export default function YoutubeCount() {
 
             <SocialMediaFollowers
                 handleImage={telegramPhoto}
-                handleFollowers={12000}
+                handleFollowers={15000}
                 handleFollowersExtention={"+"}
                 handleOtherInfo={"Followers"}
                 socialMediaActiveStatus={socialMediaActiveStatus}

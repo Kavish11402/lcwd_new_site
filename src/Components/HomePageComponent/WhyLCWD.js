@@ -20,12 +20,25 @@ export default function WhyLCWD()
 
           <div className={"grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 lg:gap-x-12 2xl:gap-x-28 gap-y-12 w-fit mx-auto lg:px-10"}>
 
-              <ExplanationCard icon={languages} title={"Courses In Hindi"} description={"Each and every concepts are well explained so that you can learn effectively."}/>
-              <ExplanationCard icon={qualityContent} title={"Quality Content"} description={"Each and every concepts are well explained so that you can learn effectively."}/>
+              <ExplanationCard
+                  icon={languages}
+                  title={"Courses In Hindi"}
+                  description={"Our courses is in Hindi language. Some times we mix hindi and english to make our learners understand."}
+              />
+
+              <ExplanationCard
+                  icon={qualityContent}
+                  title={"Quality Content"}
+                  description={"We focus on quality of content. Our moto is to provide quality education at very affordable price."}
+              />
 
 
               <div className={"lg:col-span-2 xl:col-span-1 lg:flex lg:flex-row lg:justify-center xl:inline"}>
-                  <ExplanationCard icon={bestExplanation} title={"Best Explanation"} description={"Each and every concepts are well explained so that you can learn effectively."}/>
+                  <ExplanationCard
+                      icon={bestExplanation}
+                      title={"Best Explanation"}
+                      description={"We always take example for make learner understand the concepts and topics. We always look for best explanation."}
+                  />
               </div>
 
           </div>
